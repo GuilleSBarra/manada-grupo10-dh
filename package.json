@@ -1,0 +1,14 @@
+{
+  "name": "proyectomanada",
+  "version": "1.0.0",
+  "description": "A) Descripción de la oferta del sitio: El sitio tiende a ofrecer productos y servicios relacionados con el mundo ecuestre, y servicios destinados al cuidado, salud y belleza de caballos, y todo lo relacionado con la temática, como por ejemplo marcas de indumentaria afin o caracteristica de ese mundo.  En cuanto al público al que apunta, por lo arriba mencionado se apunta a todos aquellos profesionales de ramas profesionales  (por ej., jinetes, amazonas, veterinarios, y todas las personas que se dedican al mundo ecuestre;  empresas y/o servicios vinculantes a la dinámica en que se desenvuelve el mundo de la equitación en nuestro entorno local, y particulres con intereses en todo ello,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
