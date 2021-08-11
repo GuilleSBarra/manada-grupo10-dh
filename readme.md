@@ -1,6 +1,4 @@
-A) Descripción de los integrantes del grupo Nº10: El grupo está integrado por Natalia Katunskis, Damian Aramayo y Marco Condinanzo. Naty, es licenciada en Relaciones Internacionales y en Ciencias Políticas, es profesora en la Unversidad Católica Argentina y se desempeña laboralmente como asesora en procesos y control de gestión en el Instituto de Vivienda de la Ciudad (IVC). Su pasión en la vida es la equitación y hace más de 6 años practica diversos deportes ecuestres. Su experiencia en el rubro fue uno de los motivos principales para la elección del producto a desarrollar para este proyecto. 
-Damian, _____________________. 
-Marco, __________________. 
+A) Descripción de los integrantes del grupo Nº10: El grupo está integrado por Natalia Katunskis, Damian Aramayo y Marco Condinanzo. Naty, es licenciada en Relaciones Internacionales y en Ciencias Políticas, es profesora en la Unversidad Católica Argentina y se desempeña laboralmente como asesora en procesos y control de gestión en el Instituto de Vivienda de la Ciudad (IVC). Su pasión en la vida es la equitación y hace más de 6 años practica diversos deportes ecuestres. Su experiencia en el rubro fue uno de los motivos principales para la elección del producto a desarrollar para este proyecto. Marco es funcionario público desde hace 22 años, Lic en Investigación Criminal, especialista en Crimen Organizado transnacional habiendo ejercido docencia sobre Crimen Organizado dentro del país, actualmente en un impasse alejado de la función por un tema médico de cierta gravedad, estudió varias otras cosas distintas (biología, música, idiomas, etc), amante de música, botánica, sin experiencia en nada de ecommerce ni venta de ningún tipo de producto. Damián, trabaja en Ingeniería en Sistemas, incursiona en inversiones y finanzas; y también programa; es el creador de viandascook.com , empresa dedicada a las viandas congeladas, saludables y caseras. 
 
 B) Descripción de la oferta del sitio:
 El sitio tiene como objeto ofrecer una amplia gama de productos relacionados con el mundo ecuestre, destinados al cuidado, salud y belleza de caballos, indumentaria para el jinete, equipos y accesores deportivos y productos veterinarios. 
@@ -17,7 +15,7 @@ Sitios de referencia argentinas: se analizó principalmente las secciones y prod
 5) https://crespo.com.ar
 6) https://www.mercadolibre.com.ar/gz/cart
 
-Sitios de referencia internacional: se compararon a las páginal locales buscnaod mejoras en cuenta a la estética y funcionalidad de los sitios.
+Sitios de referencia internacional: se compararon a las páginal locales buscando mejoras en cuenta a la estética y funcionalidad de los sitios.
 1) https://www.horze.eu/on/demandware.store/Sites-hrzeu-Site/default/Login-Form
 2) https://www.equishop.com/en/logowanie?back=my-account
 3) https://ths-thehorseshop.com/
