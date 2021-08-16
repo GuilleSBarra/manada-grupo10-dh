@@ -1,0 +1,62 @@
+
+/* Estructura General */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* estructura del Body */
+
+body {
+background-image: url(../img/home.JPG);
+background-attachment: scroll;
+background-size: inherit;
+}
+
+/* estructura del main header */
+.mainheader{
+    Background-color:rgb(240, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+}
+
+.logohome{
+    width: 40vw;
+    padding: 5px;
+    color: deeppink;
+    align-self: flex-start;
+}
+
+.iconosmainheader{
+align-self: center;
+display: flex;
+justify-content: space-around;
+list-style: none;
+text-decoration: none;
+}
+
+.iconosmainheader li{
+    display: block;
+    padding: 5px;
+}
+
+.iconosmainheader li i{
+    width: 35vw;
+    padding: 5px;
+    color:deeppink;
+    border: 2px solid deeppink;
+    max-width: 35px;
+    border-radius: 6px;
+}
+.iconosmainheader li a {
+    color:deeppink;
+    font-size: 0.75em;
+    text-decoration: none;
+    text-align: center; 
+    display: block;
+}
+
