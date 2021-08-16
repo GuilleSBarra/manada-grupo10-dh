@@ -11,6 +11,8 @@ app.use(express.static(publicFolderPath))
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./view/index.html"));
 });
-
+app.get("/sections", (req, res) => {
+    res.sendFile(path.join(__dirname, "./view/sections.html"));
+  });
 app.listen(3000,()=>{console.log('Server is runnig in the Port 3000');
   });
