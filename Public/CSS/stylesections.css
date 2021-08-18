@@ -62,7 +62,7 @@ display: inline-block;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    /* position: fixed; */
+    position: fixed;
     width: 100vw;
 }
 
@@ -104,7 +104,11 @@ text-decoration: none;
     margin-top: 2vw;
 }
 
-/* Estructura del Main header con las ofertas */
+/* Estructura del Main */
+
+main {
+    margin-top: 30%;
+}
 
 .seccinesproductos{
 display: flex;
@@ -131,7 +135,7 @@ flex-wrap: wrap;
     height: 40vw;
 }
 
-/* Estructura Footer */
+/* Estructura Footer Mobile */
 
 .redes {
     background-color: rgb(122, 206, 202);
