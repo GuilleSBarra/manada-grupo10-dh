@@ -35,6 +35,9 @@ MaNaDa:
  celeste: rgb(20, 161, 255)
  gris claro: ainsboro
 
+
+ /* ---------------------------        INDEX.HTML          ----------------------------------*/
+
 /* Estructura General */
 * {
     box-sizing: border-box;
@@ -44,7 +47,7 @@ MaNaDa:
 
 /* estructura del Body */
 
-body {
+.bodyhome {
 background-image: url(../img/home.JPG);
 background-attachment: scroll;
 background-size:unset;
@@ -197,7 +200,7 @@ footer .redes {
     @media (min-width: 780px) {
         /* estructura del Body */
 
-body {
+.bodyhome {
     /* background-image: url(../img/home.JPG);
     background-attachment: scroll; */
     background-size:cover;
@@ -350,7 +353,7 @@ body {
     
     /* Estructura Footer */
 
-    footer {
+    .footerhome {
         display:none
     }
     
@@ -408,4 +411,235 @@ body {
         /* color:#f50253f1;
         margin: 1vw; */
     }
+}
+
+
+  /* ---------------------------        SECTIONS.HTML          ----------------------------------*/
+
+/* estructura del Body secciones*/
+.bodysecciones {
+    background-color: #0a192f;
+    background-attachment: scroll;
+    display: inline-block;
+    }
+
+/* estructura del main header secciones*/
+
+.mainheadersecciones{
+    display: none;
+}
+
+/* Estructura del Main SECCIONES*/
+
+.mainsecciones {
+    margin-top: 29%;
+}
+
+.seccinesproductos{
+display: flex;
+width: 100vw;
+text-align: left;
+flex-wrap: wrap;
+
+}
+
+.seccinesproductos h1{
+    font-size: 5vw;
+    color:wheat;
+    background-color: #0a192f;
+    margin-left: 2vw;
+    margin-top: 0px;
+}
+
+.seccinesproductos article{
+    margin: 0.5vw
+}
+
+.seccinesproductos article img{
+    width: 49vw;
+    height: 40vw;
+}
+
+/* ESTRUCTURA + 780 */
+
+@media (min-width: 780px) {
+
+
+    .mainsecciones {
+        margin-top: 11%;
+    }
+    
+    /* .seccinesproductos{
+    display: flex;
+    width: 100vw;
+    text-align: left;
+    flex-wrap: wrap;
+    
+    }
+    
+    .seccinesproductos h1{
+        font-size: 5vw;
+        color:wheat;
+        background-color: #0a192f;
+        margin-left: 2vw;
+        margin-top: 0px;
+    }
+    
+    .seccinesproductos article{
+        margin: 0.5vw
+    }
+    
+    .seccinesproductos article img{
+        width: 49vw;
+        height: 40vw;
+    } */
+
+    footer .redes {
+        background-color: rgb(122, 206, 202);
+        display: flex;
+        justify-content: space-around;
+        padding: 1%;
+        }
+    
+        footer .redes i{
+            width: 5px;
+            font-size: 3vw;
+            color: rgba(20,120,153,1);
+        }
+
+}
+
+/* ESTRUCTURA + 1000 */
+
+@media (min-width: 1000px) {
+
+ /* Estructura main header */
+ .bodysecciones .mainheader{
+        display: none;
+    }
+
+     /* Estructura body */
+
+.bodysecciones{
+    display: flex;
+    }
+    
+    /* Estructura header secciones +1000 */
+
+    .mainheadersecciones{
+    display: block;
+    justify-content: center;
+    }
+
+
+
+    /* Estructura main secciones +1000 */
+    
+    .mainsecciones {
+        margin-top: 0px;
+
+    }
+    
+    .seccinesproductos{
+    display: flex;
+    text-align: left;
+    width: 63vw;
+    flex-wrap: wrap;
+    
+    }
+    
+    .seccinesproductos h1{
+        font-size: 5vw;
+        color:wheat;
+        background-color: #0a192f;
+        margin-left: 2vw;
+        margin-top: 0px;
+        width: 25vw;
+    }
+    
+    /* .seccinesproductos article{
+        margin: 0.5vw
+    } */
+    
+    .seccinesproductos article img{
+        width: 100%;
+        height: 30vw;
+    }
+
+    .seccinesproductos article {
+        width: 30vw;
+        height: 40vw;
+    }
+
+/* Estructura Headsecciones*/
+
+.mainheadersecciones{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    width: 100vw
+}
+
+.mainheadersecciones  .iconosmainheader{
+    align-self: right;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 1vw;
+  width: 20vw;
+  } 
+  
+.mainheadersecciones  .iconosmainheader li{
+      display: block;
+      padding: 0.5vw;
+      margin: 0.5vw;
+      }
+  
+.mainheadersecciones  .iconosmainheader li i{
+      font-size: 1.5vw;
+      padding: 1vw;
+      color:#64ffda;
+      border: 1.5px solid #64ffda;
+      border-radius: 6px;
+  }
+
+.mainheadersecciones  .iconosmainheader li a {
+      color:#64ffda;
+      font-size: 1.5vw;
+      text-decoration: none;
+      text-align: center; 
+      display: block;
+      margin-top: 1vw;
+  }
+
+  .logosecciones{
+    width: 200px;
+    padding: 5px;
+    color: deeppink;
+    align-self: flex-start;
+}
+
+    /* footer secciones */
+
+    .footerhome{
+        display: none;
+    }
+
+    .footersecciones {
+        display: none;
+        /* background-color: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 3%;
+        widows: 20vw  ; */
+        }
+    
+        /* .footersecciones i{
+            width: 5px;
+            font-size: 3vw;
+            color: rgba(20,120,153,1);
+
+        } */
+
 }
