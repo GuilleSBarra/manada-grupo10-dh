@@ -524,13 +524,6 @@ flex-wrap: wrap;
     display: flex;
     }
     
-    /* Estructura header secciones +1000 */
-
-    .mainheadersecciones{
-    display: block;
-    justify-content: center;
-    }
-
 
 
     /* Estructura main secciones +1000 */
@@ -571,56 +564,94 @@ flex-wrap: wrap;
         height: 40vw;
     }
 
-/* Estructura Headsecciones*/
+    /* Estructura header secciones +1000 */
 
-.mainheadersecciones{
-    display: block;
-    text-align: center;
-    justify-content: center;
-    width: 100vw
-}
+    .mainheadersecciones{
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end;
+        text-align: center;
+        width: 100vw
+        }
 
-.mainheadersecciones  .iconosmainheader{
-    align-self: right;
+
+/* MainHeader secciones ICONOS PRINCIPALES */
+
+
+.mainheadersecciones .iconosmainheader{
+align-self:flex-end ;
   display: flex;
   justify-content: space-around;
   list-style: none;
   text-decoration: none;
   margin-right: 1vw;
-  width: 20vw;
+  width: 70%;
   } 
   
-.mainheadersecciones  .iconosmainheader li{
+  .mainheadersecciones .iconosmainheader li{
       display: block;
       padding: 0.5vw;
       margin: 0.5vw;
       }
   
-.mainheadersecciones  .iconosmainheader li i{
+       .mainheadersecciones .iconosmainheader li a {
+     color:#64ffda;
       font-size: 1.5vw;
-      padding: 1vw;
-      color:#64ffda;
+     text-decoration: none;
+      text-align: center; 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0vw;
+  } 
+  
+  .mainheadersecciones .iconosmainheader li a i{
+    font-size: 2vw;
+    padding: 1vw;
+      margin-bottom: 1vw;
       border: 1.5px solid #64ffda;
       border-radius: 6px;
   }
 
-.mainheadersecciones  .iconosmainheader li a {
-      color:#64ffda;
-      font-size: 1.5vw;
-      text-decoration: none;
-      text-align: center; 
-      display: block;
-      margin-top: 1vw;
-  }
 
-  .logosecciones{
-    width: 200px;
-    padding: 5px;
-    color: deeppink;
-    align-self: flex-start;
+
+  /* Mainheader secciones LOGO + REDES*/
+
+.logoiconossecciones{
+     align-self: center;
+     align-content: center;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30%;
+   
+
 }
 
-    /* footer secciones */
+  .logosecciones{
+    width: 30vw;
+    margin: 5px;
+    /* color: deeppink;
+    align-self: flex-start; */
+}
+
+.redessecciones {
+    background-color: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    width: 30vw;
+    }
+
+    .redessecciones i{
+        font-size: 3vw;
+        max-width: max-content;
+        color: #64ffda;
+    }
+
+
+
+    /* footer secciones +1000 */
 
     .footerhome{
         display: none;
