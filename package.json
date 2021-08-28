@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa/issues"
+  },
+  "homepage": "https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa#readme"
 }
