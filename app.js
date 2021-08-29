@@ -1,18 +1,23 @@
-const express = require("express");
+const express = require('express');
+const path = require('path');
 const app = express();
-const path = require("path");
-const port = process.env.PORT || 3000
 
-app.use(express.static(path.join(__dirname, "./public")));
-const publicFolderPath = path.resolve(__dirname,"./public");
+app.use(express.static(path.join(__dirname, './src/public')))
 
-app.use(express.static(publicFolderPath))
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./view/index.html"));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './src/views/index.html'));
 });
-app.get("/sections", (req, res) => {
-    res.sendFile(path.join(__dirname, "./view/sections.html"));
-  });
-app.listen(port,()=>{console.log(`bServer is runnig in the Port ${port}`);
-  });
+
+app.get('/sections', (req, res) => {
+  res.sendFile(path.join(__dirname, './src/views/sections.html'))
+})
+
+app.get('/categorias', (req, res) => {
+  res.sendFile(path.join(__dirname, './src/views/product-categories.html'))
+})
+
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Servidor corriendo en puerto ${port}`);
+});
