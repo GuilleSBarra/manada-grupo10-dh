@@ -16,6 +16,14 @@ app.get('/categorias', (req, res) => {
   res.sendFile(path.join(__dirname, './src/views/product-categories.html'))
 })
 
+app.get("/registro", (req, res) => {
+  res.sendFile(path.join(__dirname, "./src/views/registro.html"));
+});
+
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "./src/views/login.html"));
+});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
