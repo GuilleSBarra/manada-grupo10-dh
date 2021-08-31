@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Formulario Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/styles-1.css" rel="stylesheet">
+    <link href="./css/styles-1.css" rel="stylesheet">
 </head>
 
 <body>
@@ -66,26 +66,40 @@
     </header>
 
     <main>
-        <form class="form-login" action="/" method="GET">
-            <h2>Iniciá Sesión:</h2>
+        <form class="form-register" action="/" method="GET">
+            <h2>Registrate:</h2>
 
-            <div class="login-field">
-                <input class="controls" type="text" name="Usuario" value="" placeholder="Usuario / Email">
+            <div class="register-field">
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
                 <span></span>
             </div>
 
-            <div class="login-field">
-                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
+            <div class="register-field">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
                 <span></span>
             </div>
 
-            <div class="form-button">
-                <button type="submit" class="send-button">Ingresar</button>
+            <div class="register-field">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <span></span>
+            </div>
+
+            <div class="register-field">
+                <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+                <span></span>
             </div>
 
             <div class="form-bottom">
-                <p class="link"> ¿Olvidaste tu contraseña? Hace click <a href="#">aquí </a></p>
-                <p class="link">¿Todavía no tenes cuenta? <a href="/registro">Registrarme </a></p>
+                <input type="checkbox" name="terms">
+                <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y condiciones</a></label>
+            </div>
+
+            <div class="form-button">
+                <button type="submit" class="send-button">Registrarme</button>
+            </div>
+
+            <div class="form-bottom">
+                <p class="link">¿Ya tenes cuenta? <a href="/login">Ingresar</a></p>
             </div>
         </form>
     </main>
@@ -136,6 +150,7 @@
             <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
         </section>
     </footer>
+
 </body>
 
 </html>

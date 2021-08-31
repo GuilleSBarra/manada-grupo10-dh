@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Registro</title>
+    <title>Carrito</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet">
-    <link href="./css/styles-1.css" rel="stylesheet">
+    <link href="/css/styles-1.css" rel="stylesheet">
 </head>
-
 <body>
-
     <header>
         <div class="news">
             <p>Envios gratis a todo el país</p>
         </div>
 
+        <section class="main-header">
+            <nav class="main-navbar">
+                <ul type="none" class="nav-bar">
+                    <li><a href=# alt="Ver todo">Ver todo</a></li>
+                    <li><a href=# alt="Jinete">Jinete</a></li>
+                    <li><a href=# alt="Equipo y Accesorios">Equipo y Accesorios</a></li>
+                    <li><a href=# alt="Cuidados del Caballo">Cuidados del Caballo</a></li>
+                    <li><a href=# alt="Veterinaria">Veterinaria</a></li>
+                </ul>
+            </nav>
 
-        <div class="main-header">
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
             </div>
 
             <div class="login-register">
-                <a href="/"><i class="far fa-heart"></i></a>
+                <a href="/ingreso"><i class="far fa-heart"></i></a>
             </div>
 
             <div class="logo-conteiner">
@@ -36,23 +42,18 @@
             </div>
 
             <div class="login-register">
-                <a href="/"><i class="far fa-user"></i></a>
+                <a href="/registro"><i class="far fa-user"></i></a>
+            </div>
+            
+            <div class="searchbar-desktop">
+                <i class="fas fa-search"></i>
             </div>
 
             <div class="cart">
-                <a href="/"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
             </div>
 
-            <nav class="main-navbar">
-                <ul type="none" class="nav-bar">
-                    <li><a href=# alt="Creá tu cuenta">Creá tu cuenta</a></li>
-                    <li><a href=# alt="Ingresá">Ingresá</a></li>
-                    <li><a href=# alt="Nosotros">Nosotros</a></li>
-                    <li><a href=# alt="Categorías">Categorías</a></li>
-                    <li><a href=# alt="Carrito"></a><i class="fas fa-shopping-basket"></i></li>
-                </ul>
-            </nav>
-        </div>
+        </section>
 
         <div class="div-searchbar">
             <form action="/" method="GET" class="form-searchbar">
@@ -60,44 +61,8 @@
             </form>
         </div>
     </header>
-
+    
     <main>
-        <form class="form-register" action="/" method="GET">
-            <h2>Registrate:</h2>
-
-            <div class="register-field">
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
-                <span></span>
-            </div>
-
-            <div class="register-field">
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
-                <span></span>
-            </div>
-
-            <div class="register-field">
-                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-                <span></span>
-            </div>
-
-            <div class="register-field">
-                <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-                <span></span>
-            </div>
-
-            <div class="form-bottom">
-                <input type="checkbox" name="terms">
-                <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y condiciones</a></label>
-            </div>
-
-            <div class="form-button">
-                <button type="submit" class="send-button">Registrarme</button>
-            </div>
-
-            <div class="form-bottom">
-                <p class="link">¿Ya tenes cuenta? <a href="/login">Ingresar</a></p>
-            </div>
-        </form>
     </main>
 
     <footer>
@@ -146,7 +111,5 @@
             <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
         </section>
     </footer>
-
 </body>
-
 </html>

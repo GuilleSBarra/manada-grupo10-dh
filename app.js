@@ -17,11 +17,15 @@ app.get('/categorias', (req, res) => {
 })
 
 app.get("/registro", (req, res) => {
-  res.sendFile(path.join(__dirname, "./src/views/registro.html"));
+  res.sendFile(path.join(__dirname, "./src/views/register.html"));
 });
 
-app.get("/login", (req, res) => {
+app.get("/ingreso", (req, res) => {
   res.sendFile(path.join(__dirname, "./src/views/login.html"));
+});
+
+app.get("/carrito", (req, res) => {
+  res.sendFile(path.join(__dirname, "./src/views/cart.html"));
 });
 
 
