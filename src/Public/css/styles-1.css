@@ -259,7 +259,7 @@ footer ul li {
     margin-bottom: 200px;
 }
 
-.form-login h2 {
+.form-login h2, .form-register h2 {
     margin: 0;
     text-align: center;
     height: 40px;
@@ -269,14 +269,14 @@ footer ul li {
 
 .register-field, .login-field {
     display: block;
-    margin: 40px 0;
+    margin: 20px 0;
     font-size: 18px;
     width: 100%;
 }
 
 .controls {
     width: 100%;
-    border: 1px solid #017bab;
+    border: none;
     border-radius: 7px;
     margin-bottom: 15px;
     padding: 11px 10px;
@@ -292,7 +292,7 @@ footer ul li {
     text-align: center;
 }
 
-.send-button, .reset-button {
+.send-button {
     padding: 15px;
     font-size: 1.2em;
     border-radius: 15px;
@@ -309,15 +309,15 @@ footer ul li {
     margin: 40px 0;
 }
 
-.send-button:hover, .reset-button:hover {
+.send-button:hover {
     background-color: #0022AA;
 }
 
-.form-login a {
+.form-login a, .form-register a {
     color: #017bab;
 }
 
-.form-login a:hover{
+.form-login a:hover, .form-register a:hover{
     text-decoration: underline;
 }
 
@@ -338,6 +338,20 @@ footer ul li {
 
 /* Desktop */
 @media (min-width: 941px){
+    .form-register h2, .form-login h2 {
+        width: 50%;
+        margin: auto;
+    }
+
+    .register-field, .login-field {
+        width: 50%;
+        margin: auto;
+    }
+
+    .controls {
+        margin: 20px 0;
+    }
+    
     .categories {
         text-align: center;
         font-size: 2em;

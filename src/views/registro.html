@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet">
-    <link href="./css/styleregistro.css" rel="stylesheet"> 
+    <link href="./css/styles-1.css" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
         <div class="news">
             <p>Envios gratis a todo el país</p>
         </div>
-        
+
 
         <div class="main-header">
             <div class="burger-menu">
@@ -60,65 +62,91 @@
     </header>
 
     <main>
-    <section class="form-register">
-        <h4>Formulario Registro</h4>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-        <!-- <p>Estoy de acuerdo con <a href="#"> Términos y condiciones></a></p> -->
-        <input class="button" type="submit" value="Registrarme">
-        <p class= "link">¿Ya tenes cuenta? <a href="/login" >Ingresar </a></p>
+        <form class="form-register" action="/" method="GET">
+            <h2>Registrate:</h2>
 
-    </section>
-</main>
+            <div class="register-field">
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
+                <span></span>
+            </div>
 
-<footer>
-    <ul type="none">
-        <section class="free-shipping">
-            <i class="fas fa-shipping-fast"></i>
-            <li>ENVÍO GRATIS A TODO EL PAÍS</li>
-        </section>
+            <div class="register-field">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
+                <span></span>
+            </div>
 
-        <section class="contact-us">
-            <i class="fas fa-envelope"></i>
-            <li>CONTACTANOS</li>
-        </section>
+            <div class="register-field">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <span></span>
+            </div>
 
-        <section class="befenefits">
-            <i class="fas fa-smile-wink"></i>
-            <li>BENEFICIOS DE COMPRAR ONLINE</li>
-        </section>
+            <div class="register-field">
+                <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+                <span></span>
+            </div>
 
-        <section class="find-store">
-            <i class="fas fa-map-marked-alt"></i>
-            <li>ENCONTRÁ TU TIENDA</li>
-        </section>
-    </ul>
+            <div class="form-bottom">
+                <input type="checkbox" name="terms">
+                <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y condiciones</a></label>
+            </div>
 
-    <div class="footer-media">
-        <section class="footer-seo">
-            <p>VIVÍ LA EQUITACIÓN COMO UN VERDADERO JINETE</p>
-        </section>
+            <div class="form-button">
+                <button type="submit" class="send-button">Registrarme</button>
+            </div>
 
-        <form action="/" method="GET" class="footer-newsletter">
-            <input type="text" placeholder="Email" class="newsletter">
-            <button type="submit" class="footer-button">Suscribirse</button>
+            <div class="form-bottom">
+                <p class="link">¿Ya tenes cuenta? <a href="/login">Ingresar</a></p>
+            </div>
         </form>
+    </main>
 
-        <section class="footer-socialmedia">
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+    <footer>
+        <ul type="none">
+            <section class="free-shipping">
+                <i class="fas fa-shipping-fast"></i>
+                <li>ENVÍO GRATIS A TODO EL PAÍS</li>
+            </section>
+
+            <section class="contact-us">
+                <i class="fas fa-envelope"></i>
+                <li>CONTACTANOS</li>
+            </section>
+
+            <section class="befenefits">
+                <i class="fas fa-smile-wink"></i>
+                <li>BENEFICIOS DE COMPRAR ONLINE</li>
+            </section>
+
+            <section class="find-store">
+                <i class="fas fa-map-marked-alt"></i>
+                <li>ENCONTRÁ TU TIENDA</li>
+            </section>
+        </ul>
+
+        <div class="footer-media">
+            <section class="footer-seo">
+                <p>VIVÍ LA EQUITACIÓN COMO UN VERDADERO JINETE</p>
+            </section>
+
+            <form action="/" method="GET" class="footer-newsletter">
+                <input type="text" placeholder="Email" class="newsletter">
+                <button type="submit" class="footer-button">Suscribirse</button>
+            </form>
+
+            <section class="footer-socialmedia">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+            </section>
+
+        </div>
+        <section class="copyright">
+            <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
         </section>
-
-    </div>
-    <section class="copyright">
-        <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
-    </section>
-</footer>
+    </footer>
 
 </body>
+
 </html>
