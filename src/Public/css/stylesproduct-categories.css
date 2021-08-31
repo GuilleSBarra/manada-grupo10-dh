@@ -6,6 +6,17 @@ a {
     color: rgb(0, 0, 0);
 }
 
+.category .category-imghover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 550ms;
+}
+
 
 * {
     box-sizing: border-box;
@@ -86,7 +97,6 @@ h1 {
 }
 
 .banner {
-    position: relative;
     width: 100%;
     margin: auto;
 }
@@ -94,16 +104,6 @@ h1 {
 .categories-banner {
     width: 100%;
     margin-top: 140px;
-}
-
-.categories {
-    position: absolute;
-    display: block;
-    bottom: 15px;
-    left: 40px;
-    color: rgb(0, 0, 0);
-    font-size: 2em;
-    
 }
 
 .category-maintext {
@@ -232,4 +232,89 @@ footer ul li {
     color: #fffefc;
     padding: 20px 0;
     border: 1.5px solid #fffefc;
+}
+
+/* Tablets */
+@media (min-width: 471px) {
+    .category-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+
+    .category {
+        width: 48%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 941px){
+    .categories {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .category-section {
+        padding-bottom: 40px;
+    }
+
+    .category {
+        width: 23%;
+        transition: all 550ms;
+    }
+
+    .category-description {
+        background-color: rgba(100, 100, 100, 0.8);
+        opacity: 0;
+        transition: all 950ms;
+    }
+
+    .category:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .category:hover .category-description {
+        opacity: 1;
+    }
+
+    .category:hover .category-imghover {
+        opacity: 1;
+    }
+
+    footer {
+        border: 1.5px solid #fffefc;
+    }
+
+    footer ul {
+        padding-top: 80px;
+    }
+    
+    footer ul section {
+        width: 25%;
+        border: none;
+        border-bottom: 1.5px solid #fffefc;
+    }
+    
+    footer ul li {
+        max-width: 250px;
+    }
+    
+    .footer-media {
+        border: none;
+    }
+    
+    .footer-newsletter {
+        max-width: 500px;
+    }
+    
+    .footer-socialmedia {
+        padding: 0 30%;
+    }
+    
+    .copyright {
+        border: none;
+    }
 }

@@ -13,7 +13,7 @@ app.get('/sections', (req, res) => {
 })
 
 app.get('/categorias', (req, res) => {
-  res.sendFile(path.join(__dirname, './src/views/product-categories.html'))
+  res.sendFile(path.join(__dirname, './src/views/categories.html'))
 })
 
 app.get("/registro", (req, res) => {
