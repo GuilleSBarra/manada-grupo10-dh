@@ -5,17 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="stylesheet" href="./css/stylelogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="/css/normalize.css" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <div class="news">
+            <p>Envios gratis a todo el país</p>
+        </div>
+        
+
+        <div class="main-header">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="login-register">
+                <a href="/"><i class="far fa-heart"></i></a>
+            </div>
+
+            <div class="logo-conteiner">
+                <a href="/">
+                    <h1>Ma Na Da</h1>
+                </a>
+            </div>
+
+            <div class="login-register">
+                <a href="/"><i class="far fa-user"></i></a>
+            </div>
+
+            <div class="cart">
+                <a href="/"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <nav class="main-navbar">
+                <ul type="none" class="nav-bar">
+                    <li><a href=# alt="Creá tu cuenta">Creá tu cuenta</a></li>
+                    <li><a href=# alt="Ingresá">Ingresá</a></li>
+                    <li><a href=# alt="Nosotros">Nosotros</a></li>
+                    <li><a href=# alt="Categorías">Categorías</a></li>
+                    <li><a href=# alt="Carrito"></a><i class="fas fa-shopping-basket"></i></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="div-searchbar">
+            <form action="/" method="GET" class="form-searchbar">
+                <input type="text" placeholder="¿Qué estás buscando?" class="search-bar"><i class="fas fa-search"></i>
+            </form>
+        </div>
+    </header>
+
+<main class="forms">
     <section class="form-login">
         <h5>Formulario Login          
         </h5>
         <input class="controls" type="text" name="Usuario" value="" placeholder="Usuario">
         <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
         <input class="button" type="submit" name="" value="Ingresar">
-        <p><a href="#" >¿Olvidaste tu contraseña?</a></p>
+        <p class= "link"> ¿Olvidaste tu contraseña? Hace click <a href="#" >aquí </a></p>
+        <p class= "link">¿Todavía no tenes cuenta? <a href="/registro" >Registrarme </a></p>
     </section>
-    
+</main>
+    <footer>
+        <ul type="none">
+            <section class="free-shipping">
+                <i class="fas fa-shipping-fast"></i>
+                <li>ENVÍO GRATIS A TODO EL PAÍS</li>
+            </section>
+
+            <section class="contact-us">
+                <i class="fas fa-envelope"></i>
+                <li>CONTACTANOS</li>
+            </section>
+
+            <section class="befenefits">
+                <i class="fas fa-smile-wink"></i>
+                <li>BENEFICIOS DE COMPRAR ONLINE</li>
+            </section>
+
+            <section class="find-store">
+                <i class="fas fa-map-marked-alt"></i>
+                <li>ENCONTRÁ TU TIENDA</li>
+            </section>
+        </ul>
+
+        <div class="footer-media">
+            <section class="footer-seo">
+                <p>VIVÍ LA EQUITACIÓN COMO UN VERDADERO JINETE</p>
+            </section>
+
+            <form action="/" method="GET" class="footer-newsletter">
+                <input type="text" placeholder="Email" class="newsletter">
+                <button type="submit" class="footer-button">Suscribirse</button>
+            </form>
+
+            <section class="footer-socialmedia">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+            </section>
+
+        </div>
+        <section class="copyright">
+            <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
+        </section>
+    </footer>
 </body>
 </html>

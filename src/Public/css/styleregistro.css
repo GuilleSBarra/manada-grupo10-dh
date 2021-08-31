@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body {
+
     background-image: url(../img/home.JPG);
+    background-size:cover;
 
 }
 .form-register {
@@ -45,6 +47,7 @@ body {
     text-decoration: none;
 
 }
+
 form-register a:hover {
     color: white;
     text-decoration: underline;
