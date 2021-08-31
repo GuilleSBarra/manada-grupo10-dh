@@ -8,13 +8,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './src/views/index.html'));
 });
 
-app.get('/sections', (req, res) => {
-  res.sendFile(path.join(__dirname, './src/views/sections.html'))
-})
+// app.get('/sections', (req, res) => {
+//   res.sendFile(path.join(__dirname, './src/views/sections.html'))
+// })
 
-app.get('/categorias', (req, res) => {
-  res.sendFile(path.join(__dirname, './src/views/categories.html'))
-})
+// app.get('/categorias', (req, res) => {
+//   res.sendFile(path.join(__dirname, './src/views/categories.html'))
+// })
 
 app.get("/registro", (req, res) => {
   res.sendFile(path.join(__dirname, "./src/views/register.html"));
