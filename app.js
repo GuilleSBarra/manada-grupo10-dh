@@ -2,26 +2,26 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(path.join(__dirname, './src/public')))
+app.use(express.static(path.join(__dirname, '/src/public')))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './src/views/index.html'));
+  res.sendFile(path.join(__dirname, '/src/views/index.html'));
 });
 
 app.get("/registro", (req, res) => {
-  res.sendFile(path.join(__dirname, "./src/views/register.html"));
+  res.sendFile(path.join(__dirname, "/src/views/register.html"));
 });
 
 app.get("/ingreso", (req, res) => {
-  res.sendFile(path.join(__dirname, "./src/views/login.html"));
+  res.sendFile(path.join(__dirname, "/src/views/login.html"));
 });
 
 app.get("/shop", (req, res) => {
-  res.sendFile(path.join(__dirname, "./src/views/shop.html"));
+  res.sendFile(path.join(__dirname, "/src/views/shop.html"));
 });
 
 app.get("/carrito", (req, res) => {
-  res.sendFile(path.join(__dirname, "./src/views/cart.html"));
+  res.sendFile(path.join(__dirname, "/src/views/cart.html"));
 });
 
 
