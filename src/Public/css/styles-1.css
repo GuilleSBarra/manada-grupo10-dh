@@ -31,7 +31,6 @@ body {
 
 header {
     background-color: #FFF;
-    border-bottom: rgb(100, 100, 100);
     width: 100%;
     margin: auto;
     position: fixed;
@@ -196,6 +195,11 @@ footer ul li {
     width: 5px;
     color: #fffefc;
     padding: 20px 0;
+    transition: all 450ms;
+}
+
+.footer-socialmedia i:hover {
+    transform: scale(2);
 }
 
 .copyright {
@@ -311,7 +315,6 @@ footer ul li {
 
 .category-section {
     margin-top: 70px 0;
-    border-bottom: 1px solid rgb(100, 100, 100);
 }
 
 .category {
@@ -343,82 +346,84 @@ footer ul li {
 *
 */
 
-main h1 {
-    text-align: left;
-    font-size: 10vw;
-    margin-top: 35%;
-    margin-bottom: 2vw;
-    margin-left: 2vw;
-    color: linen;
+.deals-header {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 60px;
 }
 
-.secciónofertas{
+.deals, .shop {
     display: block;
-    padding: 20PX;
-    /* margin-top: 20vw; */
+    padding: 20px;
     text-align: center; 
 }
 
-.productoenoferta{
-    background-color: gainsboro;
+.dealproduct, .shop-product {
+    background-color: #f5f5f5;
     border-radius: 8px;
-    box-shadow: 0px 0px 97px 0px rgba(20,120,153,1);
--webkit-box-shadow: 0px 0px 97px 0px rgba(20,120,153,1);
--moz-box-shadow: 0px 0px 97px 0px rgba(20,120,153,1);
-margin: 5vw;
-width: 90%;
 }
 
-.imgproductoenoferta{
+.dealproduct img, .shop-product img {
     width: 100%;
-    height: inherit;
-    padding: 5vw;
+    padding: 15px;
     display: block;
     justify-content: center;
+    border-radius: 15px;
 }
 
-.productoenoferta i {
-    padding: 0vw;
-    font-size: 8vw;
-    color:rgb(122, 206, 202);
-
+.dealproduct i, .shop-product i {
+    color: #0f0f0f;
+    font-size: 1.5em;
 }
 
-.productoenoferta ul{
-    list-style: none;
-    margin: 5vw;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-    text-align: justify;
-    font-size: 16px;
-    border-top: purple solid 1px;
+.dealproduct ul, .shop-product ul {
+    margin: 20px 0;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+    border-top: #0f0f0f solid 1px;
+    text-align: center;
 }
 
-.precioanterior{
+.dealproduct ul li, .shop-product ul li {
+    margin: 10px 0;
+}
+
+.previous-price {
     text-decoration: line-through;
+    display: inline;
 }
 
-.preciorebajado{
-    font-size: 24px;
+.actual-price {
+    font-size: 1.2em;
+    display: inline-block;
 }
-.descuentos{
+
+.discount {
     color:limegreen;
-    font-size: 14px;
+    font-size: 1.3em;
 }
-.logoenvio{
+
+.shipping-logo {
     color:lime;
     width: 5vw;
     font-size: 6vw; 
     border-color: lime;
     border-radius: 50px;
-    padding-top: 2vw;
+    width: 100%;
+    font-size: 1.1em;
 }
 
 
 
 /* Tablets */
 @media (min-width: 471px) {
-    .category-section {
+    .shop-header {
+        margin-top: 160px;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .category-section, .deals, .shop {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -429,6 +434,24 @@ width: 90%;
     .category {
         width: 48%;
     }
+
+    .shop {
+        width: 100%;
+    }
+
+    .dealproduct, .shop-product {
+        margin: 10px 0;
+        width: 48%;
+    }
+
+    .dealproduct ul, .shop-product {
+        padding: 0;
+        margin: 10px 0;
+    }
+    
+    .dealproduct ul li, .shop-product ul li {
+        margin: 5px 0;
+    }
 }
 
 /* Desktop */
@@ -436,6 +459,7 @@ width: 90%;
     header {
         padding-top: 40px;
         padding-bottom: 20px;
+        border-bottom: 1px solid rgb(100, 100, 100);
     }
     
     .news {
@@ -508,6 +532,15 @@ width: 90%;
         border: none;
         border-bottom: 1.5px solid #fffefc;
     }
+
+    footer ul section i, footer ul section li {
+        transition: all 450ms;
+    }
+
+    footer ul section:hover i, footer ul section:hover li {
+        transform: scale(1.1);
+        margin-top: 5px;
+    }
     
     footer ul li {
         max-width: 250px;
@@ -524,7 +557,18 @@ width: 90%;
     .footer-socialmedia {
         padding: 0 30%;
     }
+
+    .footer-socialmedia i {
+        width: 5px;
+        color: #fffefc;
+        padding: 20px 0;
+        transition: all 450ms;
+    }
     
+    .footer-socialmedia i:hover {
+        transform: scale(2);
+    }
+
     .copyright {
         border: none;
     }
@@ -601,5 +645,15 @@ width: 90%;
 
     .categories-banner {
         margin-top: 80px;
+    }
+
+    .dealproduct, .shop-product {
+        width: 22%;
+        transition: all 450ms;
+    }
+
+    .dealproduct:hover, .shop-product:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 }
