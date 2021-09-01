@@ -1,3 +1,18 @@
+/*
+* Mobile First
+*   Media Query: Cellphones
+*   Media Queary: Tablet
+*   Media Query: Desktop
+*
+* Structure of CSS:
+*   Header
+*   Footer
+*   Login / Register
+*   Cart
+*   Main Page
+*   Main Deals - Articles / Products
+*/
+
 main p {
     margin: 20px 0;
 }
@@ -28,6 +43,16 @@ body {
     font-family: roboto;
     font-size: 17px;
 }
+
+
+/*
+*
+*
+* Media Query: cellphones
+* Header
+*
+*
+*/
 
 header {
     background-color: #FFF;
@@ -103,7 +128,8 @@ h1 {
 
 /*
 *
-*   
+*
+* Media Query: cellphones
 * Footer
 *
 *
@@ -214,7 +240,8 @@ footer ul li {
 
 /*
 *
-*   
+*
+* Media Query: cellphones
 * Login / Register pages
 *
 *
@@ -292,7 +319,35 @@ footer ul li {
 
 /*
 *
-*   
+*
+* Media Query: cellphones
+* Cart Page
+*
+*
+*/
+
+.main-cart {
+    padding-top: 170px;
+    width: 90%;
+    margin: auto;
+}
+
+.empty-cart {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    background-color: #017bab;
+    color: #FFF;
+    padding-left: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+
+/*
+*
+*
+* Media Query: cellphones
 * Main Page
 *
 *
@@ -340,7 +395,8 @@ footer ul li {
 
 /*
 *
-*   
+*
+* Media Query: cellphones
 * Main Deals - Articles / Products
 *
 *
@@ -456,6 +512,16 @@ footer ul li {
 
 /* Desktop */
 @media (min-width: 941px){
+
+    /*
+    *
+    * 
+    * Media Query: Desktop
+    * Header
+    *
+    *
+    */
+
     header {
         padding-top: 40px;
         padding-bottom: 20px;
@@ -513,7 +579,8 @@ footer ul li {
 
     /*
     *
-    *   
+    * 
+    * Media Query: Desktop
     * Footer page
     *
     *
@@ -576,7 +643,8 @@ footer ul li {
 
     /*
     *
-    *   
+    * 
+    * Media Query: Desktop
     * Login / Register pages
     *
     *
@@ -599,8 +667,25 @@ footer ul li {
 
     /*
     *
-    *   
-    * Main Page
+    * 
+    * Media Query: Desktop
+    * Cart page
+    *
+    *
+    */
+
+    .main-cart {
+        padding-top: 150px;
+        width: 80%;
+        margin: auto;
+    }
+
+
+    /*
+    *
+    * 
+    * Media Query: Desktop
+    * Categories / Articles
     *
     *
     */

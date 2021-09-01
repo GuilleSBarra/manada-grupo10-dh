@@ -11,3 +11,4 @@ También nos sirvió para investigar y aprender herramientas para el wireframe, 
 3. Continuar haciendo: reuniones de seguimiento semanales
 4. Hacer menos: trabajo individual
 5. Dejar de hacer: trabajo individual
+

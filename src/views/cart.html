@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="/css/styles-1.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="news">
@@ -61,8 +63,15 @@
             </form>
         </div>
     </header>
-    
-    <main>
+
+    <main class="main-cart">
+        <p1 class="empty-cart">Tu carrito está vacío</p1>
+
+        <form class="form-login" action="/shop" method="GET">
+            <div class="form-button">
+                <button type="submit" class="send-button">Volver a la tienda</button>
+            </div>
+        </form>
     </main>
 
     <footer>
@@ -112,4 +121,5 @@
         </section>
     </footer>
 </body>
+
 </html>
