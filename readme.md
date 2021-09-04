@@ -28,5 +28,5 @@ Sitios de referencia de diseño: se tomaron como ejemplo para el diseño del wir
 
 
 D) TABLERO DE TRABAJO: 
-https://trello.com/invite/b/GujGBQ86/4873be40f8bc5cc941ff5a832c55d148/proyecto-manada
+https://digitalhouse-g10.atlassian.net/jira/software/projects/DHG10/boards/1
 
