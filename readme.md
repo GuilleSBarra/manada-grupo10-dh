@@ -26,11 +26,3 @@ Sitios de referencia de diseño: se tomaron como ejemplo para el diseño del wir
 2) https://brittanychiang.com/
 3) https://titusklein.com/
 
-
-D) TABLERO DE TRABAJO:
-
-https://digitalhouse-g10.atlassian.net/jira/software/projects/DHG10/boards/1
-
-E) SPRINT REPORT (JIRA):
-
-https://digitalhouse-g10.atlassian.net/jira/software/projects/DHG10/boards/1/reports/burnup
