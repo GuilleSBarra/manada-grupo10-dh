@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>MaNaDa</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet">
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="news">
             <p>Envios gratis a todo el país</p>
@@ -35,7 +34,7 @@
             </div>
 
             <div class="login-register">
-                <a href="/ingreso"><i class="far fa-heart"></i></a>
+                <a href="/users/login"><i class="far fa-heart"></i></a>
             </div>
 
             <div class="logo-conteiner">
@@ -45,7 +44,7 @@
             </div>
 
             <div class="login-register">
-                <a href="/registro"><i class="far fa-user"></i></a>
+                <a href="/users/register"><i class="far fa-user"></i></a>
             </div>
 
             <div class="searchbar-desktop">
@@ -53,7 +52,7 @@
             </div>
 
             <div class="cart">
-                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
             </div>
 
         </section>
@@ -66,28 +65,54 @@
     </header>
 
     <main>
-        <form class="form-login" action="/" method="GET">
-            <h2>Iniciá Sesión:</h2>
 
-            <div class="login-field">
-                <input class="controls" type="text" name="Usuario" value="" placeholder="Usuario / Email">
-                <span></span>
-            </div>
+        <h1 class="shop-header">Shop</h1>
 
-            <div class="login-field">
-                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
-                <span></span>
-            </div>
+        <section class="shop">
+                <article class="shop-product">
+                    <img src="../../Public/img/montura.JPG">
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <ul type="none">
+                        <li class="description">Montura</li>
+                        <li class="actual-price">$6.770</li>
+                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                    </ul>
+                </article>
 
-            <div class="form-button">
-                <button type="submit" class="send-button">Ingresar</button>
-            </div>
+                <article class="shop-product">
+                    <img src="../../Public/img/montura.JPG">
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <ul type="none">
+                        <li class="description">Montura</li>
+                        <li class="actual-price">$6.770</li>
+                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                    </ul>
+                </article>
 
-            <div class="form-bottom">
-                <p class="link"> ¿Olvidaste tu contraseña? Hace click <a href="#">aquí </a></p>
-                <p class="link">¿Todavía no tenes cuenta? <a href="/registro">Registrarme </a></p>
-            </div>
-        </form>
+                <article class="shop-product">
+                    <img src=".../../Public/img/cabezada.jpg">
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <ul type="none">
+                        <li class="description">Cabezada</li>
+                        <li class="actual-price">$6.770</li>
+                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                    </ul>
+                </article>
+
+                <article class="shop-product">
+                    <img src="../../Public/img/cabezada.jpg">
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <ul type="none">
+                        <li class="description">Cabezada</li>
+                        <li class="actual-price">$6.770</li>
+                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                    </ul>
+                </article>
+        </section>
     </main>
 
     <footer>

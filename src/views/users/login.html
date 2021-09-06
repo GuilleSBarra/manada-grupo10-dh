@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet">
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="news">
             <p>Envios gratis a todo el país</p>
@@ -34,7 +35,7 @@
             </div>
 
             <div class="login-register">
-                <a href="/ingreso"><i class="far fa-heart"></i></a>
+                <a href="/users/ingreso"><i class="far fa-heart"></i></a>
             </div>
 
             <div class="logo-conteiner">
@@ -44,7 +45,7 @@
             </div>
 
             <div class="login-register">
-                <a href="/registro"><i class="far fa-user"></i></a>
+                <a href="/users/registro"><i class="far fa-user"></i></a>
             </div>
 
             <div class="searchbar-desktop">
@@ -52,7 +53,7 @@
             </div>
 
             <div class="cart">
-                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
             </div>
 
         </section>
@@ -64,12 +65,27 @@
         </div>
     </header>
 
-    <main class="main-cart">
-        <p1 class="empty-cart">Tu carrito está vacío</p1>
+    <main>
+        <form class="form-login" action="/" method="GET">
+            <h2>Iniciá Sesión:</h2>
 
-        <form class="form-login" action="/shop" method="GET">
+            <div class="login-field">
+                <input class="controls" type="text" name="Usuario" value="" placeholder="Usuario / Email">
+                <span></span>
+            </div>
+
+            <div class="login-field">
+                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
+                <span></span>
+            </div>
+
             <div class="form-button">
-                <button type="submit" class="send-button">Volver a la tienda</button>
+                <button type="submit" class="send-button">Ingresar</button>
+            </div>
+
+            <div class="form-bottom">
+                <p class="link"> ¿Olvidaste tu contraseña? Hace click <a href="#">aquí </a></p>
+                <p class="link">¿Todavía no tenes cuenta? <a href="/users/registro">Registrarme </a></p>
             </div>
         </form>
     </main>
