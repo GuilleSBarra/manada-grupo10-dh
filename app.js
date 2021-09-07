@@ -1,11 +1,14 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-let usersRoute = require('./src/Routes/users.routes');
-let productsRoute = require('./src/Routes/products.routes');
-let mainRoute = require('./src/Routes/main.routes')
+const mainRoute = require('./src/routes/main.routes')
+const usersRoute = require('./src/routes/users.routes');
+const productsRoute = require('./src/routes/products.routes');
 
-app.use(express.static(path.join(__dirname, '/src/public')))
+app.set('views', path.join(__dirname, "./src/views"));
+
+/*app.use(express.static(path.join(__dirname, '/src/public')))*/
+app.use(express.static('./src/public'));
 
 app.use ('/', mainRoute)
 app.use ('/users', usersRoute)

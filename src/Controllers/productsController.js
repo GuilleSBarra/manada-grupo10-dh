@@ -1,11 +1,9 @@
-const path = require('path');
-
 let carrito = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/products/cart.html"))
+    res.render('./products/cart.ejs');
 };
 
 let shop = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/products/shop.html"))
+    res.render('./products/shop.ejs');
 };
 
 module.exports = { carrito, shop }

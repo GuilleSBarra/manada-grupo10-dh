@@ -1,11 +1,9 @@
-const path = require('path');
-
 let register = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/users/register.html"))
+    res.render('./users/register.ejs');
 };
 
 let login = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/users/login.html"))
+    res.render('./users/login.ejs');
 };
 
 module.exports = { register, login }
