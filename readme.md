@@ -26,3 +26,5 @@ Sitios de referencia de diseño: se tomaron como ejemplo para el diseño del wir
 2) https://brittanychiang.com/
 3) https://titusklein.com/
 
+# FeedBack Sprint 1
+Buen dia muchachos, estoy gratamente sorprendido por su trabajo y desarrollo , calificiacion (10/10 )
