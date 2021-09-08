@@ -1,68 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/styles-1.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="news">
-            <p>Envios gratis a todo el país</p>
-        </div>
-
-        <section class="main-header">
-            <nav class="main-navbar">
-                <ul type="none" class="nav-bar">
-                    <li><a href="/products/shop" alt="Ver todo">Ver todo</a></li>
-                    <li><a href="/products/shop" alt="Jinete">Jinete</a></li>
-                    <li><a href="/products/shop" alt="Equipo y Accesorios">Equipo y Accesorios</a></li>
-                    <li><a href="/products/shop" alt="Cuidados del Caballo">Cuidados del Caballo</a></li>
-                    <li><a href="/products/shop" alt="Veterinaria">Veterinaria</a></li>
-                </ul>
-            </nav>
-
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <div class="login-register">
-                <a href="/users/ingreso"><i class="far fa-heart"></i></a>
-            </div>
-
-            <div class="logo-conteiner">
-                <a href="/">
-                    <h1>Ma Na Da</h1>
-                </a>
-            </div>
-
-            <div class="login-register">
-                <a href="/users/registro"><i class="far fa-user"></i></a>
-            </div>
-
-            <div class="searchbar-desktop">
-                <i class="fas fa-search"></i>
-            </div>
-
-            <div class="cart">
-                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-
-        </section>
-
-        <div class="div-searchbar">
-            <form action="/" method="GET" class="form-searchbar">
-                <input type="text" placeholder="¿Qué estás buscando?" class="search-bar"><i class="fas fa-search"></i>
-            </form>
-        </div>
-    </header>
+<%- include('../partials/head.ejs') %>
+<body>    
+    <%- include('../partials/header') %>
 
     <main class="main-cart">
         <p1 class="empty-cart">Tu carrito está vacío</p1>
@@ -74,52 +12,6 @@
         </form>
     </main>
 
-    <footer>
-        <ul type="none">
-            <section class="free-shipping">
-                <i class="fas fa-shipping-fast"></i>
-                <li>ENVÍO GRATIS A TODO EL PAÍS</li>
-            </section>
-
-            <section class="contact-us">
-                <i class="fas fa-envelope"></i>
-                <li>CONTACTANOS</li>
-            </section>
-
-            <section class="befenefits">
-                <i class="fas fa-smile-wink"></i>
-                <li>BENEFICIOS DE COMPRAR ONLINE</li>
-            </section>
-
-            <section class="find-store">
-                <i class="fas fa-map-marked-alt"></i>
-                <li>ENCONTRÁ TU TIENDA</li>
-            </section>
-        </ul>
-
-        <div class="footer-media">
-            <section class="footer-seo">
-                <p>VIVÍ LA EQUITACIÓN COMO UN VERDADERO JINETE</p>
-            </section>
-
-            <form action="/" method="GET" class="footer-newsletter">
-                <input type="text" placeholder="Email" class="newsletter">
-                <button type="submit" class="footer-button">Suscribirse</button>
-            </form>
-
-            <section class="footer-socialmedia">
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-            </section>
-
-        </div>
-        <section class="copyright">
-            <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
-        </section>
-    </footer>
+    <%- include('../partials/footer') %>
 </body>
-
 </html>

@@ -1,0 +1,22 @@
+[
+    {
+        "description": "Jinete",
+        "image": "./img/jinete.jpg",
+        "imageHover": "./img/jinete-hover.jpg"
+    },
+    {
+        "description": "Equipo y Accesorios",
+        "image": "./img/accesorios.jpg",
+        "imageHover": "./img/accesorios-hover.jpg"
+    },
+    {
+        "description": "Cuidados del caballo",
+        "image": "./img/cuidados.jpg",
+        "imageHover": "./img/cuidados-hover.jpg"
+    },
+    {
+        "description": "Veterinaria",
+        "image": "./img/veterinario.jpg",
+        "imageHover": "./img/veterinario-hover.jpg"
+    }
+]
