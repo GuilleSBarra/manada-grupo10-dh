@@ -1,9 +1,9 @@
-let register = (req, res) => {
-    res.render('./users/register.ejs');
-};
+let controller = {
+register:(req, res) => {
+    res.render('./users/register.ejs')},
 
-let login = (req, res) => {
-    res.render('./users/login.ejs');
-};
+login: (req, res) => {
+    res.render('./users/login.ejs')}
+}
 
-module.exports = { register, login }
+module.exports = controller
