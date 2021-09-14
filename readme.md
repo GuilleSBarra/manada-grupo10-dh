@@ -28,3 +28,18 @@ Sitios de referencia de diseño: se tomaron como ejemplo para el diseño del wir
 
 # FeedBack Sprint 1
 Buen dia muchachos, estoy gratamente sorprendido por su trabajo y desarrollo , calificiacion (10/10 )
+
+# FeedBack Sprint 2
+Buen dia muchachos, 
+Antes debo decirles que estoy muy impresionado por lo sencillo y bello que esta su sitio me volaron la cabeza con el efecto que le hicieron a los items cuando le hacemos hover al mismo , teniendo encuenta que lo hicieron sin js y a puro pulso los felicito!!.
+
+## Recomendaciones 
+- si bien encuentro todos los items que el sprint requiere , lo enlaces estan apuntando todos al mismo lado , tratemos de darle el destino correspondiente a cada uno de los enlaces.
+
+- No me estan agregando el archivo retro.md  (aca quiero que reflexionen que les quiero decir con este comentario , teniendo encuenta que tienen el archivo scrum.md)
+
+- Por que solo hay dos participantes en los commits? por que no veo commits del integrante Marco Condinanzo? que estrategia estan tomando para el ?
+
+
+## calificiacion del sprint 2
+felicitaciones por su trabajo muchachos (8/10)
