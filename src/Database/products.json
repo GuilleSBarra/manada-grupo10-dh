@@ -1,22 +1,26 @@
 [
     {
+        "id": "0",
         "image": "../img/montura.JPG",
-        "description": "Montura",
+        "description": "Montura-1",
+        "actualPrice": "$7.770"
+    },
+    {
+        "id": "1",
+        "image": "../img/montura.JPG",
+        "description": "Montura-2",
+        "actualPrice": "$5.770"
+    },
+    {
+        "id": "2",
+        "image": "../img/montura.JPG",
+        "description": "Montura-3",
         "actualPrice": "$6.770"
     },
     {
+        "id": "3",
         "image": "../img/montura.JPG",
-        "description": "Montura",
-        "actualPrice": "$6.770"
-    },
-    {
-        "image": "../img/montura.JPG",
-        "description": "Montura",
-        "actualPrice": "$6.770"
-    },
-    {
-        "image": "../img/montura.JPG",
-        "description": "Montura",
-        "actualPrice": "$6.770"
+        "description": "Montura-4",
+        "actualPrice": "$2.770"
     }
 ]

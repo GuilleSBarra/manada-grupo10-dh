@@ -13,6 +13,21 @@
 *   Main Deals - Articles / Products
 */
 
+.label-admin {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    margin-top: 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.admin-img {
+    text-align: center;
+    max-width: 220px;
+}
+
 main p {
     margin: 20px 0;
 }
@@ -247,14 +262,14 @@ footer ul li {
 *
 */
 
-.form-register, .form-login {
+.form-register, .form-login, .form-admin {
     width: 90%;
     margin: auto;
     margin-top: 170px;
     margin-bottom: 200px;
 }
 
-.form-login h2, .form-register h2 {
+.form-login h2, .form-register h2, .form-admin h2 {
     margin: 0;
     text-align: center;
     height: 40px;
@@ -262,14 +277,15 @@ footer ul li {
     border-bottom: 1px solid;
 }
 
-.register-field, .login-field {
+.register-field, .login-field, .admin-field{
     display: block;
     margin: 20px 0;
     font-size: 18px;
     width: 100%;
+    text-align: center  ;
 }
 
-.controls {
+.controls, .admin {
     width: 100%;
     border: none;
     border-radius: 7px;
@@ -278,6 +294,7 @@ footer ul li {
     background: #252323;
     font-size: 14px;
     font-weight: bold;
+    color: white;
 }
 
 .form-button {
@@ -308,11 +325,11 @@ footer ul li {
     background-color: #0022AA;
 }
 
-.form-login a, .form-register a {
+.form-login a, .form-register a, .form-admin a {
     color: #017bab;
 }
 
-.form-login a:hover, .form-register a:hover{
+.form-login a:hover, .form-register a:hover, .form-admin a:hover {
     text-decoration: underline;
 }
 
@@ -650,17 +667,17 @@ footer ul li {
     *
     */
 
-    .form-register h2, .form-login h2 {
+    .form-register h2, .form-login h2, .form-admin h2 {
         width: 50%;
         margin: auto;
     }
 
-    .register-field, .login-field {
+    .register-field, .login-field, .admin-field {
         width: 50%;
         margin: auto;
     }
 
-    .controls {
+    .controls, .admin {
         margin: 20px 0;
     }
 

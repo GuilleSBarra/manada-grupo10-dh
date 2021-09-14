@@ -5,5 +5,4 @@ const router = express.Router()
 router.get("/registro", controller.register)
 router.get("/ingreso", controller.login)
 
-
 module.exports = router
