@@ -5,8 +5,9 @@ https://digitalhouse-g10.atlassian.net/wiki/spaces/DHG10/pages/33044/Retrospecti
 SPRINT 2:
 
 Start doing:
-Work with branches in Git
-Start using Heroku to deployments
+Work with branches in Git 
+Start using Heroku to deployments 
+
 Use Jira to manage stories
 Use Confluence to manage Weekly & Retrospective meetings
 
