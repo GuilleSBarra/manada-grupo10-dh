@@ -22,3 +22,8 @@ Daily communications and update of the work board
 Communication for the division of tasks
 Weekly follow-up meetings
 Support in doubts or queries
+
+
+Hola
+Esto
+Es un Test
