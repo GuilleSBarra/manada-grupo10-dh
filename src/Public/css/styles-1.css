@@ -52,10 +52,10 @@ a {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", "Open Sans";
 }
 
 body {
-    font-family: roboto;
     font-size: 17px;
 }
 
@@ -121,6 +121,7 @@ h1 {
     padding: 0 20px;
     text-align: center;
     margin-top: 8px;
+    padding-bottom: 10px;
 }
 
 .search-bar {
@@ -149,36 +150,6 @@ h1 {
 *
 *
 */
-
-footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    font-size: 15px;
-    padding-top: 30px;
-}
-
-footer ul section {
-    width: 50%;
-    color: #fffefc;
-    background-color: #080808;
-    border: 1.5px solid #fffefc;
-    padding: 40px 0;
-}
-
-footer ul i {
-    margin-bottom: 15px;
-}
-
-footer ul li {
-    margin: 15px 0;
-    font-size: 13px;
-    width: 100%;
-    max-width: 120px;
-    margin: auto;
-}
 
 .footer-media {
     display: block;
@@ -365,25 +336,10 @@ footer ul li {
 *
 *
 * Media Query: cellphones
-* Main Page
+* Home Page
 *
 *
 */
-
-.banner {
-    width: 100%;
-    margin: auto;
-}
-
-.categories-banner {
-    width: 100%;
-    margin-top: 140px;
-}
-
-.category-maintext {
-    width: 90%;
-    margin: auto;
-}
 
 .category-section {
     margin-top: 70px 0;
@@ -707,10 +663,7 @@ footer ul li {
     *
     */
 
-    .categories-banner {
-        width: 100%;
-        margin-top: 80px;
-    }
+
 
     .categories {
         text-align: center;
@@ -745,9 +698,7 @@ footer ul li {
         opacity: 1;
     }
 
-    .categories-banner {
-        margin-top: 80px;
-    }
+
 
     .dealproduct, .shop-product {
         width: 22%;

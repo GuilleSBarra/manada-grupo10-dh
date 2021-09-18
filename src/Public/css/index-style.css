@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", "Open Sans";
+    text-decoration: none;
+}
+
+
+/*
+* Section: index-baner
+*/
+
+.index-banner {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.index-banner-img {
+    min-height: 60vh;
+    width: 100%;
+    margin-top: 130px;
+    object-fit: cover;
+}
+
+.index-block {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    width: 100%;
+    max-width: 60%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 25px;
+}
+
+.index-header, .index-maintext {
+    color: #FFF;
+    font-size: 1.2em;
+}
+
+.index-button {
+    background-color: #FFF;
+    color:rgb(0, 0, 0);
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 110px;
+}
+
+
+/*
+* Section: index-main
+*/
+
+.index-main {
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+
+/*
+* Section: index-benefits
+*/
+
+.index-benefits ul {
+    width: 85%;
+    margin: auto;
+}
+
+.index-benefits div {
+    width: 100%;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.index-benefits li {
+    margin: 20px 0;
+}
+
+.index-benefits i {
+    font-size: 2em;
+}
+
+
+/*
+* Section: index-categories
+*/
+
+.index-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f6f8fb;
+    border-radius: 10px;
+}
+
+.index-categories div {
+    margin: 0 30px;
+}
+
+.index-categories h3 {
+    margin: 5px 0;
+}
+
+.index-categories a {
+    font-weight: 600;
+    color: salmon;
+}
+
+.index-categories i {
+    padding-left: 5px;
+    color: salmon;
+}
+
+.fa-chevron-circle-left, .fa-chevron-circle-right{
+    font-size: 30px;
+}
+
+
+
+
+
+/* Tablets */
+@media (min-width: 471px) {
+    .index-block {
+        bottom: 25%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 941px){
+    .index-banner-img {
+        width: 100%;
+        padding-top: 30px;
+    }
+}
+
+
+

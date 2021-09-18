@@ -1,67 +1,135 @@
 <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
-    
-        <main>
 
-            <div class="banner">
-                <img src="./img/banner.jpg" alt="Banner" class="categories-banner">
-            </div>
+    <body>
+        <%- include('./partials/header') %>
 
-            <section class="category-maintext">
-                <h1 class="categories">MA NA DA</h1>
-                <p>
-                    Aquí estás y eres de los nuestros, no quieres las típicas vestimentas de polo, ni esos logotipos
-                    que
-                    usan en los clubes. Quieres lo mejor, pero tampoco quieres que te cobren 10 veces su valor
-                    Buscas
-                    artículos con personalidad propia, impactantes y que te definan.
-                </p>
-                <p>
-                    Pero no solo ofrecemos los mejores artículos para el jinete, sino que también podrás encontrar
-                    una
-                    alta
-                    gama de accesorios para que tu caballo sea el mejor del establo.
-                    Y no solo eso, sino que podrás encontrar toda la información de veterinaria equina que necesitas
-                    para
-                    elegir los mejores productos y servicios.
-                </p>
-            </section>
+            <main>
 
-            <section class="category-section">
-                <% categories.forEach(category => { %>
-                    <article class="category">
-                        <a href="/shop">
-                            <img src= <%= category.image %> alt= <%= category.description %>>
-                            <img src= <%= category.imageHover %> alt= <%= category.description %> class="category-imghover">
-                        </a>
-                        <article class="category-description">
-                            <p class="description"> <%= category.description %> </p>
-                        </article>
-                    </article>
-                <% }); %>
-            </section>
+                <section class="index-banner">
+                    <img src="./img/index-banner.jpg" alt="Banner" class="index-banner-img">
 
-            <h1 class="deals-header">Oportunidades</h1>
+                    <div class="index-block">
+                        <h1 class="index-header">
+                            Todo lo que necesitan tu caballo y vos
+                        </h1>
+                        <p class="index-maintext">
+                            Artículos para el Jinete, el Caballo, y más..
+                        </p>
+                        <a class="index-button" href="/shop">Ver Tienda</a>
+                    </div>
+                </section>
 
-            <section class="deals">
-                <% salesProducts.forEach(product => { %>
+                <section class="index-main">
+                    <h1>MA NA DA</h1>
+                    <p>¡Bienvenido!</p>
+                    </p>¡Estamos emocionados de que visites nuestra tienda! Somos una tienda de
+                    ropa ecuestre y ropa occidental de propiedad y operación familiar, donde la calidad y el
+                    servicio al cliente son nuestra principal prioridad. Estamos orgullosos de nuestra selección de
+                    tácticas occidentales e inglesas, y nos esforzamos por ofrecer una amplia variedad para cada
+                    jinete y caballo.</p>
+                </section>
+
+                <section class="index-benefits">
+                    <ul type="none">
+                        <div class="free-shipping">
+                            <i class="fas fa-shipping-fast"></i>
+                            <li>
+                                <h4>Envío Gratis</h4>
+                            </li>
+                            <li>Con la compra de $15.000 o más</li>
+                        </div>
+
+                        <div class="contact-us">
+                            <i class="fas fa-headset"></i>
+                            <li>
+                                <h4>Atención al Cliente</h4>
+                            </li>
+                            <li>Podes contactarnos 24x7 por todos nuestros canales oficiales</li>
+                        </div>
+
+                        <div class="befenefits">
+                            <i class="far fa-smile-wink"></i>
+                            <li>
+                                <h4>Programa de Puntos</h4>
+                            </li>
+                            <li>Acumulá puntos por cada compra que realices en nuestra web</li>
+                        </div>
+                    </ul>
+                </section>
+
+                <section class="index-categories">
+                    <div>
+                        <h3>Jinetes</h3>
+                        <a class="index-link-categories" href="/shop">Ver Tienda<i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <div>
+                        <i class="fas fa-chevron-circle-left"><i class="fas fa-chevron-circle-right"></i></i>
+                    </div>
+                </section>
+
+                <section class="index-products">
                     <article class="dealproduct">
-                        <img src= <%= product.image  %> >
-                        <i class="far fa-star"></i>
-                        <i class="fas fa-shopping-cart"></i>
+                        <img src="/img/products/helmet.jpg">
                         <ul type="none">
-                            <li class="description"><%= product.description  %></li>
-                            <li class="previous-price"><%= product.previousPrice  %></li>
-                            <li class="actual-price"><%= product.actualPrice  %></li>
-                            <li class="discount"><%= product.discount  %></li>
-                            <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                            <li class="product-type">
+                                Head
+                            </li>
+                            <li class="product-name">
+                                Samshield Shadowmatt Helmet
+                            </li>
+                            <li class="product-price">
+                                $5.900
+                            </li>
                         </ul>
                     </article>
-                <% }); %>
-            </section>
-        </main>
+                </section>
 
-        <%- include('./partials/footer') %>
-</body>
-</html>
+                <section class="category-section">
+                    <% categories.forEach(category=> { %>
+                        <article class="category">
+                            <a href="/shop">
+                                <img src=<%=category.image %> alt= <%= category.description %>>
+                                    <img src=<%=category.imageHover %> alt= <%= category.description %>
+                                        class="category-imghover">
+                            </a>
+                            <article class="category-description">
+                                <p class="description">
+                                    <%= category.description %>
+                                </p>
+                            </article>
+                        </article>
+                        <% }); %>
+                </section>
+
+                <h1 class="deals-header">Oportunidades</h1>
+
+                <section class="deals">
+                    <% salesProducts.forEach(product=> { %>
+                        <article class="dealproduct">
+                            <img src=<%=product.image %> >
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-shopping-cart"></i>
+                            <ul type="none">
+                                <li class="description">
+                                    <%= product.description %>
+                                </li>
+                                <li class="previous-price">
+                                    <%= product.previousPrice %>
+                                </li>
+                                <li class="actual-price">
+                                    <%= product.actualPrice %>
+                                </li>
+                                <li class="discount">
+                                    <%= product.discount %>
+                                </li>
+                                <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                            </ul>
+                        </article>
+                        <% }); %>
+                </section>
+            </main>
+
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>
