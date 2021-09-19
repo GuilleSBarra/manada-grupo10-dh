@@ -1,12 +1,9 @@
 const categories = require('../database/categories.json');
-const salesProducts = require('../database/productsSale.json');
+const products = require('../database/products.json');
 
 const controller = {
   home: (req, res) => {
-    res.render('index.ejs', {
-      salesProducts: salesProducts,
-      categories: categories
-    })
+    res.render('index.ejs', { products, categories })
   }
 }
 

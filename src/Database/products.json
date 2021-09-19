@@ -1,26 +1,150 @@
 [
     {
         "id": "0",
-        "image": "../img/montura.JPG",
-        "description": "Montura-1",
-        "actualPrice": "$7.770"
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
     },
     {
         "id": "1",
-        "image": "../img/montura.JPG",
-        "description": "Montura-2",
-        "actualPrice": "$5.770"
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
     },
     {
         "id": "2",
-        "image": "../img/montura.JPG",
-        "description": "Montura-3",
-        "actualPrice": "$6.770"
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
     },
     {
         "id": "3",
-        "image": "../img/montura.JPG",
-        "description": "Montura-4",
-        "actualPrice": "$2.770"
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
+    },
+    {
+        "id": "4",
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
+    },
+    {
+        "id": "5",
+        "image": "../img/products/helmet.jpg",
+        "category": "Jinete",
+        "type": "Head",
+        "name": "Samshield Shadowmatt Helmet",
+        "price": "$7.770"
+    },
+
+    {
+        "id": "6",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+    {
+        "id": "7",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+    {
+        "id": "8",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+    {
+        "id": "9",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+    {
+        "id": "10",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+    {
+        "id": "11",
+        "image": "../img/products/saddle.jpg",
+        "category": "Equipo y Accesorios",
+        "type": "Jump Saddle",
+        "name": "Wintec 500 Jump Saddle",
+        "price": "$8.150"
+    },
+
+
+
+    {
+        "id": "12",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
+    },
+    {
+        "id": "13",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
+    },
+    {
+        "id": "14",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
+    },
+    {
+        "id": "15",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
+    },
+    {
+        "id": "16",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
+    },
+    {
+        "id": "17",
+        "image": "../img/products/bandage.jpg",
+        "category": "Cuidados del caballo",
+        "type": "Self-Sealing",
+        "name": "Sealtex Latex Bandage 3' x 36",
+        "price": "$1.100"
     }
 ]
