@@ -307,31 +307,38 @@
     .index-flex-categories-products {
         display: flex;
         justify-content: space-between;
+        max-width: 1280px;
         width: 90%;
         margin: auto;
         margin-top: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 7%;
     }
 
     .index-categories {
-        width: 60%;
-        padding-bottom: 60vh;
+        max-width: 400px;
+        max-height: 650px;
+        height: 100vh;
+        padding-bottom: 70vh;
+        margin-left: 2%;
         position: relative;
     }
 
     .index-categories-2 {
-        width: 60%;
-        padding-bottom: 60vh;
+        max-width: 400px;
+        max-height: 650px;
+        height: 100vh;
+        padding-bottom: 70vh;
+        margin-right: 2%;
         position: relative;
         order: 1;
     }
 
     .index-categories img {
         display: block;
-        width: 80%;
+        width: 90%;
         height: 65%;
         position: absolute;
-        left: 10%;
+        left: 5%;
         bottom: 12%;
         border-radius: 10px;
         transition: all 750ms;
@@ -343,10 +350,10 @@
 
     .index-categories-2 img {
         display: block;
-        width: 80%;
+        width: 90%;
         height: 65%;
         position: absolute;
-        left: 10%;
+        left: 5%;
         bottom: 12%;
         border-radius: 10px;
         transition: all 750ms;
@@ -357,7 +364,8 @@
     }
 
     .index-products {
-        width: 100%;
+        width: 60%;
+        max-height: 650px;
     }
 
     .index-products article {
