@@ -49,6 +49,13 @@
     display: inline-block;
     margin-top: 10px;
     width: 110px;
+    border-radius: 5px;
+    transition: all 450ms;
+}
+
+.index-button:hover {
+    background-color: rgb(80, 100, 140);
+    color: #FFF;
 }
 
 
@@ -109,14 +116,20 @@
     margin: 5px 0;
 }
 
-.index-categories a {
+.index-categories .index-link-categories {
     font-weight: 600;
     color: salmon;
+    transition: all 450ms;
 }
 
 .index-categories i {
     padding-left: 5px;
     color: salmon;
+    transition: all 450ms;
+}
+
+.index-categories a:hover, .index-categories a:hover i {
+    color: rgb(80, 100, 140);
 }
 
 .index-categories-2 {
@@ -135,14 +148,20 @@
     margin: 5px 0;
 }
 
-.index-categories-2 a {
+.index-categories-2 .index-link-categories {
     font-weight: 600;
     color: salmon;
+    transition: all 450ms;
 }
 
 .index-categories-2 i {
     padding-left: 5px;
     color: salmon;
+    transition: all 450ms;
+}
+
+.index-categories-2 a:hover, .index-categories-2 a:hover i {
+    color: rgb(80, 100, 140);
 }
 
 .fa-chevron-circle-left, .fa-chevron-circle-right{
@@ -183,6 +202,11 @@
     border-radius: 50%;
     color: #818285;
     font-size: 0.8em;
+    transition: all 450ms;
+}
+
+.index-products .fa-heart:hover {
+    color: salmon;
 }
 
 .index-products img {
@@ -220,25 +244,16 @@
 */
 
 .index-background-img-mobile {
-    background-image: url("../img/index-background-mobile.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("../img/index-background-mobile.jpg");
     background-attachment: fixed;
     background-size: cover;
     height: 400px;
-    margin: auto;
     background-color: rgba(0,0,0,0.5);
     position: relative;
     display: flex;
 }
 
-.index-background-img-overlay {
-    background-color: #000;
-    opacity: 0.6;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.index-background-img-overlay h3 {
+.index-background-img-mobile h3 {
     display: block;
     color: #FFF;
     font-weight: 900;
@@ -281,7 +296,7 @@
         bottom: 25%;
     }
 
-    .index-background-img-overlay h3 {
+    .index-background-img-mobile h3 {
         top: 40%;
     }
 }
@@ -341,13 +356,8 @@
         left: 5%;
         bottom: 12%;
         border-radius: 10px;
-        transition: all 750ms;
     }
-
-    .index-categories img:hover {
-        opacity: 0;
-    }
-
+    
     .index-categories-2 img {
         display: block;
         width: 90%;
@@ -356,11 +366,53 @@
         left: 5%;
         bottom: 12%;
         border-radius: 10px;
-        transition: all 750ms;
     }
 
-    .index-categories-2 img:hover {
+    .index-categories-img-overlay {
+        display: block;
+        width: 90%;
+        height: 65%;
+        position: absolute;
+        left: 5%;
+        bottom: 12%;
+        border-radius: 10px;
         opacity: 0;
+        transition: all 750ms;
+    }
+    
+    .index-categories-img-overlay p {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        color: #FFFFFF;
+        transition: all 950ms;
+    }
+
+    .index-categories-button {
+        position: absolute;
+        left: 36%;
+        top: 80%;
+        background-color: #FFF;
+        color: #000;
+        padding: 10px;
+        display: inline-block;
+        margin-top: 10px;
+        width: 110px;
+        border-radius: 5px;
+        transition: all 950ms;
+    }
+
+    .index-categories-img-overlay:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .index-categories-img-overlay:hover p {
+        transform: translateY(-550%);
+    }
+
+    .index-categories-img-overlay:hover .index-categories-button {
+        transform: translateY(-400%);
     }
 
     .index-products {
@@ -373,14 +425,7 @@
     }
 
     .index-background-img-desktop {
-        background-image: url("../img/index-background-desktop.jpg");
-        background-attachment: fixed;
-        background-size: cover;
-        height: 400px;
-        margin: auto;
-        background-color: rgba(0,0,0,0.5);
-        position: relative;
-        display: flex;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/index-background-desktop.jpg");
     }
 }
 

@@ -1,11 +1,16 @@
 <div>
-    <h3><%= category.name %></h3>
-    <a class="index-link-categories" href="/shop">Ver Tienda<i
-            class="fas fa-angle-right"></i></a>
+    <h3>
+        <%= category.name %>
+    </h3>
+    <a class="index-link-categories" href="/shop">Ver Tienda<i class="fas fa-angle-right"></i></a>
 </div>
 <div>
-    <img class="index-category-img-hover" src=<%=category.imageHover %> >
-    <img class="index-category-img" src=<%=category.image %> >
+    <img src=<%= category.imageHover %> >
+    <img class="index-categories-img" src=<%= category.image %> >
+    <div class="index-categories-img-overlay">
+        <p>Holaaaaaa</p>
+        <a class="index-categories-button" href="/shop">Ver Tienda</a>
+    </div>
 </div>
 <div>
     <i class="fas fa-chevron-circle-left"><i class="fas fa-chevron-circle-right"></i></i>
