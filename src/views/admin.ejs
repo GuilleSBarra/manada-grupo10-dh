@@ -8,24 +8,77 @@
 
             <div class="admin-field">
                 <label class="label-admin">Imágen del Producto:</label>
-                <input class="admin-img" type="file" name="newProductImage" accept=".jpg .jpeg" multiple>
+                <input class="admin-img" type="file" name="image" accept=".jpg .jpeg" multiple>
                 <span></span>
             </div>
 
             <div class="admin-field">
-                <input class="admin" type="text" name="newProductDescription" id="newProductDescription" placeholder="Descripción del producto">
+                <input class="admin" type="text" name="name" id="newProductName" placeholder="Nombre del producto">
                 <span></span>
             </div>
 
             <div class="admin-field">
-                <input class="admin" type="text" name="newProductPrice" id="newProductPrice" placeholder="Precio del Producto">
+                <input class="admin" type="text" name="description" id="newProductDescription" placeholder="Descripción del producto">
                 <span></span>
             </div>
+
+            <div class="admin-field">
+                <label for="category">Categoría</label>
+                <div class="control">
+                    <select name="category" id="category">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Rider">Jinete</option>
+                        <option value="horseCare">Cuidado del Caballo</option>
+                        <option value="Veterinary">Veterinaria</option>
+                        <option value="Accesories">Equipo y accesorios</option>
+                    </select>
+                </div>
+
+                <div class="admin-field">
+                    <label for="size">Talle</label>
+                    <div class="control">
+                        <select name="size" id="size">
+                            <option value="">Seleccione una opción</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+    
+
+            <div class="admin-field">
+                <input class="admin" type="text" name="Price" id="newProductPrice" placeholder="Precio del Producto">
+                <span></span>
+            </div>
+
+            <div class="admin-field">
+                <input class="admin" type="text" name="keywords" id="keywords" placeholder="Palabras clave">
+                <span></span>
+            </div>
+
+            <div class="admin-field">
+                <label for="inSale">En oferta</label>
+                    <input type="radio" name="inSale" value="true">Si </input>      
+                    <input type="radio" name="inSale" value="false">No </input>     
+                </div>
+
+                <div class="admin-field">
+                    <input class="admin" type="text" name="discountPrice" id="discountPrice" placeholder="Precio en descuento">
+                    <span></span>
+                </div>            
+                
+                <div class="admin-field">
+                    <input class="admin" type="text" name="discount" id="discount" placeholder="Porcentaje de descuento">
+                    <span></span>
+                </div>
 
             <div class="form-button">
                 <button type="submit" class="send-button">Enviar</button>
             </div>
         </form>
+
 
         <form class="form-admin" action="/admin/edit/0" method="GET">
             <h2>Editar Productos:</h2>

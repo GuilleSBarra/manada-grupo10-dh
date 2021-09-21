@@ -7,12 +7,22 @@ let controller = {
 
     createProduct: (req, res) => {
         products.push({
-            image: req.body.newProductImage,
+            id:"" ,
+            // VER COMO AGREGAR EL ID DE MANERA AUTOMÁTICA.
+            name: req.body.newProductName,
             description: req.body.newProductDescription,
-            actualPrice: req.body.newProductPrice
+            image: req.body.newProductImage,
+            category: req.body.category,
+            size: req.body.size,
+            Price: req.body.Price,
+            keywords: req.body.keywords,
+            inSale: req.body.inSale,
+            discountPrice: req.body.discountPrice,
+            discount: req.body.discount
         });
 
-        res.redirect('/admin');
+        // VER COMO REDIRIGIR AL DETALLE DLE PRODUCTO CARGADO
+        res.redirect('/products');
     },
 
     adminEdit: (req, res) => {

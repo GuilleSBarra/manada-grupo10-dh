@@ -1,0 +1,27 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header') %>
+    
+    <main>
+
+        <h1 class="shop-header">Shop</h1>
+
+        <section class="shop">
+            <% products.forEach(product => { %>
+                <article class="shop-product">
+                    <img src= <%= product.image  %> >
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <ul type="none">
+                        <li class="description"> <%= product.description  %> </li>
+                        <li class="actual-price"> <%= product.Price  %> </li>
+                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
+                    </ul>
+                </article>
+            <% }); %>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
