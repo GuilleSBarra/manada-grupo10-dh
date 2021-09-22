@@ -1,9 +1,11 @@
-<%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
     
     <main>
-        <form class="form-admin" action="/admin" method="POST">
+        <form class="form-admin" action="/products" method="POST" enctype="multipart/form-data">
             <h2>Agregar Nuevos Productos:</h2>
 
             <div class="admin-field">
@@ -89,6 +91,6 @@
         </form>
     </main>
 
-        <%- include('./partials/footer') %>
+        <%- include('../partials/footer') %>
 </body>
 </html>
