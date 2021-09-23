@@ -24,6 +24,10 @@ let controller = {
         res.render('admin.ejs');
     },
 
+    createForm: (req, res) => {
+        res.render('./admin/createProducts.ejs')
+    },
+
     createProduct: (req, res) => {
 
         const archivo = req.file

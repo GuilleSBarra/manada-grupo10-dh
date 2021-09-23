@@ -22,13 +22,13 @@ const storage = multer.diskStorage({
 
 router.get("/", controllerProducts.shop);
 router.get("/carrito", controllerProducts.carrito);
-router.get('/:id', controllerProducts.detail)
+
 
 // Create products 
 
-router.get("/create",controllerAdmin.createProduct)
+router.get("/create",controllerAdmin.createForm)
 router.post('/',upload.single("image"), controllerAdmin.createProduct)
 
-
+router.get('/:id', controllerProducts.detail)
 
 module.exports = router;
