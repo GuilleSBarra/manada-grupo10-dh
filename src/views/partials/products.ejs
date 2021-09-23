@@ -1,15 +1,21 @@
 <article>
-    <i class="far fa-heart"></i>
-    <img src="<%= product.image %>">
-    <ul type="none">
-        <li class="product-type">
-            <%= product.type %>
-        </li>
-        <li class="product-name">
-            <%= product.name %>
-        </li>
-        <li class="product-price">
-            <%= product.price %>
-        </li>
-    </ul>
+    <div class="product-container">
+        <i class="far fa-heart"></i>
+        <img class="product-img" src="<%= product.image %>">
+        <ul type="none">
+            <li class="product-type">
+                <%= product.type %>
+            </li>
+            <li class="product-name">
+                <%= product.name %>
+            </li>
+            <li class="product-price">
+                <%= product.price %>
+            </li>
+        </ul>
+    </div>
+    <div class="product-cart">
+        <a class="product-button" href="/carrito">Añadir al Carrito</a>
+        <a class="product-quickview" href="#"> <i class="far fa-eye"></i> Vista rápida</a>
+    </div>
 </article>
