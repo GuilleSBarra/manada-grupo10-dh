@@ -1,7 +1,9 @@
 <article>
     <div class="product-container">
         <i class="far fa-heart"></i>
-        <img class="product-img" src="<%= product.image %>">
+        <a href="/products/detail/<%= product.id %>">
+            <img class="product-img" src="<%= product.image %>">
+        </a>
         <ul type="none">
             <li class="product-type">
                 <%= product.type %>

@@ -190,7 +190,7 @@
     background-color: #ebeef2;
     padding: 7px;
     border-radius: 50%;
-    color: #818285;
+    color: rgb(80, 100, 140);
     font-size: 0.8em;
     transition: all 450ms;
 }

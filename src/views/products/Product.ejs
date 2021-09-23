@@ -1,27 +1,69 @@
 <%- include('../partials/head.ejs') %>
-<body>
-    <%- include('../partials/header') %>
-    
-    <main>
 
-        <h1 class="shop-header">Shop</h1>
+    <body>
+        <%- include('../partials/header') %>
 
-        <section class="shop">
-            <% products.forEach(product => { %>
-                <article class="shop-product">
-                    <img src= <%= product.image  %> >
-                    <i class="far fa-star"></i>
-                    <i class="fas fa-shopping-cart"></i>
-                    <ul type="none">
-                        <li class="description"> <%= product.description  %> </li>
-                        <li class="actual-price"> <%= product.Price  %> </li>
-                        <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
-                    </ul>
-                </article>
-            <% }); %>
-        </section>
-    </main>
+            <main class="single-product-main">
+                <section class="single-product-title">
+                    <div>
+                        <h2>
+                            Detalle del producto: <%= product.name %>
+                        </h2>
+                    </div>
+                </section>
+                <section class="single-product-container">
+                    <div class="single-product-img-description">
+                        <div class="single-product-img">
+                            <img src=<%= product.image %> alt="product image">
+                        </div>
+                        <div class="single-product-description">
+                            <p><%= product.keywords %></p>
+                        </div>
+                    </div>
+                    <div class="single-product-detail">
+                        <article class="single-product-detail-info">
+                            <div class="single-product-rating-wishlist">
+                                <div class="single-product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="single-product-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <h2 class="single-product-detail-title">
+                                <%= product.name %>
+                            </h2>
+                            <p class="single-product-detail-price">
+                                <span class="single-product-price"><%= product.price %></span>
+                                /
+                                <b>
+                                    <%= product.discount %>% OFF
+                                </b>
+                            </p>
+                            <ul class="single-product-actions-list" type="none">
+                                <li>
+                                    <i class="fas fa-credit-card"></i>
+                                    <p>Pagá en 12 cuotas sin interes</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-store"></i>
+                                    <p>Retiro gratis en locales del vendedor</p>
+                                </li>
+                            </ul>
+                            <div class="single-product-button">
+                                <a href="/carrito" class="single-product-buy-now-button">COMPRAR AHORA</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
-    <%- include('../partials/footer') %>
-</body>
-</html>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

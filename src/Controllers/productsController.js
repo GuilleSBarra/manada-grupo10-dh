@@ -31,8 +31,8 @@ const controller = {
     },
     detail:(req,res) => {
         const id = req.params.id;
-        const product = products.find(item=>item.id === id);
-        res.render("./products/product.ejs", { products: product })}
+        let product = products.find(item=>item.id == id);
+        res.render("./products/product.ejs", { product })}
 }
 
 module.exports = controller;

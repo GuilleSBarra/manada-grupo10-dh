@@ -1,0 +1,156 @@
+.single-product-main {
+    margin-top: 240px;
+    margin-bottom: 50px;
+}
+
+.single-product-main .single-product-title {
+    font-size: 1.05em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.single-product-container {
+    width: 85%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgb(80, 100, 140);
+    padding-bottom: 20px;
+}
+
+.single-product-img-description {
+    width: 85%;
+    margin: auto;
+}
+
+.single-product-img img {
+    width: 100%;
+    padding: 15px;
+}
+
+.single-product-rating-wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.single-product-rating {
+    font-size: 0.8em;
+    color: rgb(80, 100, 140);
+}
+
+.single-product-wishlist .fa-heart {
+    background-color: #ebeef2;
+    color: rgb(80, 100, 140);
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 1em;
+    margin-right: 15px;
+    transition: all 450ms;
+}
+
+.single-product-wishlist .fa-heart:hover {
+    color: salmon;
+}
+
+.single-product-detail {
+    width: 85%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.single-product-price {
+    color: rgb(80, 100, 140);
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.single-product-actions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.single-product-actions-list li {
+    width: 45%;
+}
+
+.single-product-actions-list .fa-credit-card,
+.single-product-actions-list .fa-store {
+    color: rgb(80, 100, 140);
+    font-size: 1.4em;
+}
+
+.single-product-button {
+    max-width: 220px;
+    width: 70%;
+    margin: auto;
+}
+
+.single-product-buy-now-button {
+    display: block;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    background-color: rgb(80, 100, 140);
+    color: #FFF;
+    padding: 10px 2px;
+}
+
+
+
+
+
+/* Desktop */
+@media (min-width: 941px){
+    .single-product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+    .single-product-img-description {
+        width: 60%;
+    }
+
+    .single-product-detail {
+        margin-top: 4%;
+        margin-right: 2%;
+        width: 35%;
+    }
+
+    .single-product-detail-title,
+    .single-product-detail-price {
+        text-align: center;
+        margin-top: 55px;
+    }
+
+    .single-product-actions-list {
+        margin-top: 25%;
+    }
+
+    .single-product-actions-list li {
+        margin: 65px 0;
+    }
+
+
+
+
+    .single-product-buy-now-button {
+        position: relative;
+        background: linear-gradient(to right, rgb(40, 50, 80), rgb(40, 50, 80) 50%, rgb(80, 100, 140) 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: all 275ms ease;
+    }
+    
+    .single-product-buy-now-button:hover {
+        background-position: 0 100%;
+    }
+}

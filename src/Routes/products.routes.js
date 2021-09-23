@@ -24,11 +24,13 @@ router.get("/", controllerProducts.shop);
 router.get("/carrito", controllerProducts.carrito);
 
 
+/*** GET ONE PRODUCT ***/ 
+router.get('/detail/:id/', controllerProducts.detail); 
+
+
 // Create products 
 
 router.get("/create",controllerAdmin.createForm)
 router.post('/',upload.single("image"), controllerAdmin.createProduct)
-
-router.get('/:id', controllerProducts.detail)
 
 module.exports = router;
