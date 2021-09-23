@@ -76,8 +76,8 @@
                                 <% if (count < 6) { %>
                                     <% if (products[i].category == category.name) { %>
                                         <% count = count + 1 %>
-                                        <% let test = products[i] %>
-                                        <%- include('partials/products', { test }) %>
+                                        <% let product = products[i] %>
+                                        <%- include('partials/products', { product }) %>
                                     <% } %>
                                 <% } %>
                             <% }; %>

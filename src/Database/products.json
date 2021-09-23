@@ -7,14 +7,14 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "2XL",
-        "Price": "$1.47",
+        "price": "$1.47",
         "keywords": [
             "Beisa oryx",
             "Bulbul, black-eyed",
             "Western bearded dragon"
         ],
         "inSale": true,
-        "discountPrice": "$3.14",
+        "discountprice": "$3.14",
         "discount": 43
     },
     {
@@ -25,13 +25,13 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "L",
-        "Price": "$6.40",
+        "price": "$6.40",
         "keywords": [
             "Gull, southern black-backed",
             "Butterfly, canadian tiger swallowtail"
         ],
         "inSale": true,
-        "discountPrice": "$6.70",
+        "discountprice": "$6.70",
         "discount": 94
     },
     {
@@ -42,14 +42,14 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "3XL",
-        "Price": "$4.78",
+        "price": "$4.78",
         "keywords": [
             "Kite, black",
             "Brown lemur",
             "Black-necked stork"
         ],
         "inSale": true,
-        "discountPrice": "$6.73",
+        "discountprice": "$6.73",
         "discount": 84
     },
     {
@@ -60,7 +60,7 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "XL",
-        "Price": "$2.98",
+        "price": "$2.98",
         "keywords": [
             "Crane, sarus",
             "Iguana, common green",
@@ -69,7 +69,7 @@
             "Cliffchat, mocking"
         ],
         "inSale": false,
-        "discountPrice": "$4.50",
+        "discountprice": "$4.50",
         "discount": 21
     },
     {
@@ -80,13 +80,13 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "2XL",
-        "Price": "$9.90",
+        "price": "$9.90",
         "keywords": [
             "Turtle, eastern box",
             "European stork"
         ],
         "inSale": true,
-        "discountPrice": "$2.06",
+        "discountprice": "$2.06",
         "discount": 41
     },
     {
@@ -97,7 +97,7 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "S",
-        "Price": "$9.18",
+        "price": "$9.18",
         "keywords": [
             "North American red fox",
             "Gull, lava",
@@ -105,7 +105,7 @@
             "Tern, royal"
         ],
         "inSale": false,
-        "discountPrice": "$6.99",
+        "discountprice": "$6.99",
         "discount": 32
     },
     {
@@ -116,13 +116,13 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "L",
-        "Price": "$7.03",
+        "price": "$7.03",
         "keywords": [
             "Chestnut weaver",
             "Kafue flats lechwe"
         ],
         "inSale": false,
-        "discountPrice": "$0.72",
+        "discountprice": "$0.72",
         "discount": 90
     },
     {
@@ -133,13 +133,13 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "L",
-        "Price": "$3.74",
+        "price": "$3.74",
         "keywords": [
             "White-eye, pale",
             "Long-tailed spotted cat"
         ],
         "inSale": true,
-        "discountPrice": "$4.48",
+        "discountprice": "$4.48",
         "discount": 77
     },
     {
@@ -150,7 +150,7 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "XS",
-        "Price": "$1.32",
+        "price": "$1.32",
         "keywords": [
             "Brush-tailed rat kangaroo",
             "Chestnut weaver",
@@ -159,7 +159,7 @@
             "Bengal vulture"
         ],
         "inSale": false,
-        "discountPrice": "$2.78",
+        "discountprice": "$2.78",
         "discount": 49
     },
     {
@@ -170,13 +170,13 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "M",
-        "Price": "$1.37",
+        "price": "$1.37",
         "keywords": [
             "Ass, asiatic wild",
             "Snake, racer"
         ],
         "inSale": false,
-        "discountPrice": "$5.13",
+        "discountprice": "$5.13",
         "discount": 32
     },
     {
@@ -187,14 +187,14 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "2XL",
-        "Price": "$2.54",
+        "price": "$2.54",
         "keywords": [
             "Skink, blue-tongued",
             "Wallaby, dama",
             "Parakeet, rose-ringed"
         ],
         "inSale": true,
-        "discountPrice": "$8.24",
+        "discountprice": "$8.24",
         "discount": 90
     },
     {
@@ -205,7 +205,7 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "2XL",
-        "Price": "$0.72",
+        "price": "$0.72",
         "keywords": [
             "Western bearded dragon",
             "Bateleur eagle",
@@ -214,7 +214,7 @@
             "Rhinoceros, white"
         ],
         "inSale": false,
-        "discountPrice": "$4.22",
+        "discountprice": "$4.22",
         "discount": 95
     },
     {
@@ -225,14 +225,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "M",
-        "Price": "$7.26",
+        "price": "$7.26",
         "keywords": [
             "Whale, southern right",
             "Spoonbill, european",
             "Bat-eared fox"
         ],
         "inSale": true,
-        "discountPrice": "$0.34",
+        "discountprice": "$0.34",
         "discount": 62
     },
     {
@@ -243,7 +243,7 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "3XL",
-        "Price": "$2.60",
+        "price": "$2.60",
         "keywords": [
             "Racer snake",
             "Coot, red-knobbed",
@@ -251,7 +251,7 @@
             "Shelduck, european"
         ],
         "inSale": false,
-        "discountPrice": "$5.39",
+        "discountprice": "$5.39",
         "discount": 29
     },
     {
@@ -262,13 +262,13 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "3XL",
-        "Price": "$6.06",
+        "price": "$6.06",
         "keywords": [
             "Mouse, four-striped grass",
             "Striped dolphin"
         ],
         "inSale": false,
-        "discountPrice": "$1.59",
+        "discountprice": "$1.59",
         "discount": 24
     },
     {
@@ -279,7 +279,7 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "M",
-        "Price": "$8.17",
+        "price": "$8.17",
         "keywords": [
             "Eagle, bald",
             "Cormorant, little",
@@ -288,7 +288,7 @@
             "Bare-faced go away bird"
         ],
         "inSale": false,
-        "discountPrice": "$7.47",
+        "discountprice": "$7.47",
         "discount": 56
     },
     {
@@ -299,7 +299,7 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$7.18",
+        "price": "$7.18",
         "keywords": [
             "Wallaby, whip-tailed",
             "Eastern dwarf mongoose",
@@ -308,7 +308,7 @@
             "Skink, african"
         ],
         "inSale": false,
-        "discountPrice": "$9.23",
+        "discountprice": "$9.23",
         "discount": 61
     },
     {
@@ -319,7 +319,7 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "XS",
-        "Price": "$3.76",
+        "price": "$3.76",
         "keywords": [
             "Meerkat, red",
             "Fox, blue",
@@ -327,7 +327,7 @@
             "Tiger cat"
         ],
         "inSale": false,
-        "discountPrice": "$7.64",
+        "discountprice": "$7.64",
         "discount": 70
     },
     {
@@ -338,14 +338,14 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "XL",
-        "Price": "$8.40",
+        "price": "$8.40",
         "keywords": [
             "Buttermilk snake",
             "Darwin ground finch (unidentified)",
             "Coot, red-knobbed"
         ],
         "inSale": false,
-        "discountPrice": "$8.47",
+        "discountprice": "$8.47",
         "discount": 79
     },
     {
@@ -356,7 +356,7 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "M",
-        "Price": "$3.15",
+        "price": "$3.15",
         "keywords": [
             "Common dolphin",
             "Bushbaby, large-eared",
@@ -364,7 +364,7 @@
             "Rock dove"
         ],
         "inSale": true,
-        "discountPrice": "$0.92",
+        "discountprice": "$0.92",
         "discount": 24
     },
     {
@@ -375,7 +375,7 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "XS",
-        "Price": "$2.97",
+        "price": "$2.97",
         "keywords": [
             "Hawk-eagle, crowned",
             "Common melba finch",
@@ -383,7 +383,7 @@
             "Asian water buffalo"
         ],
         "inSale": true,
-        "discountPrice": "$1.77",
+        "discountprice": "$1.77",
         "discount": 29
     },
     {
@@ -394,14 +394,14 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "M",
-        "Price": "$3.09",
+        "price": "$3.09",
         "keywords": [
             "Smith's bush squirrel",
             "Seal, harbor",
             "Rat, desert kangaroo"
         ],
         "inSale": false,
-        "discountPrice": "$4.61",
+        "discountprice": "$4.61",
         "discount": 67
     },
     {
@@ -412,7 +412,7 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "S",
-        "Price": "$0.44",
+        "price": "$0.44",
         "keywords": [
             "Siskin, pine",
             "Turtle, snake-necked",
@@ -421,7 +421,7 @@
             "Asian foreset tortoise"
         ],
         "inSale": false,
-        "discountPrice": "$1.61",
+        "discountprice": "$1.61",
         "discount": 51
     },
     {
@@ -432,14 +432,14 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "M",
-        "Price": "$4.06",
+        "price": "$4.06",
         "keywords": [
             "Blue-faced booby",
             "Red-cheeked cordon bleu",
             "Barrows goldeneye"
         ],
         "inSale": false,
-        "discountPrice": "$4.34",
+        "discountprice": "$4.34",
         "discount": 52
     },
     {
@@ -450,7 +450,7 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "XS",
-        "Price": "$8.06",
+        "price": "$8.06",
         "keywords": [
             "Turtle, snake-necked",
             "Monitor lizard (unidentified)",
@@ -458,7 +458,7 @@
             "Elegant crested tinamou"
         ],
         "inSale": false,
-        "discountPrice": "$7.45",
+        "discountprice": "$7.45",
         "discount": 41
     },
     {
@@ -469,13 +469,13 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "XL",
-        "Price": "$6.66",
+        "price": "$6.66",
         "keywords": [
             "Hippopotamus",
             "Green heron"
         ],
         "inSale": true,
-        "discountPrice": "$8.76",
+        "discountprice": "$8.76",
         "discount": 93
     },
     {
@@ -486,13 +486,13 @@
         "category": "Equipo y Accesorios",
         "type": "Type C",
         "size": "M",
-        "Price": "$8.70",
+        "price": "$8.70",
         "keywords": [
             "Shrike, common boubou",
             "Agouti"
         ],
         "inSale": true,
-        "discountPrice": "$6.14",
+        "discountprice": "$6.14",
         "discount": 91
     },
     {
@@ -503,13 +503,13 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "3XL",
-        "Price": "$5.18",
+        "price": "$5.18",
         "keywords": [
             "Columbian rainbow boa",
             "Ring-tailed possum"
         ],
         "inSale": false,
-        "discountPrice": "$0.16",
+        "discountprice": "$0.16",
         "discount": 31
     },
     {
@@ -520,7 +520,7 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "XS",
-        "Price": "$0.32",
+        "price": "$0.32",
         "keywords": [
             "Bushpig",
             "Cockatoo, sulfur-crested",
@@ -528,7 +528,7 @@
             "Grizzly bear"
         ],
         "inSale": false,
-        "discountPrice": "$8.56",
+        "discountprice": "$8.56",
         "discount": 100
     },
     {
@@ -539,14 +539,14 @@
         "category": "Jinete",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -557,14 +557,14 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -575,14 +575,14 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -593,14 +593,14 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -611,14 +611,14 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -629,14 +629,14 @@
         "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -647,14 +647,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -665,14 +665,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -683,14 +683,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -701,14 +701,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     },
     {
@@ -719,14 +719,14 @@
         "category": "Veterinary",
         "type": "Type C",
         "size": "S",
-        "Price": "$6.78",
+        "price": "$6.78",
         "keywords": [
             "Emerald green tree boa",
             "Slender loris",
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountPrice": "$9.36",
+        "discountprice": "$9.36",
         "discount": 50
     }
 ]
