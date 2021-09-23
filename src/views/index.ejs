@@ -36,7 +36,7 @@
                             <li>
                                 <h4>Envío Gratis</h4>
                             </li>
-                            <li>Con la compra de $15.000 o más</li>
+                            <li>Con tu compra de $15.000 o más en cualquiera de nuestros productos</li>
                         </div>
 
                         <div class="contact-us">
@@ -57,79 +57,81 @@
                     </ul>
                 </section>
 
-                <section class="index-categories">
-                    <div>
-                        <h3>Jinetes</h3>
-                        <a class="index-link-categories" href="/shop">Ver Tienda<i class="fas fa-angle-right"></i></a>
+                <% categories.forEach(function(category){ %>
+                    <section class="index-flex-categories-products">
+
+                        <% if (category.id % 2 == 0) { %>
+                            <section class="index-categories">
+                                <%- include('partials/categories', { category }) %>
+                            </section>
+                        <% } else { %>
+                            <section class="index-categories-2">
+                                <%- include('partials/categories', { category }) %>
+                            </section>
+                        <% } %>
+
+                        <section class="index-products">
+                            <% products.forEach(function(product){ %>
+                                <% if (product.category == category.name) { %>
+                                    <%- include('partials/products', { product }) %>
+                                <% } %>
+                            <% }); %>
+                        </section>
+                    </section>
+                <% }); %>
+
+                <section class="index-background-img-mobile index-background-img-desktop">
+                    <h3>Cabalgamos. Mostramos. Sabemos.</h3>
+                </section>
+
+                <section class="index-testimonies">
+                    <h3>Testimonios</h3>
+                    <div class="index-testimonies-conteiner">
+                        <div>
+                            <h4>Nombre 1</h4>
+                            <p>Texto 1</p>
+                        </div>
+                        <div>
+                            <h4>Nombre 2</h4>
+                            <p>Texto 2</p>
+                        </div>
+                        <div>
+                            <h4>Nombre 3</h4>
+                            <p>Texto 3</p>
+                        </div>
                     </div>
-                    <div>
-                        <i class="fas fa-chevron-circle-left"><i class="fas fa-chevron-circle-right"></i></i>
+                </section>
+
+
+                <div class="container">
+                    <div class="box">
+                      <div class="boxContent">
+                        <i class="fa fa-microchip icon"></i>
+                        <h1 class="title">Title</h1>
+                        <p class="desc">Less unicorn and apart and credibly yikes touched much jeez that so reverent the by a as that kiwi fed wherever more aboard.</p>
+                      </div>
+                      <a href="#"></a>
                     </div>
-                </section>
-
-                <section class="index-products">
-                    <article class="dealproduct">
-                        <img src="/img/products/helmet.jpg">
-                        <ul type="none">
-                            <li class="product-type">
-                                Head
-                            </li>
-                            <li class="product-name">
-                                Samshield Shadowmatt Helmet
-                            </li>
-                            <li class="product-price">
-                                $5.900
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section class="category-section">
-                    <% categories.forEach(category=> { %>
-                        <article class="category">
-                            <a href="/shop">
-                                <img src=<%=category.image %> alt= <%= category.description %>>
-                                    <img src=<%=category.imageHover %> alt= <%= category.description %>
-                                        class="category-imghover">
-                            </a>
-                            <article class="category-description">
-                                <p class="description">
-                                    <%= category.description %>
-                                </p>
-                            </article>
-                        </article>
-                        <% }); %>
-                </section>
-
-                <h1 class="deals-header">Oportunidades</h1>
-
-                <section class="deals">
-                    <% salesProducts.forEach(product=> { %>
-                        <article class="dealproduct">
-                            <img src=<%=product.image %> >
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <ul type="none">
-                                <li class="description">
-                                    <%= product.description %>
-                                </li>
-                                <li class="previous-price">
-                                    <%= product.previousPrice %>
-                                </li>
-                                <li class="actual-price">
-                                    <%= product.actualPrice %>
-                                </li>
-                                <li class="discount">
-                                    <%= product.discount %>
-                                </li>
-                                <li class="shipping-logo"><i class="fas fa-shipping-fast"></i></li>
-                            </ul>
-                        </article>
-                        <% }); %>
-                </section>
+                    <div class="box">
+                      <div class="boxContent">
+                        <i class="fa fa-calendar icon"></i>
+                        <h1 class="title">Title</h1>
+                        <p class="desc">Less unicorn and apart and credibly yikes touched much jeez that so reverent the by a as that kiwi fed wherever more aboard.</p>
+                      </div>
+                      <a href="#"></a>
+                    </div>
+                    <div class="box">
+                      <div class="boxContent">
+                        <i class="fa fa-podcast icon"></i>
+                        <h1 class="title">Title</h1>
+                        <p class="desc">Less unicorn and apart and credibly yikes touched much jeez that so reverent the by a as that kiwi fed wherever more aboard.</p>
+                      </div>
+                      <a href="#"></a>
+                    </div>
+                  </div>
+                  
             </main>
 
             <%- include('./partials/footer') %>
     </body>
-
-    </html>
+</html>
