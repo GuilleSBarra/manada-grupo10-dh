@@ -21,7 +21,7 @@ const { v4: uuidv4 } = require('uuid');
 // CONTROLER
 let controller = {
     admin: (req, res) => {
-        res.render('./admin/Admin.ejs');
+        res.render('admin.ejs');
     },
 
     createForm: (req, res) => {

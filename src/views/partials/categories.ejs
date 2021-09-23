@@ -1,0 +1,18 @@
+<div>
+    <h3>
+        <%= category.name %>
+    </h3>
+    <a class="index-link-categories" href="/shop">Ver Tienda<i class="fas fa-angle-right"></i></a>
+</div>
+<div>
+    <img src=<%= category.imageHover %> >
+    <img class="index-categories-img" src=<%= category.image %> >
+    <div class="index-categories-img-overlay">
+        <p class="index-overlay-name"><%= category.name %></p>
+        <p class="index-overlay-description"><%= category.description %></p>
+        <a class="index-categories-button" href="/shop">Ver Tienda</a>
+    </div>
+</div>
+<div>
+    <i class="fas fa-chevron-circle-left"><i class="fas fa-chevron-circle-right"></i></i>
+</div>

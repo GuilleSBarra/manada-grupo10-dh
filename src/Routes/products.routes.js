@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerProducts = require('../controllers/productsController');
-const controllerAdmin = require('../Controllers/adminController')
+const controllerAdmin = require('../controllers/adminController')
 const router = express.Router();
 const multer = require('multer')
 

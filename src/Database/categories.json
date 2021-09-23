@@ -1,22 +1,20 @@
 [
     {
-        "description": "Jinete",
+        "id": 0,
+        "name": "Jinete",
         "image": "./img/jinete.jpg",
-        "imageHover": "./img/jinete-hover.jpg"
+        "description": "Todo lo que necesitas para ser Jinete"
     },
     {
-        "description": "Equipo y Accesorios",
+        "id": 1,
+        "name": "Equipo y Accesorios",
         "image": "./img/accesorios.jpg",
-        "imageHover": "./img/accesorios-hover.jpg"
+        "description": "Todos los accesorios para tu caballo"
     },
     {
-        "description": "Cuidados del caballo",
+        "id": 2,
+        "name": "Cuidados del caballo",
         "image": "./img/cuidados.jpg",
-        "imageHover": "./img/cuidados-hover.jpg"
-    },
-    {
-        "description": "Veterinaria",
-        "image": "./img/veterinario.jpg",
-        "imageHover": "./img/veterinario-hover.jpg"
+        "description": "El mejor lugar para cuidar de tu amigo"
     }
 ]
