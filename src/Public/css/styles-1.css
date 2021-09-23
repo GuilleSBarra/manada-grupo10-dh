@@ -228,87 +228,6 @@ h1 {
 *
 *
 * Media Query: cellphones
-* Login / Register pages
-*
-*
-*/
-
-.form-register, .form-login, .form-admin {
-    width: 90%;
-    margin: auto;
-    margin-top: 170px;
-    margin-bottom: 200px;
-}
-
-.form-login h2, .form-register h2, .form-admin h2 {
-    margin: 0;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-}
-
-.register-field, .login-field, .admin-field{
-    display: block;
-    margin: 20px 0;
-    font-size: 18px;
-    width: 100%;
-    text-align: center  ;
-}
-
-.controls, .admin {
-    width: 100%;
-    border: none;
-    border-radius: 7px;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #252323;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-}
-
-.form-button {
-    display: block;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-}
-
-.send-button {
-    padding: 15px;
-    font-size: 1.2em;
-    border-radius: 15px;
-    margin: 0 40px;
-    border: none;
-    background-color: #017bab;
-    color: #FFF;
-    transition: all 450ms;
-}
-
-.form-bottom {
-    display: block;
-    text-align: center;
-    margin: 40px 0;
-}
-
-.send-button:hover {
-    background-color: #0022AA;
-}
-
-.form-login a, .form-register a, .form-admin a {
-    color: #017bab;
-}
-
-.form-login a:hover, .form-register a:hover, .form-admin a:hover {
-    text-decoration: underline;
-}
-
-
-/*
-*
-*
-* Media Query: cellphones
 * Cart Page
 *
 *
@@ -581,30 +500,6 @@ h1 {
 
     .copyright {
         border: none;
-    }
-
-
-    /*
-    *
-    * 
-    * Media Query: Desktop
-    * Login / Register pages
-    *
-    *
-    */
-
-    .form-register h2, .form-login h2, .form-admin h2 {
-        width: 50%;
-        margin: auto;
-    }
-
-    .register-field, .login-field, .admin-field {
-        width: 50%;
-        margin: auto;
-    }
-
-    .controls, .admin {
-        margin: 20px 0;
     }
 
 
