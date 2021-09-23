@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerProducts = require('../controllers/productsController');
-const controllerAdmin = require('../Controllers/adminController')
+const controllerAdmin = require('../controllers/adminController')
 const router = express.Router();
 const multer = require('multer')
 
@@ -26,7 +26,7 @@ router.get('/:id', controllerProducts.detail)
 
 // Create products 
 
-router.get("/create",controllerAdmin.admin)
+router.get("/create",controllerAdmin.createProduct)
 router.post('/',upload.single("image"), controllerAdmin.createProduct)
 
 

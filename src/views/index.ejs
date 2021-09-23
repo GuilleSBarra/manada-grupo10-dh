@@ -3,7 +3,7 @@
     <body>
         <%- include('./partials/header') %>
 
-            <main>
+            <main>  
 
                 <section class="index-banner">
                     <img src="./img/index-banner.jpg" alt="Banner" class="index-banner-img">
@@ -71,11 +71,16 @@
                         <% } %>
 
                         <section class="index-products">
-                            <% products.forEach(function(product){ %>
-                                <% if (product.category == category.name) { %>
-                                    <%- include('partials/products', { product }) %>
+                            <% let count = 0; %>
+                            <% for (let i=0 ; i < products.length ; i++) { %>
+                                <% if (count < 6) { %>
+                                    <% if (products[i].category == category.name) { %>
+                                        <% count = count + 1 %>
+                                        <% let test = products[i] %>
+                                        <%- include('partials/products', { test }) %>
+                                    <% } %>
                                 <% } %>
-                            <% }); %>
+                            <% }; %>
                         </section>
                     </section>
                 <% }); %>
