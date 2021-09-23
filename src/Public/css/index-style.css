@@ -266,24 +266,70 @@
 * Section: index-testimonials
 */
 
-.index-testimonies {
-    width: 90%;
-    margin: auto;
+.index-testimonies h3 {
     text-align: center;
-    margin-top: 20px;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.index-testimonies-conteiner div {
-    width: 60%;
+.index-testimonies-container {
+    width: 100%;
     margin: auto;
+}
+
+.index-testimonies-container .box {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 90px;
-    color: #FFF;
-    background-color: #000;
-    opacity: 0.6;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgb(80, 100, 140);
+}
+
+.index-testimonies-container .box .boxContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.index-testimonies-container .box .boxContent .fa-heart {
+    color: rgb(80, 100, 140);
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+.index-testimonies-container .box .boxContent .title {
+    color: rgb(80, 100, 140);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.index-testimonies-container .box .boxContent .desc {
+    color: rgb(80, 100, 140);
+    font-size: 0.9em;
+    height: 20%;
+}
+
+.index-testimonies-container .box .testimonies-rating {
+    text-align: center;
+}
+
+.index-testimonies-container .box .fa-star {
+    display: inline-block;
+    color: rgb(80, 100, 140);
+}
+
+.index-testimonies-container .box a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 
@@ -502,78 +548,32 @@
     .index-background-img-desktop {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/index-background-desktop.jpg");
     }
-    
 
+    .index-testimonies-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 85%;
+    }
 
+    .index-testimonies-container .box {
+        transition: 0.4s all ease-in-out;
+        position: relative;
+    }
 
+    .index-testimonies-container .box:hover {
+        background: linear-gradient(130deg, rgb(80, 100, 140) 0%, rgb(122, 151, 209) 100%);
+        box-shadow: none;
+    }
 
-
-
-
-  
-  .container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 97vh;
-  }
-  .container .box {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    background-color: white;
-    margin: 20px;
-    transition: 0.3s all ease-in-out;
-    position: relative;
-    box-shadow: 0px 0px 15px background;
-    /* Link */
-  }
-  .container .box .boxContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-  }
-  .container .box .boxContent .icon {
-    color: #8293ff;
-    font-size: 48px;
-    padding: 15px;
-  }
-  .container .box .boxContent .title {
-    font-size: 24px;
-    color: #8293ff;
-    font-weight: bold;
-    padding: 10px;
-  }
-  .container .box .boxContent .desc {
-    color: #8293ff;
-    font-size: 15px;
-    height: 20%;
-  }
-  .container .box a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  .container .box:hover {
-    background: linear-gradient(130deg, #503bff 0%, #8293ff 100%);
-    box-shadow: none;
-  }
-  .container .box:hover .icon,
-  .container .box:hover .title,
-  .container .box:hover .desc {
-    color: white;
-    transition: 0.3s all ease-in-out;
-  }
-
-
-
-
+    .index-testimonies-container .box:hover .fa-heart,
+    .index-testimonies-container .box:hover .title,
+    .index-testimonies-container .box:hover .desc,
+    .index-testimonies-container .box:hover .fa-star {
+        color: white;
+        transition: 0.3s all ease-in-out;
+    }
 }
 
 
