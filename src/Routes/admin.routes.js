@@ -1,12 +1,31 @@
 const express = require('express')
 const controller = require('../controllers/adminController')
 const router = express.Router()
+const multer = require('multer')
 
-// router.get("/create", controller.admin);
-// router.post("/", controller.createProduct);
+//  MULTER
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, "../public/img"));
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix =
+            Date.now() + "-" + Math.round(Math.random() * 1e9) + file.originalname;
+        cb(null, file.fieldname + "-" + uniqueSuffix);
+    },
+});
+
+const upload = multer({ storage: storage });
+
 
 router.get("/", controller.admin);
-router.get("/edit/:idProduct", controller.adminEdit);
-router.put("/edit/:idProduct", controller.editProduct);
+
+router.get("/create-product", controller.create);
+router.post('/create-product',upload.single("image"), controller.store)
+
+router.get("/edit-product/:idProduct", controller.edit);
+router.put("/edit-product/:idProduct", controller.update);
+
+//router.delete('/delete/:id', productsController.destroy);
 
 module.exports = router

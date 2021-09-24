@@ -1,0 +1,35 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="admin-main">
+                <h1 class="admin-header">
+                    Panel de Administrador
+                </h1>
+                <section class="admin-section">
+                    <section class="admin-products">
+                        <h2>
+                            Administrar Productos
+                        </h2>
+                        <ul type="none">
+                            <li><a href="/admin/create-product">Agregar nuevos productos</a></li>
+                            <li><a href="/admin/edit-product">Editar productos</a></li>
+                        </ul>
+                    </section>
+    
+                    <section class="admin-users">
+                        <h2>
+                            Administrar usuarios
+                        </h2>
+                        <ul type="none">
+                            <li><a href="/admin/create-user">Agregar nuevos usuarios</a></li>
+                            <li><a href="/admin/edit-user">Editar usuarios</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+</html>

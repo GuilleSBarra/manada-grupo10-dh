@@ -84,13 +84,25 @@ header {
     background-color: #050505;
     color: #fffefc;
     margin: auto;
-    text-align: center;
+    text-align: end;
 }
 
 .news p {
     padding: 7px;
     font-size: 14px;
+    position: relative;
+    animation: example 20s infinite;
+    
 }
+
+@keyframes example {
+    0% {
+        right: 0;
+    }
+    100% {
+      right: 100%;
+    }
+  }
 
 .searchbar-desktop {
     display: none;

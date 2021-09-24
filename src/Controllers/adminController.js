@@ -1,34 +1,18 @@
 const products = require('../database/products.json');
 const fs = require("fs");
 const path = require("path");
-const multer = require('multer')
 const { v4: uuidv4 } = require('uuid');
 
-//MULTER 
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//       cb(null, path.join(__dirname, "../public/img"));
-//     },
-//     filename: function (req, file, cb) {
-//       const uniqueSuffix =
-//         Date.now() + "-" + Math.round(Math.random() * 1e9) + file.originalname;
-//       cb(null, file.fieldname + "-" + uniqueSuffix);
-//     },
-//   });
-  
-//   const upload = multer({ storage: storage });
-
-// CONTROLER
 let controller = {
     admin: (req, res) => {
-        res.render('admin.ejs');
+        res.render('./admin/admin.ejs');
     },
 
-    createForm: (req, res) => {
+    create: (req, res) => {
         res.render('./admin/createProducts.ejs')
     },
 
-    createProduct: (req, res) => {
+    store: (req, res) => {
 
         const archivo = req.file
         const {name,description,category,size,Price,keywords,inSale,discountPrice,discount} = req.body 
@@ -51,15 +35,15 @@ let controller = {
             products: products });
     },
 
-    adminEdit: (req, res) => {
+    edit: (req, res) => {
         let idProduct = req.params.idProduct;
         let product = products[idProduct];
 
-        res.render('./edit.ejs', { 
+        res.render('./admin/edit.ejs', { 
             product: product })
     },
 
-    editProduct: (req, res) => {
+    update: (req, res) => {
         let idProduct = req.params.idProduct;
     
         products.forEach(product => {
@@ -70,7 +54,7 @@ let controller = {
             }
         })
 
-        res.render('.edit.ejs');
+        res.render('./admin/edit.ejs');
     }
 }
 
