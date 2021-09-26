@@ -1,32 +1,31 @@
 <%- include('../partials/head') %>
-
     <body>
         <%- include('../partials/header') %>
 
     
     <main>
-        <form class="form-admin" action="/products" method="POST" enctype="multipart/form-data">
-            <h2>Agregar Nuevos Productos:</h2>
+        <form class="createProduct-form" action="/products" method="POST" enctype="multipart/form-data">
+            <h2 class="createProduct-title">Agregar Nuevos Productos:</h2>
 
-            <div class="admin-field">
-                <label class="label-admin">Imágen del Producto:</label>
-                <input class="admin-img" type="file" name="image" accept=".jpg .jpeg" multiple>
+            <div class="createProduct-admin-field">
+                <label class="createProduct-label-admin">Imágen del Producto:</label>
+                <input class="createProduct-admin-img" type="file" name="image" accept=".jpg .jpeg" multiple>
                 <span></span>
             </div>
 
-            <div class="admin-field">
-                <input class="admin" type="text" name="name" id="newProductName" placeholder="Nombre del producto">
+            <div class="createProduct-admin-field">
+                <input class="createProduct-admin" type="text" name="name" id="newProductName" placeholder="Nombre del producto">
                 <span></span>
             </div>
 
-            <div class="admin-field">
-                <input class="admin" type="text" name="description" id="newProductDescription" placeholder="Descripción del producto">
+            <div class="createProduct-admin-field">
+                <input class="createProduct-admin" type="text" name="description" id="newProductDescription" placeholder="Descripción del producto">
                 <span></span>
             </div>
 
-            <div class="admin-field">
-                <label for="category">Categoría</label>
-                <div class="control">
+            <div class="createProduct-admin-field">
+                <label class="createProduct-label-admin" for="createProduct-label-admin">Categoría</label>
+                <div class="createProduct-control">
                     <select name="category" id="category">
                         <option value="">Seleccione una opción</option>
                         <option value="Rider">Jinete</option>
@@ -35,10 +34,11 @@
                         <option value="Accesories">Equipo y accesorios</option>
                     </select>
                 </div>
+            </div>
 
-                <div class="admin-field">
-                    <label for="size">Talle</label>
-                    <div class="control">
+            <div class="createProduct-admin-field">
+                    <label class="createProduct-label-admin" for="createProduct-label-admin">Talle</label>
+                    <div class="createProduct-control">
                         <select name="size" id="size">
                             <option value="">Seleccione una opción</option>
                             <option value="XS">XS</option>
@@ -48,45 +48,49 @@
                             <option value="XL">XL</option>
                         </select>
                     </div>
+             </div>
     
 
-            <div class="admin-field">
-                <input class="admin" type="text" name="Price" id="newProductPrice" placeholder="Precio del Producto">
+            <div class="createProduct-admin-field">
+                <input class="createProduct-admin" type="text" name="Price" id="newProductPrice" placeholder="Precio del Producto">
                 <span></span>
             </div>
 
-            <div class="admin-field">
-                <input class="admin" type="text" name="keywords" id="keywords" placeholder="Palabras clave">
+            <div class="createProduct-admin-field">
+                <input class="createProduct-admin" type="text" name="keywords" id="keywords" placeholder="Palabras clave">
                 <span></span>
             </div>
 
-            <div class="admin-field">
-                <label for="inSale">En oferta</label>
-                    <input type="radio" name="inSale" value="true">Si </input>      
-                    <input type="radio" name="inSale" value="false">No </input>     
-                </div>
+            <div class="createProduct-admin-field">
+                <label class="createProduct-label-admin" for="createProduct-label-admin">En oferta</label>
+                <div class="createProduct-admin-field-inSale">    
+                <input class="field-inSale" type="radio" name="inSale" value="true">Si </input>   
+                <br>   
+                    <input class="field-inSale" type="radio" name="inSale" value="false">No </input>  
+                </div>   
+            </div>
 
-                <div class="admin-field">
-                    <input class="admin" type="text" name="discountPrice" id="discountPrice" placeholder="Precio en descuento">
+            <div class="createProduct-admin-field">
+                    <input class="createProduct-admin" type="text" name="discountPrice" id="discountPrice" placeholder="Precio en descuento">
                     <span></span>
-                </div>            
+             </div>            
                 
-                <div class="admin-field">
-                    <input class="admin" type="text" name="discount" id="discount" placeholder="Porcentaje de descuento">
+            <div class="createProduct-admin-field">
+                    <input class="createProduct-admin" type="text" name="discount" id="discount" placeholder="Porcentaje de descuento">
                     <span></span>
                 </div>
 
-            <div class="form-button">
-                <button type="submit" class="send-button">Enviar</button>
+            <div class="createProduct-form-button">
+                <button type="submit" class="create-send-button">Enviar</button>
             </div>
         </form>
 
 
-        <form class="form-admin" action="/admin/edit/0" method="GET">
-            <h2>Editar Productos:</h2>
+        <form class="createProduct-form" action="/admin/edit/0" method="GET">
+            <h2 class="createProduct-title">Editar Productos:</h2>
 
-            <div class="form-button">
-                <button type="submit" class="send-button">Ir</button>
+            <div class="createProduct-form-button">
+                <button type="submit" class="create-send-button">Ir</button>
             </div>
         </form>
     </main>
