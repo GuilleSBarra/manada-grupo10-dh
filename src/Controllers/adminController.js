@@ -8,11 +8,11 @@ let controller = {
         res.render('./admin/admin.ejs');
     },
 
-    create: (req, res) => {
+    createForm: (req, res) => {
         res.render('./admin/createProducts.ejs')
     },
 
-    store: (req, res) => {
+    create: (req, res) => {
 
         const archivo = req.file
         const {name,description,category,size,Price,keywords,inSale,discountPrice,discount} = req.body 
