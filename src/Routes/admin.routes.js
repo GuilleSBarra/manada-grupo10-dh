@@ -1,7 +1,9 @@
 const express = require('express')
 const controller = require('../controllers/adminController')
 const router = express.Router()
+const path = require("path")
 const multer = require('multer')
+
 
 //  MULTER
 const storage = multer.diskStorage({

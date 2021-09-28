@@ -728,5 +728,17 @@
         "inSale": false,
         "discountprice": "$9.36",
         "discount": 50
+    },
+    {
+        "id": "fdcc9081-9d4c-4721-b8f5-0507cd9ca854",
+        "name": "Mica",
+        "description": "",
+        "image": "/img/image-1632847534678-584029946cabezada.jpg",
+        "category": "",
+        "size": "",
+        "Price": "",
+        "keywords": "",
+        "discountPrice": "",
+        "discount": ""
     }
 ]

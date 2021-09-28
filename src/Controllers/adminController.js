@@ -20,7 +20,7 @@ let controller = {
             id: uuidv4() ,
             name: name,
             description: description,
-            image: `./img/${archivo.filename}`,
+            image: `/img/${archivo.filename}`,
             category: category,
             size: size,
             Price: Price,
@@ -29,9 +29,12 @@ let controller = {
             discountPrice: discountPrice,
             discount: discount
         }
-        fs.writeFileSync(path.join(__dirname, "../Database/products.json"),JSON.stringify(newProducto,null,4),{encoding: 'utf-8'})
+
+        products.push(newProduct)
+
+        fs.writeFileSync(path.join(__dirname, "../Database/products.json"),JSON.stringify(products,null,4),{encoding: 'utf-8'})
         
-        res.redirect('./products/shop.ejs', {
+        res.render('./products/shop.ejs', {
             products: products });
     },
 
