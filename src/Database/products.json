@@ -14,7 +14,7 @@
             "Western bearded dragon"
         ],
         "inSale": true,
-        "discountprice": "$3.14",
+        "discountPrice": "$3.14",
         "discount": 43
     },
     {
@@ -31,26 +31,26 @@
             "Butterfly, canadian tiger swallowtail"
         ],
         "inSale": true,
-        "discountprice": "$6.70",
+        "discountPrice": "$6.70",
         "discount": 94
     },
     {
         "id": 3,
-        "name": "Eastern cottontail rabbit",
-        "description": "Sylvilagus floridanus",
+        "name": "Botas de equitación",
+        "description": "Macaca nemestrina",
         "image": "/img/products/botas-equitacion-fouganza-560-adulto-negro-de-piel.JPG",
         "category": "Jinete",
         "type": "Type C",
-        "size": "3XL",
+        "size": "M",
         "price": "$4.78",
         "keywords": [
-            "Kite, black",
-            "Brown lemur",
-            "Black-necked stork"
+            "Blue-faced booby",
+            "Red-cheeked cordon bleu",
+            "Barrows goldeneye"
         ],
         "inSale": true,
-        "discountprice": "$6.73",
-        "discount": 84
+        "discountPrice": "$6.73",
+        "discount": 40
     },
     {
         "id": 4,
@@ -69,7 +69,7 @@
             "Cliffchat, mocking"
         ],
         "inSale": false,
-        "discountprice": "$4.50",
+        "discountPrice": "$4.50",
         "discount": 21
     },
     {
@@ -86,7 +86,7 @@
             "European stork"
         ],
         "inSale": true,
-        "discountprice": "$2.06",
+        "discountPrice": "$2.06",
         "discount": 41
     },
     {
@@ -105,25 +105,15 @@
             "Tern, royal"
         ],
         "inSale": false,
-        "discountprice": "$6.99",
+        "discountPrice": "$6.99",
         "discount": 32
     },
     {
         "id": 7,
-        "name": "Badger, eurasian",
-        "description": "Meles meles",
         "image": "/img/products/casco-equitacion-fouganza-520-negro-mate.JPG",
-        "category": "Jinete",
         "type": "Type C",
-        "size": "L",
         "price": "$7.03",
-        "keywords": [
-            "Chestnut weaver",
-            "Kafue flats lechwe"
-        ],
-        "inSale": false,
-        "discountprice": "$0.72",
-        "discount": 90
+        "discountPrice": "$0.72"
     },
     {
         "id": 8,
@@ -139,7 +129,7 @@
             "Long-tailed spotted cat"
         ],
         "inSale": true,
-        "discountprice": "$4.48",
+        "discountPrice": "$4.48",
         "discount": 77
     },
     {
@@ -159,7 +149,7 @@
             "Bengal vulture"
         ],
         "inSale": false,
-        "discountprice": "$2.78",
+        "discountPrice": "$2.78",
         "discount": 49
     },
     {
@@ -176,7 +166,7 @@
             "Snake, racer"
         ],
         "inSale": false,
-        "discountprice": "$5.13",
+        "discountPrice": "$5.13",
         "discount": 32
     },
     {
@@ -194,7 +184,7 @@
             "Parakeet, rose-ringed"
         ],
         "inSale": true,
-        "discountprice": "$8.24",
+        "discountPrice": "$8.24",
         "discount": 90
     },
     {
@@ -214,7 +204,7 @@
             "Rhinoceros, white"
         ],
         "inSale": false,
-        "discountprice": "$4.22",
+        "discountPrice": "$4.22",
         "discount": 95
     },
     {
@@ -232,7 +222,7 @@
             "Bat-eared fox"
         ],
         "inSale": true,
-        "discountprice": "$0.34",
+        "discountPrice": "$0.34",
         "discount": 62
     },
     {
@@ -251,7 +241,7 @@
             "Shelduck, european"
         ],
         "inSale": false,
-        "discountprice": "$5.39",
+        "discountPrice": "$5.39",
         "discount": 29
     },
     {
@@ -268,7 +258,7 @@
             "Striped dolphin"
         ],
         "inSale": false,
-        "discountprice": "$1.59",
+        "discountPrice": "$1.59",
         "discount": 24
     },
     {
@@ -288,7 +278,7 @@
             "Bare-faced go away bird"
         ],
         "inSale": false,
-        "discountprice": "$7.47",
+        "discountPrice": "$7.47",
         "discount": 56
     },
     {
@@ -308,7 +298,7 @@
             "Skink, african"
         ],
         "inSale": false,
-        "discountprice": "$9.23",
+        "discountPrice": "$9.23",
         "discount": 61
     },
     {
@@ -327,7 +317,7 @@
             "Tiger cat"
         ],
         "inSale": false,
-        "discountprice": "$7.64",
+        "discountPrice": "$7.64",
         "discount": 70
     },
     {
@@ -345,7 +335,7 @@
             "Coot, red-knobbed"
         ],
         "inSale": false,
-        "discountprice": "$8.47",
+        "discountPrice": "$8.47",
         "discount": 79
     },
     {
@@ -364,7 +354,7 @@
             "Rock dove"
         ],
         "inSale": true,
-        "discountprice": "$0.92",
+        "discountPrice": "$0.92",
         "discount": 24
     },
     {
@@ -383,7 +373,7 @@
             "Asian water buffalo"
         ],
         "inSale": true,
-        "discountprice": "$1.77",
+        "discountPrice": "$1.77",
         "discount": 29
     },
     {
@@ -401,7 +391,7 @@
             "Rat, desert kangaroo"
         ],
         "inSale": false,
-        "discountprice": "$4.61",
+        "discountPrice": "$4.61",
         "discount": 67
     },
     {
@@ -421,7 +411,7 @@
             "Asian foreset tortoise"
         ],
         "inSale": false,
-        "discountprice": "$1.61",
+        "discountPrice": "$1.61",
         "discount": 51
     },
     {
@@ -439,7 +429,7 @@
             "Barrows goldeneye"
         ],
         "inSale": false,
-        "discountprice": "$4.34",
+        "discountPrice": "$4.34",
         "discount": 52
     },
     {
@@ -458,7 +448,7 @@
             "Elegant crested tinamou"
         ],
         "inSale": false,
-        "discountprice": "$7.45",
+        "discountPrice": "$7.45",
         "discount": 41
     },
     {
@@ -475,7 +465,7 @@
             "Green heron"
         ],
         "inSale": true,
-        "discountprice": "$8.76",
+        "discountPrice": "$8.76",
         "discount": 93
     },
     {
@@ -492,7 +482,7 @@
             "Agouti"
         ],
         "inSale": true,
-        "discountprice": "$6.14",
+        "discountPrice": "$6.14",
         "discount": 91
     },
     {
@@ -509,7 +499,7 @@
             "Ring-tailed possum"
         ],
         "inSale": false,
-        "discountprice": "$0.16",
+        "discountPrice": "$0.16",
         "discount": 31
     },
     {
@@ -528,7 +518,7 @@
             "Grizzly bear"
         ],
         "inSale": false,
-        "discountprice": "$8.56",
+        "discountPrice": "$8.56",
         "discount": 100
     },
     {
@@ -546,7 +536,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -564,7 +554,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -582,7 +572,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -600,7 +590,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -618,7 +608,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -636,7 +626,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -654,7 +644,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -672,7 +662,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -690,7 +680,7 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
@@ -708,26 +698,22 @@
             "Whip-tailed wallaby"
         ],
         "inSale": false,
-        "discountprice": "$9.36",
+        "discountPrice": "$9.36",
         "discount": 50
     },
     {
         "id": 40,
-        "name": "Wombat, common",
+        "name": "Repelente de Insectos",
         "description": "Vombatus ursinus",
         "image": "/img/products/repelente-de-insectos-gel.JPG",
-        "category": "Veterinaria",
+        "category": "",
         "type": "Type C",
-        "size": "S",
-        "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
-        "inSale": false,
-        "discountprice": "$9.36",
-        "discount": 50
+        "size": "",
+        "price": "$9.83",
+        "keywords": "Emerald green tree boa,Slender loris,Whip-tailed wallaby",
+        "inSale": "false",
+        "discountPrice": "$9.36",
+        "discount": "50"
     },
     {
         "id": "fdcc9081-9d4c-4721-b8f5-0507cd9ca854",

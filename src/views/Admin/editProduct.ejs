@@ -1,0 +1,209 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="single-product-main">
+                <section class="single-product-title">
+                    <div>
+                        <h2>
+                            Detalle del producto: <%= product.name %>
+                        </h2>
+                    </div>
+                </section>
+                <section class="single-product-container">
+                    <div class="single-product-img-description">
+                        <div class="single-product-img">
+                            <img src=<%= product.image %> alt="product image">
+                        </div>
+                        <div class="single-product-description">
+                            <p><%= product.keywords %></p>
+                        </div>
+                    </div>
+                    <div class="single-product-detail">
+                        <article class="single-product-detail-info">
+                            <h2 class="single-product-detail-title">
+                                <%= product.name %>
+                            </h2>
+                            <p class="single-product-detail-price">
+                                <span class="single-product-price"><%= product.price %></span>
+                                /
+                                <b>
+                                    <%= product.discount %>% OFF
+                                </b>
+                            </p>
+                            <p class="single-product-detail-title">
+                                <span class="single-product-price">Categoría: <%= product.category %></span>
+                            </p>
+                            <p class="single-product-detail-title">
+                                <span class="single-product-price">Descripción: <%= product.description %></span>
+                            </p>
+                            <p class="single-product-detail-title">
+                                <span class="single-product-price">Tamaño: <%= product.size %></span>
+                            </p>
+                            <Br>
+                            <div class="single-product-button">
+                                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="single-product-buy-now-button">ELIMINAR</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section>
+                    <form class="createProduct-form" method="POST" action="/admin/edit-product/<%= product.id %>?_method=PUT">
+
+                        <h2 class="createProduct-title">Editar Producto:</h2>
+
+                        <div class="createProduct-admin-field">
+                            <label class="createProduct-label-admin">Imágen del Producto:</label>
+                            <input class="createProduct-admin-img" type="file" name="image">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="name" placeholder="Nombre del producto"
+                                value="<%= product.name %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="description"
+                                placeholder="Descripción del producto" value="<%= product.description %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">Categoría</label>
+                            <div class="createProduct-control">
+                                <select name="category" id="category">
+
+                                    <% switch (product.category) { 
+                                        case product.category = "Jinete" : %>
+                                            <option value="Rider" selected>Jinete</option>
+                                            <option value="horseCare">Cuidado del Caballo</option>
+                                            <option value="Veterinary">Veterinaria</option>
+                                            <option value="Accesories">Equipo y accesorios</option>
+                                       <% break;
+                                       
+                                       case product.category = "Cuidado del Caballo" : %>
+                                            <option value="Rider">Jinete</option>
+                                            <option value="horseCare" selected>Cuidado del Caballo</option>
+                                            <option value="Veterinary">Veterinaria</option>
+                                            <option value="Accesories">Equipo y accesorios</option>
+                                       <% break;
+
+                                       case product.category = "Veterinaria" : %>
+                                            <option value="Rider">Jinete</option>
+                                            <option value="horseCare">Cuidado del Caballo</option>
+                                            <option value="Veterinary" selected>Veterinaria</option>
+                                            <option value="Accesories">Equipo y accesorios</option>
+                                       <% break;
+
+                                       case product.category = "Equipo y accesorio" : %>
+                                            <option value="Rider" >Jinete</option>
+                                            <option value="horseCare">Cuidado del Caballo</option>
+                                            <option value="Veterinary">Veterinaria</option>
+                                            <option value="Accesories" selected>Equipo y accesorios</option>
+                                       <% break;
+                                   } %>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">Talle</label>
+                            <div class="createProduct-control">
+                                <select name="size" id="size">
+
+                                    <% switch (product.size) { 
+                                         case product.size = "XS" : %>
+                                            <option value="XS" selected>XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                        <% break;
+                                        
+                                        case product.size = "S" : %>
+                                            <option value="XS">XS</option>
+                                            <option value="S" selected>S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                        <% break;
+
+                                        case product.size = "M" : %>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M" selected>M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                        <% break;
+
+                                        case product.size = "L" : %>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L" selected>L</option>
+                                            <option value="XL">XL</option>
+                                        <% break;
+                                    } %>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="price" id="newProductPrice"
+                                placeholder="Precio del Producto" value="<%= product.price %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="keywords" id="keywords"
+                                placeholder="Palabras clave" value="<%= product.keywords %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">En oferta</label>
+                            <div class="createProduct-admin-field-inSale">
+                                <% if ( product.inSale == true ){%>
+                                    <input class="field-inSale" type="radio" name="inSale" value="true" checked>Si</input>
+                                    <br>
+                                    <input class="field-inSale" type="radio" name="inSale" value=false>No</input>
+                                <% } else { %>
+                                    <input class="field-inSale" type="radio" name="inSale" value="true">Si</input>
+                                    <br>
+                                    <input class="field-inSale" type="radio" name="inSale" value=false checked>No</input>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="discountPrice" id="discountPrice"
+                                placeholder="Precio en descuento" value="<%= product.discountPrice %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-admin-field">
+                            <input class="createProduct-admin" type="text" name="discount" id="discount"
+                                placeholder="Porcentaje de descuento" value="<%= product.discount %>">
+                            <span></span>
+                        </div>
+
+                        <div class="createProduct-form-button">
+                            <button type="submit" class="create-send-button">Modificar</button>
+                        </div>
+                    </form>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

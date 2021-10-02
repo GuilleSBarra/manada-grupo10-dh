@@ -1,0 +1,18 @@
+<article>
+    <div class="product-container">
+        <a href="/admin/edit-product/<%= product.id %>">
+            <img class="product-img" src="<%= product.image %>">
+        </a>
+        <ul type="none">
+            <li class="product-type">
+                <%= product.category %>
+            </li>
+            <li class="product-name">
+                <%= product.name %>
+            </li>
+            <li class="product-price">
+                <%= product.price %>
+            </li>
+        </ul>
+    </div>
+</article>

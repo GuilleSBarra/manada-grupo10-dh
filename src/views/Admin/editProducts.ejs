@@ -1,37 +1,18 @@
-<%- include('../partials/head') %>
+<%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header') %>
     
     <main>
-        <form class="form-admin" action="/admin/edit?_method=PUT" method="POST">
-            <h2>Editar Productos:</h2>
 
-            <div class="admin-field">
-                <label class="label-admin">Imágen del Producto:</label>
-                <input class="admin-img" type="file" name="editProductImage" accept=".jpg .jpeg" multiple>
-                <span></span>
-            </div>
-
-            <div class="admin-field">
-                <label class="label-admin" for="editProductDescription">Descriptión del Producto:</label>
-                <input class="admin" type="text" name="editProductDescription" id="editProductDescription"
-                placeholder=<%= product.description %> >
-                <span></span>
-            </div>
-
-            <div class="admin-field">
-                <label class="label-admin" for="editProductPrice">Precio del Producto:</label>
-                <input class="admin" type="text" name="editProductPrice" id="editProductPrice" 
-                placeholder=<%= product.actualPrice %> >
-                <span></span>
-            </div>
-
-            <div class="form-button">
-                <button type="submit" class="send-button">Enviar</button>
-            </div>
-        </form>
+        <h1 class="shop-header">Elige el producto a modificar</h1>
+        
+        <section class="index-products shop-products">
+            <% products.forEach(product => { %>
+                <%- include('../partials/editProduct', { product }) %>
+            <% }); %>
+        </section>
     </main>
 
-        <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html>

@@ -12,6 +12,15 @@
     border-bottom: 1px black solid;
 }
 
+.createProduct-admin {
+    width: 100%; 
+    background-color: #0a192f;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    color: #FFFF;
+}
+
 .createProduct-admin-field {
     width: 100%;
     margin-top: 30px;
@@ -22,13 +31,6 @@
     font-size: 1.4em;
 }
 
-.createProduct-admin {
-    width: 100%; 
-    background-color: #0a192f;
-    border-radius: 10px;
-    border: none;
-    padding: 15px;
-}
 
 .createProduct-control{
     font-size: 1.4em;

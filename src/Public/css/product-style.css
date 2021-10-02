@@ -18,7 +18,7 @@
 }
 
 .single-product-img-description {
-    width: 85%;
+    width: 65%;
     margin: auto;
 }
 
@@ -88,6 +88,7 @@
     max-width: 220px;
     width: 70%;
     margin: auto;
+    text-align: center;
 }
 
 .single-product-buy-now-button {
@@ -98,7 +99,9 @@
     font-size: 1.2em;
     background-color: rgb(80, 100, 140);
     color: #FFF;
-    padding: 10px 2px;
+    padding: 10px 10px;
+    margin: auto;
+    max-width: 240px;
 }
 
 
@@ -116,7 +119,15 @@
     }
 
     .single-product-img-description {
-        width: 60%;
+        width: 45%;
+    }
+
+    .single-product-img {
+        transition: all 575ms ease;
+    }
+
+    .single-product-img:hover {
+        transform: scale(1.02);
     }
 
     .single-product-detail {
