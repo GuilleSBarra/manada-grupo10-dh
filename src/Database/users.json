@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "user": "daramayo90",
+        "name": "Damián",
+        "surname": "Aramayo",
+        "email": "da.aramayo1990@gmail.com",
+        "password": "123456",
+        "category": "Admin",
+        "image": "/img/users/daramayo90.JPG"
+    },
+    {
+        "id": 2,
+        "user": "daramayo90",
+        "name": "Natalia",
+        "surname": "Katunskis",
+        "email": "natalia.katunskis@gmail.com",
+        "password": "123456",
+        "category": "Admin",
+        "image": "/img/users/nkatunskis.jpg"
+    },
+    {
+        "id": 3,
+        "user": "franmaster08",
+        "name": "Francisco",
+        "surname": "Jimenez",
+        "email": "f.jimenezcohen@digitalhouse.com",
+        "password": "123456",
+        "category": "Admin",
+        "image": "/img/users/daramayo90.JPG"
+    },
+    {
+        "id": 4,
+        "user": "jereantequera",
+        "name": "Jeremias",
+        "surname": "Antequera",
+        "email": "jeremias.antequera@digitalhouse.com",
+        "password": "123456",
+        "category": "Admin",
+        "image": ""
+    }
+]
