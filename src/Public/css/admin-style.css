@@ -1,3 +1,9 @@
+/*
+*
+* Admin: Index Page
+*
+*/
+
 .admin-main {
     margin: 180px 0;
     width: 100%;
@@ -30,4 +36,170 @@
 .admin-section ul li {
     text-decoration: underline;
     margin: 15px 0;
+}
+
+
+
+/*
+*
+* Admin: Create Product Page
+*
+*/
+
+.admin-createProduct-main-mobile {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/login-background-mobile.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.admin-createProduct-container {
+    padding: 220px 0;
+    width: 100%;
+    margin: auto;
+}
+
+.admin-createProduct-form {
+    width: 80%;
+    margin: auto;
+}
+
+.admin-createProduct-title {
+    color: #FFFF;
+    text-align: center;
+    margin: auto;
+    max-width: 560px;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+}
+
+.admin-createProduct-field {
+    max-width: 260px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.createProduct-label-admin {
+    display: inline-block;
+    font-size: 1.2em;
+    color: #FFFF;
+    margin: 10px 0;
+}
+
+.admin-createProduct-img {
+    margin-top: 10px;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    max-width: 220px;
+}
+
+.admin-createProduct {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 15px 0 15px 15px;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 1.1em;
+}
+
+.createProduct-control select {
+    font-size: 1.1em;
+    width: 100%;
+    margin-bottom: 35px;
+    color: #FFFF;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 25px;
+    padding: 5px 0 5px 5px;
+}
+
+.createProduct-control select option {
+    color: black;
+}
+
+.admin-createProduct-field-inSale {
+    margin: 5px 0 15px 15px;
+    color: #FFFF;
+}
+
+.field-inSale {
+    margin-bottom: 15px;
+}
+
+.admin-createProduct-form-button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 45px;
+    position: relative;
+}
+
+.admin-createProduct-button {
+    max-width: 260px;
+    width: 80%;
+    border-radius: 25px;
+    padding: 15px 0;
+    font-size: 1.2em;
+    border: none;
+    background-color: rgb(80, 100, 140);
+    color: #FFF;
+    transition: all 450ms;
+}
+
+
+
+/* Desktop */
+@media (min-width: 941px){
+    .admin-createProduct-main-desktop {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/login-background.jpg);
+    }
+
+    .admin-createProduct-form {
+        width: 60%;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0px 0px 5px rgb(80, 100, 140);
+        padding: 35px 0;
+    }
+    
+    .admin-createProduct-field {
+        max-width: 560px;
+        width: 80%;
+        margin: auto;
+        position: relative;
+    }
+    
+    .createProduct-label-admin {
+        display: inline-block;
+        font-size: 1.2em;
+        color: #FFFF;
+        margin: 10px 0;
+    }
+
+
+
+
+
+
+
+    .send-button {
+        position: relative;
+        background: linear-gradient(to right, rgb(40, 50, 80), rgb(40, 50, 80) 50%, rgb(80, 100, 140) 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: all 275ms ease;
+    }
+
+    .send-button:hover {
+        background-position: 0 100%;
+    }
+    
+    .form-login a:hover, .form-register a:hover, .form-admin a:hover {
+        text-decoration: underline;
+    }
 }

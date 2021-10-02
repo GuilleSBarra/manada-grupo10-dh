@@ -3,92 +3,95 @@
     <body>
         <%- include('../partials/header') %>
 
-            <main>
-                <form class="createProduct-form" action="/admin/create-product" method="POST"
-                    enctype="multipart/form-data">
-                    <h2 class="createProduct-title">Agregar Nuevos Productos:</h2>
+            <main class="admin-createProduct-main-mobile admin-createProduct-main-desktop">
+                <section class="admin-createProduct-container">
+                    <form class="admin-createProduct-form" action="/admin/create-product" method="POST"
+                        enctype="multipart/form-data">
+                        <h2 class="admin-createProduct-title">Agregar Nuevos Productos:</h2>
 
-                    <div class="createProduct-admin-field">
-                        <label class="createProduct-label-admin">Imágen del Producto:</label>
-                        <input class="createProduct-admin-img" type="file" name="image">
-                        <span></span>
-                    </div>
-
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="name" placeholder="Nombre del producto">
-                        <span></span>
-                    </div>
-
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="description"
-                            placeholder="Descripción del producto">
-                        <span></span>
-                    </div>
-
-                    <div class="createProduct-admin-field">
-                        <label class="createProduct-label-admin" for="createProduct-label-admin">Categoría</label>
-                        <div class="createProduct-control">
-                            <select name="category" id="category">
-                                <option value="">Seleccione una opción</option>
-                                <option value="Rider">Jinete</option>
-                                <option value="horseCare">Cuidado del Caballo</option>
-                                <option value="Veterinary">Veterinaria</option>
-                                <option value="Accesories">Equipo y accesorios</option>
-                            </select>
+                        <div class="admin-createProduct-field">
+                            <label for="image" class="createProduct-label-admin">Imágen del Producto:</label>
+                            <input id="image" class="admin-createProduct-img" type="file" name="image">
+                            <span></span>
                         </div>
-                    </div>
 
-                    <div class="createProduct-admin-field">
-                        <label class="createProduct-label-admin" for="createProduct-label-admin">Talle</label>
-                        <div class="createProduct-control">
-                            <select name="size" id="size">
-                                <option value="">Seleccione una opción</option>
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                            </select>
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="name"
+                                placeholder="Nombre del producto">
+                            <span></span>
                         </div>
-                    </div>
 
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="Price" id="newProductPrice"
-                            placeholder="Precio del Producto">
-                        <span></span>
-                    </div>
-
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="keywords" id="keywords"
-                            placeholder="Palabras clave">
-                        <span></span>
-                    </div>
-
-                    <div class="createProduct-admin-field">
-                        <label class="createProduct-label-admin" for="createProduct-label-admin">En oferta</label>
-                        <div class="createProduct-admin-field-inSale">
-                            <input class="field-inSale" type="radio" name="inSale" value="true">Si </input>
-                            <br>
-                            <input class="field-inSale" type="radio" name="inSale" value="false">No </input>
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="description"
+                                placeholder="Descripción del producto">
+                            <span></span>
                         </div>
-                    </div>
 
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="discountPrice" id="discountPrice"
-                            placeholder="Precio en descuento">
-                        <span></span>
-                    </div>
+                        <div class="admin-createProduct-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">Categoría</label>
+                            <div class="createProduct-control">
+                                <select name="category" id="category">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="Rider">Jinete</option>
+                                    <option value="horseCare">Cuidado del Caballo</option>
+                                    <option value="Veterinary">Veterinaria</option>
+                                    <option value="Accesories">Equipo y accesorios</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div class="createProduct-admin-field">
-                        <input class="createProduct-admin" type="text" name="discount" id="discount"
-                            placeholder="Porcentaje de descuento">
-                        <span></span>
-                    </div>
+                        <div class="admin-createProduct-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">Talle</label>
+                            <div class="createProduct-control">
+                                <select name="size" id="size">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div class="createProduct-form-button">
-                        <button type="submit" class="create-send-button">Enviar</button>
-                    </div>
-                </form>
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="Price" id="newProductPrice"
+                                placeholder="Precio del Producto">
+                            <span></span>
+                        </div>
+
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="keywords" id="keywords"
+                                placeholder="Palabras clave">
+                            <span></span>
+                        </div>
+
+                        <div class="admin-createProduct-field">
+                            <label class="createProduct-label-admin" for="createProduct-label-admin">En oferta</label>
+                            <div class="admin-createProduct-field-inSale">
+                                <input class="field-inSale" type="radio" name="inSale" value="true"> Si</input>
+                                <br>
+                                <input class="field-inSale" type="radio" name="inSale" value="false"> No</input>
+                            </div>
+                        </div>
+
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="discountPrice" id="discountPrice"
+                                placeholder="Precio en descuento">
+                            <span></span>
+                        </div>
+
+                        <div class="admin-createProduct-field">
+                            <input class="admin-createProduct" type="text" name="discount" id="discount"
+                                placeholder="Porcentaje de descuento">
+                            <span></span>
+                        </div>
+
+                        <div class="admin-createProduct-form-button">
+                            <button type="submit" class="admin-createProduct-button">Enviar</button>
+                        </div>
+                    </form>
+                </section>
 
             </main>
 
