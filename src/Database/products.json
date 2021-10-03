@@ -110,10 +110,21 @@
     },
     {
         "id": 7,
+        "name": "Casco Equitación Fouganza",
+        "description": "Gyps bengalensis",
         "image": "/img/products/casco-equitacion-fouganza-520-negro-mate.JPG",
-        "type": "Type C",
-        "price": "$7.03",
-        "discountPrice": "$0.72"
+        "category": "Jinete",
+        "size": "S",
+        "price": "$9.18",
+        "keywords": [
+            "North American red fox",
+            "Gull, lava",
+            "White-winged tern",
+            "Tern, royal"
+        ],
+        "inSale": false,
+        "discountPrice": "$6.99",
+        "discount": 32
     },
     {
         "id": 8,
@@ -706,7 +717,7 @@
         "name": "Repelente de Insectos",
         "description": "Vombatus ursinus",
         "image": "/img/products/repelente-de-insectos-gel.JPG",
-        "category": "",
+        "category": "Cuidados del caballo",
         "type": "Type C",
         "size": "",
         "price": "$9.83",
@@ -714,17 +725,5 @@
         "inSale": "false",
         "discountPrice": "$9.36",
         "discount": "50"
-    },
-    {
-        "id": "fdcc9081-9d4c-4721-b8f5-0507cd9ca854",
-        "name": "Mica",
-        "description": "",
-        "image": "/img/image-1632847534678-584029946cabezada.jpg",
-        "category": "",
-        "size": "",
-        "Price": "",
-        "keywords": "",
-        "discountPrice": "",
-        "discount": ""
     }
 ]

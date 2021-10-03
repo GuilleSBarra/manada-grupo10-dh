@@ -5,10 +5,12 @@ const { v4: uuidv4 } = require('uuid');
 
 let controller = {
     admin: (req, res) => {
+        
         res.render('./admin/admin.ejs');
     },
 
     createForm: (req, res) => {
+
         res.render('./admin/createProducts.ejs')
     },
 
@@ -38,10 +40,15 @@ let controller = {
     },
 
     editProducts: (req, res) => {
-        res.render('./admin/editProducts.ejs', { products })
+
+        const categories = [...new Set(products.map(product => product.category))];
+        const productsByCategory = products.filter(product => product.category == req.query.category);
+        
+        res.render('./admin/editProducts.ejs', { products: productsByCategory, categories })
     },
 
     editForm: (req, res) => {
+
         const idProduct = req.params.idProduct;
         const product = products.find(product => product.id == idProduct);
 
@@ -49,6 +56,7 @@ let controller = {
     },
 
     update: (req, res) => {
+
         const idProduct = req.params.idProduct;
         console.log(idProduct)
 
@@ -72,11 +80,12 @@ let controller = {
     },
 
     destroy: (req, res) => {
+
         products = products.filter(product => product.id != req.params.idProduct);
 
 		fs.writeFileSync(path.join(__dirname, "../database/products.json"), JSON.stringify(products, null, 4), { encoding: 'utf-8' })
 
-		res.render('./admin/editProducts.ejs', { products })
+        controller.editProducts (req, res);
     },
 }
 

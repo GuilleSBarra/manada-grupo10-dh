@@ -1,0 +1,9 @@
+<tr>
+    <td><%- product.id %> </td>
+    <td><a href="/admin/edit-product/<%= product.id %>"><%- product.name %></a></td>
+    <td class="admin-table-form-button">
+         <form action="/admin/delete/<%- product.id %>?_method=DELETE" name="deleteform" method="POST"> 
+            <button type="submit" class="admin-table-button">Eliminar</button>
+        </form>
+    </td>
+</tr>
