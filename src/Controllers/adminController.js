@@ -1,9 +1,9 @@
 let products = require('../database/products.json');
 const fs = require("fs");
 const path = require("path");
-const { v4: uuidv4 } = require('uuid');
 
 let controller = {
+
     admin: (req, res) => {
         
         res.render('./admin/admin.ejs');
@@ -16,10 +16,11 @@ let controller = {
 
     create: (req, res) => {
 
+        const id = products.length + 1;
         const file = req.file
         const { name, description, category, size, Price, keywords, inSale, discountPrice, discount } = req.body
         const newProduct = {
-            id: uuidv4(),
+            id: id,
             name: name,
             description: description,
             image: `/img/${file.filename}`,
@@ -56,14 +57,21 @@ let controller = {
     },
 
     update: (req, res) => {
-
+        const file = req.file;
         const idProduct = req.params.idProduct;
-        console.log(idProduct)
+        let searchedProduct = products.find(product => product.id == idProduct);
+
+        if (file == undefined) {
+            searchedProduct.image = searchedProduct.image;
+        } else {
+            searchedProduct.image = `/img/${file.filename}`;
+        }
 
         products.forEach(product => {
 			if (product.id == idProduct){
                 product.name = req.body.name,
                 product.description = req.body.description,
+                product.image = searchedProduct.image,
                 product.category = req.body.category,
                 product.size = req.body.size,
                 product.price = req.body.price,

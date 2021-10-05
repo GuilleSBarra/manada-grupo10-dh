@@ -10,25 +10,25 @@
                     </div>
 
                     <div class="admin-products-container">
-                        <form class="admin-products-form" method="POST" action="/admin/edit-product/<%= product.id %>?_method=PUT">
+                        <form class="admin-products-form" action="/admin/edit-product/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                             <h2 class="admin-products-title">Editar Producto:</h2>
 
                             <div class="admin-products-field">
-                                <label class="admin-products-label">Imágen del Producto:</label>
+                                <label class="admin-products-label">Cambiar Imágen:</label>
                                 <input class="admin-products-img" type="file" name="image">
                                 <span></span>
                             </div>
 
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="name" placeholder="Nombre del producto"
-                                    value="<%= product.name %>">
+                                <label class="admin-products-label" for="name">Nombre</label>
+                                <input class="admin-products" type="text" id="name" name="name" value="<%= product.name %>">
                                 <span></span>
                             </div>
 
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="description"
-                                    placeholder="Descripción del producto" value="<%= product.description %>">
+                                <label class="admin-products-label" for="description">Description</label>
+                                <input class="admin-products" type="text" id="description" name="description" value="<%= product.description %>">
                                 <span></span>
                             </div>
 
@@ -115,14 +115,8 @@
                             </div>
 
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="price" id="newProductPrice"
-                                    placeholder="Precio del Producto" value="<%= product.price %>">
-                                <span></span>
-                            </div>
-
-                            <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="keywords" id="keywords"
-                                    placeholder="Palabras clave" value="<%= product.keywords %>">
+                                <label class="admin-products-label" for="price">Precio</label>
+                                <input class="admin-products" type="text" name="price" id="price" value="<%= product.price %>">
                                 <span></span>
                             </div>
 
@@ -140,21 +134,15 @@
                                     <% } %>
                                 </div>
                             </div>
-
-                            <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="discountPrice" id="discountPrice"
-                                    placeholder="Precio en descuento" value="<%= product.discountPrice %>">
-                                <span></span>
-                            </div>
-
-                            <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="discount" id="discount"
-                                    placeholder="Porcentaje de descuento" value="<%= product.discount %>">
-                                <span></span>
-                            </div>
-
-                            <div class="admin-products-form-button">
-                                <button type="submit" class="admin-products-button">Modificar</button>
+                            <div class="admin-editProducts-buttons-div">
+                                <div class="admin-products-form-button">
+                                    <button type="submit" class="admin-products-button">Modificar</button>
+                                </div>
+                                <form action="/admin/delete/<%- product.id %>?_method=DELETE" name="deleteform" method="POST">
+                                    <div class="admin-products-form-button">
+                                        <button type="submit" class="admin-products-button">Eliminar</button>
+                                    </div>
+                                </form>
                             </div>
                         </form>
                     </div>
