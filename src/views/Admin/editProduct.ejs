@@ -36,37 +36,10 @@
                                 <label class="admin-products-label" for="category">Categoría</label>
                                 <div class="admin-products-control">
                                     <select name="category" id="category">
-
-                                        <% switch (product.category) { 
-                                            case product.category = "Jinete" : %>
-                                                <option value="Rider" selected>Jinete</option>
-                                                <option value="horseCare">Cuidados del caballo</option>
-                                                <option value="Veterinary">Veterinaria</option>
-                                                <option value="Accesories">Equipo y accesorios</option>
-                                        <% break;
-                                        
-                                        case product.category = "Cuidados del caballo" : %>
-                                                <option value="Rider">Jinete</option>
-                                                <option value="horseCare" selected>Cuidados del caballo</option>
-                                                <option value="Veterinary">Veterinaria</option>
-                                                <option value="Accesories">Equipo y accesorios</option>
-                                        <% break;
-
-                                        case product.category = "Veterinaria" : %>
-                                                <option value="Rider">Jinete</option>
-                                                <option value="horseCare">Cuidados del caballo</option>
-                                                <option value="Veterinary" selected>Veterinaria</option>
-                                                <option value="Accesories">Equipo y accesorios</option>
-                                        <% break;
-
-                                        case product.category = "Equipo y Accesorios" : %>
-                                                <option value="Rider">Jinete</option>
-                                                <option value="horseCare">Cuidados del caballo</option>
-                                                <option value="Veterinary">Veterinaria</option>
-                                                <option value="Accesories" selected>Equipo y accesorios</option>
-                                        <% break;
-                                    } %>
-
+                                        <option value="Rider" <%= product.category == 'Jinete' ? 'selected' : '' %>>Jinete</option>
+                                        <option value="Rider" <%= product.category == 'Cuidados del caball' ? 'selected' : '' %>>Cuidados del caballo</option>
+                                        <option value="Rider" <%= product.category == 'Veterinaria' ? 'selected' : '' %>>Veterinaria</option>
+                                        <option value="Rider" <%= product.category == 'Equipo y accesorios' ? 'selected' : '' %>>Equipo y accesorios</option>
                                     </select>
                                 </div>
                             </div>
@@ -75,41 +48,11 @@
                                 <label class="admin-products-label" for="size">Talle</label>
                                 <div class="admin-products-control">
                                     <select name="size" id="size">
-
-                                        <% switch (product.size) { 
-                                            case product.size = "XS" : %>
-                                                <option value="XS" selected>XS</option>
-                                                <option value="S">S</option>
-                                                <option value="M">M</option>
-                                                <option value="L">L</option>
-                                                <option value="XL">XL</option>
-                                            <% break;
-                                            
-                                            case product.size = "S" : %>
-                                                <option value="XS">XS</option>
-                                                <option value="S" selected>S</option>
-                                                <option value="M">M</option>
-                                                <option value="L">L</option>
-                                                <option value="XL">XL</option>
-                                            <% break;
-
-                                            case product.size = "M" : %>
-                                                <option value="XS">XS</option>
-                                                <option value="S">S</option>
-                                                <option value="M" selected>M</option>
-                                                <option value="L">L</option>
-                                                <option value="XL">XL</option>
-                                            <% break;
-
-                                            case product.size = "L" : %>
-                                                <option value="XS">XS</option>
-                                                <option value="S">S</option>
-                                                <option value="M">M</option>
-                                                <option value="L" selected>L</option>
-                                                <option value="XL">XL</option>
-                                            <% break;
-                                        } %>
-
+                                        <option value="XS" <%= product.size == 'XS' ? 'selected' : '' %>>XS</option>
+                                        <option value="S" <%= product.size == 'S' ? 'selected' : '' %>>S</option>
+                                        <option value="M" <%= product.size == 'M' ? 'selected' : '' %>>M</option>
+                                        <option value="L" <%= product.size == 'L' ? 'selected' : '' %>>L</option>
+                                        <option value="XL" <%= product.size == 'XL' ? 'selected' : '' %>>XL</option>
                                     </select>
                                 </div>
                             </div>
