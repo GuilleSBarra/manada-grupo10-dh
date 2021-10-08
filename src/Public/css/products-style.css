@@ -15,7 +15,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 70px;
+    padding-top: 50px;
+    width: 85%;
+    margin: auto;
 }
 
 .index-products article {
@@ -82,6 +84,7 @@
     .index-products {
         width: 60%;
         max-height: 650px;
+        padding-top: 0;
     }
 
     .shop-products {
