@@ -5,8 +5,8 @@
 .shop-header {
     width: 85%;
     margin: auto;
-    margin-top: 160px;
-    font-size: 2em;
+    margin-top: 15px;
+    font-size: 1.5em;
     text-align: center;
     margin-bottom: 35px;
 }
@@ -15,11 +15,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 70px;
 }
 
 .index-products article {
     width: 45%;
-    padding: 15px;
     display: block;
     position: relative;
 }
@@ -88,6 +88,7 @@
         width: 70%;
         max-height: 100%;
         margin: auto;
+        margin-top: 80px;
     }
 
     .index-products article {
@@ -112,20 +113,17 @@
         box-shadow: 6px 0 5px -4px rgb(240, 240, 240), -6px 0 5px -4px rgb(240, 240, 240); 
         /*box-shadow: 0px 5px 10px rgb(240, 240, 240);*/
         overflow: hidden;
-        transform: scale(1.02);
     }
 
     .product-cart {
         position: absolute;
-        margin-left: -0.9%;
         padding-bottom: 30px;
         margin-top: 15%;
-        width: 89%;
+        width: 100%;
         text-align: center;
         z-index: 50;
-        border-radius: 5px;
         background-color: #FFFF;
-        box-shadow: 6px 0 5px -4px rgb(240, 240, 240), -6px 0 5px -4px rgb(240, 240, 240); 
+        box-shadow: 6px 0 5px -4px rgb(240, 240, 240), -6px 10px 5px -4px rgb(240, 240, 240);
         opacity: 0;
         visibility: hidden;
         transition: all 450ms;
@@ -155,6 +153,6 @@
     .index-products article:hover .product-cart {
         opacity: 1;
         visibility: visible;
-        transform: translateY(-60%);
+        transform: translateY(-70%);
     }
 }

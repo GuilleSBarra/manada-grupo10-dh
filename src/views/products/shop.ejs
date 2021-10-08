@@ -4,7 +4,28 @@
     
     <main>
 
-        <h1 class="shop-header">Todo lo que buscás en un solo lugar</h1>
+        <div class="index-categories-header">
+            <div>
+                <a href="/"><span><i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i></span></a>
+                <span>Shop</span>
+            </div>
+
+            <div class="shop-header">
+                <h1>Todo lo que buscás en un solo lugar</h1>
+            </div>
+
+            <div class="index-categories-header-filter">
+                <div class="index-categories-filter-container">
+                    <div class="index-categories-filter-div">
+                        <p><i class="fas fa-filter"></i> Filtro <i class="fas fa-caret-down"></i></p>
+                    </div>
+        
+                    <div class="index-categories-pages">
+                        <p><i class="fas fa-chevron-left"></i> 1 / 5 <i class="fas fa-chevron-right"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <section class="index-products shop-products">
             <% products.forEach(product => { %>

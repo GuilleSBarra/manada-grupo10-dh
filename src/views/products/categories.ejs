@@ -3,8 +3,29 @@
     <%- include('../partials/header') %>
     
     <main>
+        <div class="index-categories-header">
+            <div>
+                <a href="/"><span><i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i></span></a>
+                <a href="/products"><span>Shop <i class="fas fa-chevron-right"></i></span></a>
+                <span class="span-name"><%= product.category %></span>
+            </div>
 
-        <h1 class="shop-header">Todos los productos de <%= product.category %></h1>
+            <div class="shop-header">
+                <h1>Todos los productos de <%= product.category %></h1>
+            </div>
+
+            <div class="index-categories-header-filter">
+                <div class="index-categories-filter-container">
+                    <div class="index-categories-filter-div">
+                        <p><i class="fas fa-filter"></i> Filtro <i class="fas fa-caret-down"></i></p>
+                    </div>
+        
+                    <div class="index-categories-pages">
+                        <p><i class="fas fa-chevron-left"></i> 1 / 5 <i class="fas fa-chevron-right"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <section class="index-products shop-products">
             <% productsByCategory.forEach(product => { %>
