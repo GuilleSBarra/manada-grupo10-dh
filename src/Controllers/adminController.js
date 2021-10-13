@@ -1,4 +1,5 @@
 let products = require('../database/products.json');
+let users = require('../database/users.json');
 const fs = require("fs");
 const path = require("path");
 

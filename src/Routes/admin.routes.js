@@ -21,6 +21,6 @@ router.get("/edit-user/", controller.editUsers);
 router.get("/edit-user/:idUser", controller.editUserForm);
 router.put("/edit-user/:idUser", upload.single("image"), controller.updateUser);
 
-router.delete("/delete/:idUser", controller.destroyUser);
+router.delete("/delete-user/:idUser", controller.destroyUser);
 
 module.exports = router

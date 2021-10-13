@@ -37,8 +37,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% user.forEach(function(user){ %>
-                                    <%- include('../partials/adminUserTable', {users: user}) %>
+                                <% users.forEach(function(user){ %>
+                                    <%- include('../partials/adminUserTable', {user: user}) %>
                                 <% }); %>
                             </tbody>
                         </table>
@@ -56,7 +56,7 @@
                             </thead>
                             <tbody>
                                 <% users.forEach(function(user){ %>
-                                    <%- include('../partials/adminUserTableDesktop', {users: user}) %>
+                                    <%- include('../partials/adminUserTableDesktop', {user: user}) %>
                                 <% }); %>
                             </tbody>
                         </table>

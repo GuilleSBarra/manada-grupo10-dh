@@ -1,3 +1,7 @@
+let users = require('../database/users.json');
+const fs = require("fs");
+const path = require("path");
+
 let controller = {
      login: (req, res) => {
         res.render('./users/login.ejs')
@@ -9,7 +13,7 @@ let controller = {
 
     registerUser: (req, res) => {
 
-        const id = products.length + 1;
+        const id = users.length + 1;
         const file = req.file
         const { user, name, surname, category, password } = req.body
         const newUser = {
@@ -17,16 +21,16 @@ let controller = {
             user: user,
             name: name,
             surname: surname,
-            image: `/img/${file.filename}`,
-            category: category,
+            image: `/img/users/${file.filename}`,
+            category: "User",
             password: password
         }
 
-        products.push(newUser)
+        users.push(newUser)
 
         fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(users, null, 4), { encoding: 'utf-8' })
 
-        res.render('./users/login.ejs', { users });
+        res.render('./users/login.ejs', { user });
     },
 
     detail:(req,res) => {
