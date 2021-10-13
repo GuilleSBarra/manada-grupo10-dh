@@ -26,7 +26,7 @@
         "surname": "Jimenez",
         "email": "f.jimenezcohen@digitalhouse.com",
         "password": "123456",
-        "category": "Admin",
+        "category": "User",
         "image": "/img/users/daramayo90.JPG"
     },
     {
@@ -36,7 +36,7 @@
         "surname": "Antequera",
         "email": "jeremias.antequera@digitalhouse.com",
         "password": "123456",
-        "category": "Admin",
+        "category": "User",
         "image": ""
     }
 ]

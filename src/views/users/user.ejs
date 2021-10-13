@@ -1,0 +1,53 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="single-product-main">
+                <section class="single-product-title">
+                    <div>
+                        <h2>
+                            Detalle del Usuario: <%= user.name %>
+                        </h2>
+                    </div>
+                </section>
+                <section class="single-product-container">
+                    <div class="single-product-img-description">
+                        <div class="single-product-img">
+                            <img src=<%= user.image %> alt="user image">
+                        </div>
+                    </div>
+                    <div class="single-product-detail">
+                        <article class="single-product-detail-info">
+                            <div class="single-product-rating-wishlist">
+                                <div class="single-product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="single-product-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <h2 class="single-product-detail-title">
+                                <%= user.user %>
+                            </h2>
+                            
+                            <p class="single-product-detail-price">
+                                <span class="single-product-price"><%= user.name %></span>
+                            </p>
+                            <p class="single-product-detail-price">
+                                <span class="single-product-price"><%= user.surname %></span>
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

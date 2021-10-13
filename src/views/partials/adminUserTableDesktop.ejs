@@ -1,0 +1,16 @@
+<tr>
+    <td><%- users.id %> </td>
+    <td>
+        <a href="/admin/edit-users/<%= users.id %>">
+            <img class="admin-editProduct-img" src="<%= users.image %>">
+        </a>
+    </td>
+    <td><a href="/admin/edit-users/<%= users.id %>"><%- users.name %></a></td>
+    <td><%- users.surname %> </td>
+    <td><%- users.category %> </td>
+    <td class="admin-table-form-button">
+         <form action="/admin/delete/<%- users.id %>?_method=DELETE" name="deleteform" method="POST"> 
+            <button type="submit" class="admin-table-button">Eliminar</button>
+        </form>
+    </td>
+</tr>

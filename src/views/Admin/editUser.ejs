@@ -1,0 +1,76 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="admin-products-main-mobile admin-products-main-desktop">                
+                <section class="admin-editProduct-container">
+                    <div class="admin-editProduct-image">
+                        <img src=<%= user.image %> alt="user image">
+                    </div>
+
+                    <div class="admin-products-container">
+                        <form class="admin-products-form" action="/admin/edit-user/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                            <h2 class="admin-products-title">Editar usuario:</h2>
+
+                            <div class="admin-products-field">
+                                <label class="admin-products-label">Cambiar foto de perfil:</label>
+                                <input class="admin-products-img" type="file" name="image">
+                                <span></span>
+                            </div>
+
+                            <div class="admin-products-field">
+                                <label class="admin-products-label" for="name">Usuario</label>
+                                <input class="admin-products" type="text" id="user" name="user" value="<%= user.user %>">
+                                <span></span>
+                            </div>
+                            
+                            <div class="admin-products-field">
+                                <label class="admin-products-label" for="name">Nombre</label>
+                                <input class="admin-products" type="text" id="name" name="name" value="<%= user.name %>">
+                                <span></span>
+                            </div>
+
+                            <div class="admin-products-field">
+                                <label class="admin-products-label" for="description">Apellido</label>
+                                <input class="admin-products" type="text" id="surname" name="surname" value="<%= user.surname %>">
+                                <span></span>
+                            </div>
+
+                            <div class="admin-products-field">
+                                <label class="admin-products-label" for="category">Categoría</label>
+                                <div class="admin-products-control">
+                                    <select name="category" id="category">
+                                        <option value="User" <%= user.category == 'Admin' ? 'selected' : '' %>>Admin</option>
+                                        <option value="User" <%= user.category == 'User' ? 'selected' : '' %>>User</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="admin-products-field">
+                                <label class="admin-products-label" for="price">Contraseña</label>
+                                <input class="admin-products" type="password" name="password" id="password" value="<%= user.password %>">
+                                <span></span>
+                            </div>
+
+                            <div class="admin-editProducts-buttons-div">
+                                <div class="admin-products-form-button">
+                                    <button type="submit" class="admin-products-button">Modificar</button>
+                                </div>
+                                <form action="/admin/delete/<%- user.id %>?_method=DELETE" name="deleteform" method="POST">
+                                    <div class="admin-products-form-button">
+                                        <button type="submit" class="admin-products-button">Eliminar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

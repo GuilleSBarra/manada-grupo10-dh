@@ -1,0 +1,70 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="admin-edit-filter-main">
+
+                <h3 class="admin-edit-filter-header">Elige el usuario a modificar</h3>
+
+                <section class="admin-filter-container">
+
+                    <form action="/admin/edit-user" method="GET">
+                        <section class="admin-search-filter">
+                            <div class="admin-filter-category">
+                                <label class="admin-filter-label" for="category"></label>
+                                <select name="category" id="category">
+                                    <option selected>Categoria</option>
+                                    <% Userscategories.forEach(function(category){ %>
+                                        <option value="<%- category %>"><%- category %></option>
+                                    <% }); %>
+                                </select>
+                            </div>
+
+                            <div class="admin-filter-form-button">
+                                <button type="submit" class="admin-filter-button">Filtrar</button>
+                            </div>
+                        </section>
+                    </form>
+
+                    <section class="admin-table-container">
+                        <table class="admin-table-rows-mobile">
+                            <thead>
+                                <tr class="admin-table-header">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% user.forEach(function(user){ %>
+                                    <%- include('../partials/adminUserTable', {users: user}) %>
+                                <% }); %>
+                            </tbody>
+                        </table>
+
+                        <table class="admin-table-rows-desktop">
+                            <thead>
+                                <tr class="admin-table-header">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Img</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Categoría</th>
+                                    <th scope="col">Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% users.forEach(function(user){ %>
+                                    <%- include('../partials/adminUserTableDesktop', {users: user}) %>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>
