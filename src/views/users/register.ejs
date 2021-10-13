@@ -1,51 +1,119 @@
 <%- include('../partials/head.ejs') %>
 
-<body>
-    <%- include('../partials/header') %>
+    <body class="login-body">
+        <%- include('../partials/header') %>
 
-        <main>
-            <form class="form-register" action="/" method="GET">
-                <h2>Registrate:</h2>
+            <main class="login-main-mobile login-main-desktop">
+                <section class="login-register-container">
+                    <!-- <div class="login-container-div-1">
+                        <form class="form-login" action="/" method="GET">
+                            <h2>Iniciá Sesión:</h2>
 
-                <div class="register-field">
-                    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
-                    <span></span>
-                </div>
+                            <div class="login-field">
+                                <i class="fas fa-user"></i>
+                                <input class="controls" type="text" name="user" value=""
+                                    placeholder="Usuario / Email">
+                                <span></span>
+                            </div>
 
-                <div class="register-field">
-                    <input class="controls" type="text" name="apellidos" id="apellidos"
-                        placeholder="Ingrese su apellido">
-                    <span></span>
-                </div>
+                            <div class="login-field">
+                                <i class="fas fa-lock"></i>
+                                <input class="controls" type="password" name="pass" value=""
+                                    placeholder="Contraseña">
+                                <span></span>
+                            </div>
 
-                <div class="register-field">
-                    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-                    <span></span>
-                </div>
+                            <div class="form-button">
+                                <button type="submit" class="send-button">Ingresar</button>
+                            </div>
 
-                <div class="register-field">
-                    <input class="controls" type="password" name="contraseña" id="contraseña"
-                        placeholder="Ingrese su contraseña">
-                    <span></span>
-                </div>
+                            <div class="form-bottom">
+                                <p class="link"> ¿Olvidaste tu contraseña? <br> Hace click <a href="#">aquí </a></p>
+                                <p class="link">¿Todavía no tenes cuenta? <a href="/users/registro">Registrarme </a></p>
+                            </div>
 
-                <div class="form-bottom">
-                    <input type="checkbox" name="terms">
-                    <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y
-                            condiciones</a></label>
-                </div>
+                            <div class="login-social-media-p">
+                                <p>Logueate con redes sociales</p>
+                            </div>
 
-                <div class="form-button">
-                    <button type="submit" class="send-button">Registrarme</button>
-                </div>
+                            <div class="login-social-media">
+                                <ul>
+                                    <li>
+                                      <a href="#">
+                                        <i class="fab fa-facebook-f icon"></i>    </a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i class="fab fa-twitter icon"></i></a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i class="fab fa-google icon"></i></a></li>
+                                  </ul>
+                            </div>
+                        </form>
+                    </div> -->
 
-                <div class="form-bottom">
-                    <p class="link">¿Ya tenes cuenta? <a href="/users/ingreso">Ingresar</a></p>
-                </div>
-            </form>
-        </main>
+                    <div class="login-container-div-2">
+                        <form class="form-register" action="/" method="GET">
+                            <h2>Registrate:</h2>
 
-        <%- include('../partials/footer') %>
-</body>
+                            <div class="register-field">
+                                <i class="fas fa-user"></i>
+                                <input class="controls" type="text" name="user" id="user" placeholder="Usuario">
+                                <span></span>
+                            </div>
 
-</html>
+                            <div class="register-field">
+                                <i class="fas fa-user"></i>
+                                <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
+                                <span></span>
+                            </div>
+
+                            <div class="register-field">
+                                <i class="fas fa-ghost"></i>
+                                <input class="controls" type="text" name="surname" id="surname"
+                                    placeholder="Apellido">
+                                <span></span>
+                            </div>
+
+                            <div class="register-field">
+                                <i class="fas fa-envelope"></i>
+                                <input class="controls" type="email" name="email" id="email" placeholder="Correo">
+                                <span></span>
+                            </div>
+
+                            <div class="register-field">
+                                <i class="fas fa-lock"></i>
+                                <input class="controls" type="password" name="pass" id="pass"
+                                    placeholder="Contraseña">
+                                <span></span>
+                            </div>
+
+                            
+                        <div class="register-field">
+                            <label for="image" class="admin-user-label">Foto de perfil:</label>
+                            <input id="image" class="admin-user-img" type="file" name="image">
+                            <span></span>
+                        </div>
+
+                            <div class="form-bottom">
+                                <input type="checkbox" name="terms">
+                                <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y
+                                        condiciones</a></label>
+                            </div>
+
+                            <div class="form-button">
+                                <button type="submit" class="send-button">Registrarme</button>
+                            </div>
+
+                            <div class="form-bottom">
+                                <p class="link">¿Ya tenes cuenta? <a href="/users/ingreso">Ingresar</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>
