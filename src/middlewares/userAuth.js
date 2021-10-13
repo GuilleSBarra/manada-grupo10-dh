@@ -17,7 +17,7 @@ const validateUserAuth = [
     .notEmpty().withMessage('Debes completar el Email').bail()
     .isEmail().withMessage('Debes completar un Email válido'),
 
-    check('pass')
+    check('password')
     .notEmpty().withMessage('Debes completar la Contraseña').bail()
     .isLength({ min: 8 }).withMessage('La Contraseña debe ser más larga')
 ]

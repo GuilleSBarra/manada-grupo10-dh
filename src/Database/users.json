@@ -38,21 +38,5 @@
         "password": "123456",
         "category": "User",
         "image": ""
-    },
-    {
-        "id": 5,
-        "user": "27353810427",
-        "name": "Natalia",
-        "surname": "Katunskis",
-        "image": "/img/users/image-1634097625580-267160716Oxi y yo.jpg",
-        "category": "Admin"
-    },
-    {
-        "id": 6,
-        "user": "27353810427",
-        "name": "Natalia",
-        "surname": "Katunskis",
-        "image": "/img/users/image-1634097004948-322074533Oxi y yo.jpg",
-        "category": "User"
     }
 ]

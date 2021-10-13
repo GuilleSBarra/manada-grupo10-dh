@@ -1,6 +1,7 @@
 let users = require('../database/users.json');
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require ("bcrypt")
 
 let controller = {
      login: (req, res) => {
@@ -23,7 +24,7 @@ let controller = {
             surname: surname,
             image: `/img/users/${file.filename}`,
             category: "User",
-            password: password
+            password: bcrypt.hashSync(password, 10)
         }
 
         users.push(newUser)

@@ -8,7 +8,8 @@ const router = express.Router()
 
 
 router.get("/registro", validateUserAuth, controller.register)
-router.post("/registro", uploadUsers.single("image"), controller.registerUser)
+router.get("/registro", validateUserAuth, controller.register)
+router.post("/registro", validateUserAuth, uploadUsers.single("image"), controller.registerUser)
 
 router.get("/ingreso", validateUserAuth, controller.login)
 
