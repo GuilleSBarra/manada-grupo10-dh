@@ -1,5 +1,6 @@
 let products = require('../database/products.json');
 let users = require('../database/users.json');
+let usersCategories = require('../database/usersCategories.json');
 const fs = require("fs");
 const path = require("path");
 
@@ -24,7 +25,7 @@ let controller = {
             id: id,
             name: name,
             description: description,
-            image: `/img/${file.filename}`,
+            image: `/img/products/${file.filename}`,
             category: category,
             size: size,
             Price: Price,
@@ -65,7 +66,7 @@ let controller = {
         if (file == undefined) {
             searchedProduct.image = searchedProduct.image;
         } else {
-            searchedProduct.image = `/img/${file.filename}`;
+            searchedProduct.image = `/img/products/${file.filename}`;
         }
 
         products.forEach(product => {
@@ -103,7 +104,7 @@ let controller = {
         const categories = [...new Set(users.map(user => user.category))];
         const usersByCategory = users.filter(user => user.category == req.query.category);
         
-        res.render('./admin/editUsers.ejs', { user: usersByCategory, categories })
+        res.render('./admin/editUsers.ejs', { users: usersByCategory, categories })
     },
 
     editUserForm: (req, res) => {

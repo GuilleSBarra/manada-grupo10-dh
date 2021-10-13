@@ -15,9 +15,8 @@
                                 <label class="admin-filter-label" for="category"></label>
                                 <select name="category" id="category">
                                     <option selected>Categoria</option>
-                                    <% Userscategories.forEach(function(category){ %>
-                                        <option value="<%- category %>"><%- category %></option>
-                                    <% }); %>
+                                    <option value="Admin">Administrador</option>
+                                    <option value="User">Usuario</option>
                                 </select>
                             </div>
 

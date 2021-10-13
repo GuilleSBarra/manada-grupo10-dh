@@ -11,13 +11,13 @@
     },
     {
         "id": 2,
-        "user": "daramayo90",
+        "user": "NatyKatunskis",
         "name": "Natalia",
         "surname": "Katunskis",
         "email": "natalia.katunskis@gmail.com",
         "password": "123456",
-        "category": "Admin",
-        "image": "/img/users/nkatunskis.jpg"
+        "category": "User",
+        "image": "/img/users/image-1634096863145-412975633Oxi y yo.jpg"
     },
     {
         "id": 3,
@@ -51,7 +51,7 @@
         "user": "27353810427",
         "name": "Natalia",
         "surname": "Katunskis",
-        "image": "/img/users/image-1634094673030-716998283Oxi y yo.jpg",
+        "image": "/img/users/image-1634097004948-322074533Oxi y yo.jpg",
         "category": "User"
     }
 ]

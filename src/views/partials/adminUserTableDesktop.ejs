@@ -1,15 +1,15 @@
 <tr>
-    <td><%- users.id %> </td>
+    <td><%- user.id %> </td>
     <td>
-        <a href="/admin/edit-users/<%= users.id %>">
-            <img class="admin-editProduct-img" src="<%= users.image %>">
+        <a href="/admin/edit-user/<%= user.id %>">
+            <img class="admin-editProduct-img" src="<%= user.image %>">
         </a>
     </td>
-    <td><a href="/admin/edit-users/<%= users.id %>"><%- users.name %></a></td>
-    <td><%- users.surname %> </td>
-    <td><%- users.category %> </td>
+    <td><a href="/admin/edit-user/<%= user.id %>"><%- user.name %></a></td>
+    <td><%- user.surname %> </td>
+    <td><%- user.category %> </td>
     <td class="admin-table-form-button">
-         <form action="/admin/delete/<%- users.id %>?_method=DELETE" name="deleteform" method="POST"> 
+         <form action="/admin/delete-user/<%- user.id %>?_method=DELETE" name="deleteform" method="POST"> 
             <button type="submit" class="admin-table-button">Eliminar</button>
         </form>
     </td>
