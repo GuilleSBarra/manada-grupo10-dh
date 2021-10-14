@@ -19,7 +19,7 @@
 .form-register, .form-login, .form-admin {
     width: 90%;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .form-login h2, .form-register h2, .form-admin h2 {
