@@ -19,7 +19,7 @@
 .form-register, .form-login, .form-admin {
     width: 90%;
     margin: auto;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
 }
 
 .form-login h2, .form-register h2, .form-admin h2 {
@@ -33,10 +33,17 @@
     border-bottom: 1px solid;
 }
 
+.error-text{
+    color:deeppink;
+    margin-top: 10px;
+    text-align: left;
+}
+
 .register-field, .login-field, .admin-field{
     width: 80%;
     max-width: 360px;
     margin: auto;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -52,7 +59,6 @@
     width: 100%;
     border: none;
     border-radius: 25px;
-    margin-bottom: 25px;
     padding: 15px 0 15px 45px;
     background: rgba(255, 255, 255, 0.15);
     font-size: 1.1em;
@@ -206,14 +212,14 @@
     }
 
     .login-register-container .login-container-div-1 {
-        height: 600px;
+        /* height: 600px; */
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.15);
         box-shadow: 0px 0px 5px rgb(80, 100, 140);
     }
 
     .login-register-container .login-container-div-2 {
-        height: 800px;
+        /* height: 800px; */
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.15);
         box-shadow: 0px 0px 5px rgb(80, 100, 140);

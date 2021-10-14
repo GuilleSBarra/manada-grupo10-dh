@@ -58,33 +58,56 @@
 
                             <div class="register-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="user" id="user" placeholder="Usuario">
+                                <input class="controls" type="text" name="user" id="user" placeholder="Usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                                <% if (locals.errors && errors.user) { %>
+									<div class="error-text">
+										<%= errors.user.msg %>
+									</div>
+								<% } %>
                                 <span></span>
                             </div>
 
                             <div class="register-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
+                                <input class="controls" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                                <% if (locals.errors && errors.name) { %>
+									<div class="error-text">
+										<%= errors.name.msg %>
+									</div>
+								<% } %>
                                 <span></span>
                             </div>
 
                             <div class="register-field">
                                 <i class="fas fa-ghost"></i>
-                                <input class="controls" type="text" name="surname" id="surname"
-                                    placeholder="Apellido">
+                                <input class="controls" type="text" name="surname" id="surname" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                                    <% if (locals.errors && errors.surname) { %>
+                                        <div class="error-text">
+                                            <%= errors.surname.msg %>
+                                        </div>
+                                    <% } %>
                                 <span></span>
                             </div>
 
                             <div class="register-field">
                                 <i class="fas fa-envelope"></i>
-                                <input class="controls" type="email" name="email" id="email" placeholder="Correo">
+                                <input class="controls" type="email" name="email" id="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>">
+                                <% if (locals.errors && errors.email) { %>
+									<div class="error-text">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
                                 <span></span>
                             </div>
 
                             <div class="register-field">
                                 <i class="fas fa-lock"></i>
-                                <input class="controls" type="password" name="password" id="password"
-                                    placeholder="Contraseña">
+                                <input class="controls" type="password" name="password" id="password" placeholder="Contraseña">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="error-text">
+                                            <%= errors.password.msg %>
+                                        </div>
+                                    <% } %>
                                 <span></span>
                             </div>
 
@@ -92,6 +115,11 @@
                         <div class="register-field">
                             <label for="image" class="admin-user-label">Foto de perfil:</label>
                             <input id="image" class="admin-user-img" type="file" name="image">
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="error-text">
+                                    <%= errors.image.msg %>
+                                </div>
+                            <% } %>
                             <span></span>
                         </div>
 

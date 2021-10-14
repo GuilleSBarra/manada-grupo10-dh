@@ -7,11 +7,10 @@ const router = express.Router()
 
 
 
-router.get("/registro", validateUserAuth, controller.register)
-router.get("/registro", validateUserAuth, controller.register)
-router.post("/registro", validateUserAuth, uploadUsers.single("image"), controller.registerUser)
+router.get("/registro", controller.register)
+router.post("/registro", uploadUsers.single("image"),validateUserAuth, controller.registerUser)
 
-router.get("/ingreso", validateUserAuth, controller.login)
+router.get("/ingreso", controller.login)
 
 
 module.exports = router
