@@ -1,3 +1,5 @@
+/* Multer Middleware wich allows upload Users Images */
+
 const path = require("path")
 const multer = require('multer')
 

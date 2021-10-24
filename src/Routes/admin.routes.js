@@ -1,27 +1,44 @@
 const express = require('express')
 const router = express.Router()
-const uploadProducts = require('../middlewares/multer-products')
-const uploadUsers = require('../middlewares/multer-users')
+const uploadProducts = require('../middlewares/multerProductsMiddleware')
+const uploadUsers = require('../middlewares/multerUsersMiddleware')
 const controller = require('../controllers/adminController')
 
-router.get("/", controller.admin);
+/* Admin Panel */
+router.get("/", controller.admin.index);
 
-router.get("/create-product", controller.createProductsForm);
-router.post("/create-product", uploadProducts.single("image"), controller.createProducts)
+/********** PRODUCTS ADMINISTRATION **********/
 
-router.get("/edit-product/", controller.editProducts);
-router.get("/edit-product/:idProduct", controller.editForm);
-router.put("/edit-product/:idProduct", uploadProducts.single("image"), controller.update);
+/* Admin Panel: New Products */
+router.get("/create-product", controller.products.createProductsForm);
+router.post("/create-product", uploadProducts.single("image"), controller.products.createProducts)
 
-router.delete("/delete/:idProduct", controller.destroy);
+/* Admin Panel: Select Products to Update */
+router.get("/edit-product/", controller.products.editProducts);
+
+/* Update Product */
+router.get("/edit-product/:id", controller.products.editForm);
+router.put("/edit-product/:id", uploadProducts.single("image"), controller.products.update);
+
+/* Admin Panel: Delete Products */
+router.delete("/delete/:id", controller.products.destroy);
 
 
+/********** USERS ADMINISTRATION **********/
 
+/* Admin Panel: New Users */
+router.get("/create-user", controller.users.createUsersForm);
+router.post("/create-user", uploadProducts.single("image"), controller.users.createUsers)
 
-router.get("/edit-user/", controller.editUsers);
-router.get("/edit-user/:idUser", controller.editUserForm);
-router.put("/edit-user/:idUser", uploadUsers.single("image"), controller.updateUser);
+/* Admin Panel: Select Users to Update */
+router.get("/edit-user/", controller.users.editUsers);
 
-router.delete("/delete-user/:idUser", controller.destroyUser);
+/* Update User */
+router.get("/edit-user/:id", controller.users.editForm);
+router.put("/edit-user/:id", uploadUsers.single("image"), controller.users.update);
+
+/* Admin Panel: Delete USers */
+router.delete("/delete-user/:id", controller.users.destroy);
+
 
 module.exports = router

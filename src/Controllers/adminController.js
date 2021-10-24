@@ -1,67 +1,55 @@
-let products = require('../database/products.json');
-let users = require('../database/users.json');
-let usersCategories = require('../database/usersCategories.json');
+const productsModel = require('../models/productsModel');
+const usersModel = require('../models/usersModel');
+const bcrypt = require("bcryptjs")
 const fs = require("fs");
 const path = require("path");
 
-let controller = {
-
-    admin: (req, res) => {
-        
-        res.render('./admin/admin.ejs');
+let admin = {
+    /* GET: Admin Panel */
+    index: (req, res) => {
+        return res.render('./admin/admin.ejs');
     },
+}
 
+let products = {
+    /* GET: Create Products Form */
     createProductsForm: (req, res) => {
-
-        res.render('./admin/createProducts.ejs')
+        return res.render('./admin/createProducts.ejs')
     },
 
+    /* POST: Create new Products in the database */
     createProducts: (req, res) => {
-
-        const id = products.length + 1;
         const file = req.file
-        const { name, description, category, size, Price, keywords, inSale, discountPrice, discount } = req.body
-        const newProduct = {
-            id: id,
-            name: name,
-            description: description,
-            image: `/img/products/${file.filename}`,
-            category: category,
-            size: size,
-            Price: Price,
-            keywords: keywords,
-            inSale: inSale,
-            discountPrice: discountPrice,
-            discount: discount
+        
+        // Take the information to add a new product
+        let productToCreate = {
+            ...req.body,
+            image: `/img/products/${file.filename}`
         }
-
-        products.push(newProduct)
-
-        fs.writeFileSync(path.join(__dirname, "../database/products.json"), JSON.stringify(products, null, 4), { encoding: 'utf-8' })
-
-        res.render('./products/shop.ejs', { products });
+        
+        productsModel.create(productToCreate);
+        return res.render('./admin/createProducts.ejs')
     },
 
+    /* GET: Select Products to Update */
     editProducts: (req, res) => {
-
+        const products = productsModel.findAll();
         const categories = [...new Set(products.map(product => product.category))];
         const productsByCategory = products.filter(product => product.category == req.query.category);
-        
         res.render('./admin/editProducts.ejs', { products: productsByCategory, categories })
     },
 
+    /* GET: Product Form */
     editForm: (req, res) => {
-
-        const idProduct = req.params.idProduct;
-        const product = products.find(product => product.id == idProduct);
-
+        const product = productsModel.findByPk(req.params.id);
         res.render('./admin/editProduct.ejs', { product })
     },
 
+    /* POST: Update the product in the database */
     update: (req, res) => {
         const file = req.file;
-        const idProduct = req.params.idProduct;
-        let searchedProduct = products.find(product => product.id == idProduct);
+        const id = req.params.id;
+        const searchedProduct = productsModel.findByPk(id);
 
         if (file == undefined) {
             searchedProduct.image = searchedProduct.image;
@@ -69,56 +57,79 @@ let controller = {
             searchedProduct.image = `/img/products/${file.filename}`;
         }
 
-        products.forEach(product => {
-			if (product.id == idProduct){
-                product.name = req.body.name,
-                product.description = req.body.description,
-                product.image = searchedProduct.image,
-                product.category = req.body.category,
-                product.size = req.body.size,
-                product.price = req.body.price,
-                product.keywords = req.body.keywords,
-                product.inSale = req.body.inSale,
-                product.discountPrice = req.body.discountPrice,
-                product.discount = req.body.discount
-			}
-		});
-
-        fs.writeFileSync(path.join(__dirname, "../database/products.json"), JSON.stringify(products, null, 4), { encoding: 'utf-8' })
+        // Take the information to update the product in the database
+        let productToUpdate = {
+            ...req.body,
+            image: searchedProduct.image
+        }
         
-        res.redirect('/admin/edit-product/' + idProduct);
+        productsModel.update(productToUpdate, id);
+        res.redirect('/admin/edit-product/' + id);
     },
 
+    /* Delete the product from the database. Call the view to Select Products to Update */
     destroy: (req, res) => {
+        productsModel.delete(req.params.id);
+        products.editProducts (req, res);
+    },
+}
 
-        products = products.filter(product => product.id != req.params.idProduct);
 
-		fs.writeFileSync(path.join(__dirname, "../database/products.json"), JSON.stringify(products, null, 4), { encoding: 'utf-8' })
 
-        controller.editProducts (req, res);
+let users = {
+    /* GET: Create Users Form */
+    createUsersForm: (req, res) => {
+        return res.render('./admin/createUsers.ejs')
     },
 
+    /* POST: Create new Users in the database */
+    createUsers: (req, res) => {  
+        const file = req.file;
 
+        // Check if the email is already register in the Database
+        let userExist = usersModel.findByField('email', req.body.email);
+        if (userExist) {
+            return res.render('./admin/createUsers.ejs', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
+
+        // Take the information to create the user
+        let userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: `/img/users/${file.filename}`
+        }
+
+        usersModel.create(userToCreate);
+        return res.render('./admin/createUsers.ejs')
+    },
+
+    /* GET: Select Users to Update */
     editUsers: (req, res) => {
-
+        const users = usersModel.findAll();
         const categories = [...new Set(users.map(user => user.category))];
         const usersByCategory = users.filter(user => user.category == req.query.category);
-        
         res.render('./admin/editUsers.ejs', { users: usersByCategory, categories })
     },
 
-    editUserForm: (req, res) => {
-
-        const idUser = req.params.idUser;
-        const user = users.find(user => user.id == idUser);
-
+    /* GET: User Form */
+    editForm: (req, res) => {
+        const user = usersModel.findByPk(req.params.id);
         res.render('./admin/editUser.ejs', { user })
     },
 
-    updateUser: (req, res) => {
+    /* POST: Update the User in the database */
+    update: (req, res) => {
         const file = req.file;
-        const idUser = req.params.idUser;
-        let searchedUser = users.find(user => user.id == idUser);
+        const id = req.params.id;
+        const searchedUser = usersModel.findByPk(id);
 
         if (file == undefined) {
             searchedUser.image = searchedUser.image;
@@ -126,29 +137,21 @@ let controller = {
             searchedUser.image = `/img/users/${file.filename}`;
         }
 
-        users.forEach(user => {
-			if (user.id == idUser){
-                user.user = req.body.user,
-                user.name = req.body.name,
-                user.surname = req.body.surname,
-                user.image = searchedUser.image,
-                user.category = req.body.category
-			}
-		});
-
-        fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(users, null, 4), { encoding: 'utf-8' })
+        // Take the information to update the user in the database
+        let userToUpdate = {
+            ...req.body,
+            image: searchedUser.image
+        }
         
-        res.redirect('/admin/edit-user/' + idUser);
+        usersModel.update(userToUpdate, id);
+        res.redirect('/admin/edit-user/' + id);
     },
 
-    destroyUser: (req, res) => {
-
-        users = users.filter(user => user.id != req.params.idUser);
-
-		fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(users, null, 4), { encoding: 'utf-8' })
-
-        controller.editUsers (req, res);
+    /* Delete the user from the database. Call the view to Select Users to Update */
+    destroy: (req, res) => {
+        usersModel.delete(req.params.id);
+        users.editUsers (req, res);
     },
 }
 
-module.exports = controller
+module.exports = { products , users, admin }

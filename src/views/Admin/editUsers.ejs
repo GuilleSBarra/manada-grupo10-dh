@@ -15,8 +15,9 @@
                                 <label class="admin-filter-label" for="category"></label>
                                 <select name="category" id="category">
                                     <option selected>Categoria</option>
-                                    <option value="Admin">Administrador</option>
-                                    <option value="User">Usuario</option>
+                                    <% categories.forEach(function(category){ %>
+                                        <option value="<%- category %>"><%- category %></option>
+                                    <% }); %>
                                 </select>
                             </div>
 
@@ -47,6 +48,7 @@
                                 <tr class="admin-table-header">
                                     <th scope="col">Id</th>
                                     <th scope="col">Img</th>
+                                    <th scope="col">Usuario</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellido</th>
                                     <th scope="col">Categoría</th>

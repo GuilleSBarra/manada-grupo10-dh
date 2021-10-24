@@ -42,8 +42,10 @@
                                 <label class="admin-products-label" for="category">Categoría</label>
                                 <div class="admin-products-control">
                                     <select name="category" id="category">
-                                        <option value="Admin" <%= user.category == 'Admin' ? 'selected' : '' %>>Administrador</option>
-                                        <option value="User" <%= user.category == 'User' ? 'selected' : '' %>>Usuario</option>
+                                        <option value="Cliente" <%= user.category == 'Cliente' ? 'selected' : '' %>>Cliente</option>
+                                        <option value="Suscriptor" <%= user.category == 'Suscriptor' ? 'selected' : '' %>>Suscriptor</option>
+                                        <option value="Editor" <%= user.category == 'Editor' ? 'selected' : '' %>>Editor</option>
+                                        <option value="Administrador" <%= user.category == 'Administrador' ? 'selected' : '' %>>Administrador</option>
                                     </select>
                                 </div>
                             </div>

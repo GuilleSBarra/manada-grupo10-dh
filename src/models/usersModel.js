@@ -1,16 +1,24 @@
 
-// 2. Buscar a un usuario que se quiere loguear por su email
-
-// 4. Editar la información de un usuario
-
-
 const fs = require('fs');
 const path = require('path');
-const users = require('../database/users.json');
 
 const usersModel = {
-    fileName: path.join(__dirname, "../database/users.json"),
+    /* Read the info from the database */
+    getData: function () {
+        return JSON.parse(fs.readFileSync(path.join(__dirname, "../database/users.json"), 'utf-8'));
+    },
 
+    /* Post the new info in the database */
+    postData: function (userData) {
+        return fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(userData, null, 4), { encoding: 'utf-8' });
+    },
+
+    /* Return all the information from the database */
+    findAll: function () {
+        return this.getData();
+    },
+
+    /* Create a new ID for new Users */
     generateId: function (){
         let users = this.findAll();
         let lastUser = users.pop();
@@ -22,30 +30,22 @@ const usersModel = {
         }
     },
 
-    getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../database/users.json"), 'utf-8'));
-    },
-
-    findAll: function () {
-        return this.getData();
-    },
-
-    // 3. Buscar a un usuario por su ID
+    /* Find a user by its ID */
     findByPk: function (id) {
         let users = this.findAll();
         let userFound = users.find(user => user.id == id);
         return userFound;
     },
 
-    // Buscar a un usuario por algún campo de la Entidad
-    // Ejemplo: field = 'email' / text = 'da.aramayo1990@gmail.com'
+    /* Find an user by a particular filed */
+    /* Example: field = 'email' / text = 'da.aramayo1990@gmail.com' */
     findByField: function (field, text) {
         let users = this.findAll();
         let userFound = users.find(user => user[field] === text);
         return userFound;
     },
 
-    // Guardar al usuario en la DB
+    /* Save the new user in the database */
     create: function (userData) {
         let users = this.findAll();
         let newUser = {
@@ -53,15 +53,35 @@ const usersModel = {
             ...userData
         }
         users.push(newUser);
-        fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(users, null, 4), { encoding: 'utf-8' });
+        this.postData(users);
         return newUser;
     },
 
-    // Eliminar a un usuario de la DB
+    /* Update the user in the database */
+    update: function (userData, id) {
+        let users = this.findAll();
+
+        users.forEach(user => {
+            if (user.id == id) {
+                user.user = userData.user,
+                user.name = userData.name,
+                user.surname = userData.surname,
+                user.email = userData.email,
+                user.password = userData.password,
+                user.category = userData.category,
+                user.image = userData.image
+            }
+        })
+        
+        this.postData(users);
+        return users;
+    },
+
+    /* Delete the user from the database */
     delete: function (id) {
         let users = this.findAll();
         let finalUsers = users.filter(user => user.id != id);
-        fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(finalUsers, null, 4), { encoding: 'utf-8' })
+        this.postData(finalUsers);
         return true;
     }
 }

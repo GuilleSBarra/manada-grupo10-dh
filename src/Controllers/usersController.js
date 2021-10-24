@@ -1,17 +1,16 @@
-const users = require('../database/users.json');
-const userModel = require('../models/usersModel');
+const usersModel = require('../models/usersModel');
 const bcrypt = require("bcryptjs")
 const { validationResult } = require("express-validator")
 
 let controller = {
     /* GET: Login Form */
     login: (req, res) => {
-        res.render('./users/login.ejs');
+        return res.render('./users/login.ejs');
     },
 
     /* POST: User to login */
     processLogin: (req, res) => {
-        let userToLogin = userModel.findByField('email', req.body.email);
+        let userToLogin = usersModel.findByField('email', req.body.email);
 
         // Check the user & password combination
         // Save the user in Session
@@ -65,7 +64,7 @@ let controller = {
         }
 
         // Check if the email is already register in the Database
-        let userExist = userModel.findByField('email', req.body.email);
+        let userExist = usersModel.findByField('email', req.body.email);
         if (userExist) {
             return res.render('./users/register.ejs', {
                 errors: {
@@ -85,9 +84,9 @@ let controller = {
             category: "User"
         }
 
-        userModel.create(userToCreate);
+        usersModel.create(userToCreate);
 
-        return res.send('Ok, se guardó el usuario');
+        return res.redirect('/');
     },
 
     /* GET: Redirect to user profile (mi-cuenta) */
@@ -95,7 +94,7 @@ let controller = {
         return res.render("./users/profile.ejs", { user: req.session.userLogged })
     },
 
-    /* GET: Delete everything that is in session */
+    /* GET: Delete everything that is in session & cookies */
     logout: (req, res) => {
         res.clearCookie('userCookieEmail');
         req.session.destroy();

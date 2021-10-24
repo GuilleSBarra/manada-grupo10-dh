@@ -1,3 +1,5 @@
+/* Middleware for express-validator library that it's incorporated for server-side data validation */
+
 const path = require("path")
 const { check } = require('express-validator');
 

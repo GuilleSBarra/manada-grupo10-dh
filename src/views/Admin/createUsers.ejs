@@ -1,0 +1,71 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="admin-products-main-mobile admin-products-main-desktop">
+                <section class="admin-products-container">
+                    <form class="admin-products-form" action="/admin/create-user" method="POST"
+                        enctype="multipart/form-data">
+                        
+                        <h2 class="admin-products-title">Agregar Nuevos Usuarios:</h2>
+
+                        <div class="admin-products-field">
+                            <label for="image" class="admin-products-label">Imágen del Usuario:</label>
+                            <input id="image" class="admin-products-img" type="file" name="image">
+                        </div>
+
+                        <div class="admin-products-field">
+                            <input class="admin-products" type="text" name="user"
+                                placeholder="Usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                        </div>
+                        
+                        <div class="admin-products-field">
+                            <input class="admin-products" type="text" name="name"
+                                placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                        </div>
+
+                        <div class="admin-products-field">
+                            <input class="admin-products" type="text" name="surname"
+                                placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                        </div>
+
+                        <div class="admin-products-field">
+                            <input class="admin-products" type="email" name="email"
+                                placeholder="Correo Electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
+                                <% if (locals.errors && errors.email) { %>
+									<div class="error-text">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>>
+                        </div>
+
+                        <div class="admin-products-field">
+                            <input class="admin-products" type="password" name="password"
+                                placeholder="Contraseña">
+                        </div>
+
+                        <div class="admin-products-field">
+                            <label class="admin-products-label" for="category">Perfil</label>
+                            <div class="admin-products-control">
+                                <select name="category" id="category">
+                                    <option value="Cliente" <%= user.category == 'Cliente' ? 'selected' : '' %>>Cliente</option>
+                                    <option value="Suscriptor" <%= user.category == 'Suscriptor' ? 'selected' : '' %>>Suscriptor</option>
+                                    <option value="Editor" <%= user.category == 'Editor' ? 'selected' : '' %>>Editor</option>
+                                    <option value="Administrador" <%= user.category == 'Administrador' ? 'selected' : '' %>>Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="admin-products-form-button">
+                            <button type="submit" class="admin-products-button">Crear</button>
+                        </div>
+                    </form>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>
