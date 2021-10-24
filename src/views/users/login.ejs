@@ -6,15 +6,15 @@
             <main class="login-main-mobile login-main-desktop">
                 <section class="login-register-container">
                     <div class="login-container-div-1">
-                        <form class="form-login" action="/" method="GET">
+                        <form class="form-login" action="/users/ingreso" method="POST">
                             <h2>Iniciá Sesión:</h2>
 
                             <div class="login-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="user" placeholder="Usuario / Email" value="<%= locals.oldData ? oldData.user : null %>">
+                                <input class="controls" type="text" name="email" placeholder="Email" value="<%= locals.oldData ? oldData.user : null %>">
                                     <% if (locals.errors && errors.email) { %>
                                         <div class="error-text">
-                                            <%= errors.user.msg %>
+                                            <%= errors.email.msg %>
                                         </div>
                                     <% } %>
                                 <span></span>
@@ -22,13 +22,19 @@
 
                             <div class="login-field">
                                 <i class="fas fa-lock"></i>
-                                <input class="controls" type="password" name="pass" placeholder="Contraseña" value="" >
+                                <input class="controls" type="password" name="password" placeholder="Contraseña" value="" >
                                 <% if (locals.errors && errors.password) { %>
 									<div class="error-text">
 										<%= errors.password.msg %>
 									</div>
 								<% } %>
                                 <span></span>
+                            </div>
+
+                            <div class="login-remember">
+                                <label>
+                                    <input class="login-remember-checkbox" type="checkbox" name="remember_user"> Recordar mi usuario
+                                </label>
                             </div>
 
                             <div class="form-button">
@@ -59,52 +65,6 @@
                             </div>
                         </form>
                     </div>
-
-                    <!-- <div class="login-container-div-2">
-                        <form class="form-register" action="/" method="GET">
-                            <h2>Registrate:</h2>
-
-                            <div class="register-field">
-                                <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
-                                <span></span>
-                            </div>
-
-                            <div class="register-field">
-                                <i class="fas fa-ghost"></i>
-                                <input class="controls" type="text" name="surname" id="surname"
-                                    placeholder="Apellido">
-                                <span></span>
-                            </div>
-
-                            <div class="register-field">
-                                <i class="fas fa-envelope"></i>
-                                <input class="controls" type="email" name="email" id="email" placeholder="Correo">
-                                <span></span>
-                            </div>
-
-                            <div class="register-field">
-                                <i class="fas fa-lock"></i>
-                                <input class="controls" type="password" name="pass" id="pass"
-                                    placeholder="Contraseña">
-                                <span></span>
-                            </div>
-
-                            <div class="form-bottom">
-                                <input type="checkbox" name="terms">
-                                <label for="terms" class="link">Estoy de acuerdo con los<a href="#"> Términos y
-                                        condiciones</a></label>
-                            </div>
-
-                            <div class="form-button">
-                                <button type="submit" class="send-button">Registrarme</button>
-                            </div>
-
-                            <div class="form-bottom">
-                                <p class="link">¿Ya tenes cuenta? <a href="/users/ingreso">Ingresar</a></p>
-                            </div>
-                        </form>
-                    </div> -->
                 </section>
             </main>
 

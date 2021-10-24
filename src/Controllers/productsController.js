@@ -11,6 +11,7 @@ const controller = {
         res.render('./products/shop.ejs', {
             products: products })
     },
+    
     detail:(req,res) => {
         const id = req.params.id;
         let product = products.find(item=>item.id == id);

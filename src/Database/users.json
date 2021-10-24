@@ -17,7 +17,7 @@
         "email": "natalia.katunskis@gmail.com",
         "password": "123456",
         "category": "User",
-        "image": "/img/users/image-1634096863145-412975633Oxi y yo.jpg"
+        "image": "/img/users/nkatunskis.jpg"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "email": "f.jimenezcohen@digitalhouse.com",
         "password": "123456",
         "category": "User",
-        "image": "/img/users/daramayo90.JPG"
+        "image": "/img/users/franmaster08.jpg"
     },
     {
         "id": 4,
@@ -38,5 +38,35 @@
         "password": "123456",
         "category": "User",
         "image": ""
+    },
+    {
+        "id": 5,
+        "user": "viandas.cook@gmail.com",
+        "name": "Damian",
+        "surname": "Aramayo",
+        "email": "da.aramayo1990@gmail.com",
+        "image": "/img/users/user -1635042149676Caida.jpg",
+        "category": "User",
+        "password": "$2b$10$LpnsEoqZCzknDwegRV29BOqfptEmrf4EjeHZANFvYdRLVsIr2nbde"
+    },
+    {
+        "id": 6,
+        "user": "viandas.cook@gmail.com",
+        "name": "Damian",
+        "surname": "Aramayo",
+        "email": "da.aramayo1990@gmail.com",
+        "image": "/img/users/user -1635042217875Caida.jpg",
+        "category": "User",
+        "password": "$2b$10$Gi2ZbRP4JRjsjSZRQgUOW.HMzwNXPIZxnyIVWq3CxDWum/VfuXBD."
+    },
+    {
+        "id": 7,
+        "user": "Viandas",
+        "name": "Viandas",
+        "surname": "Cook",
+        "email": "info@viandascook.com",
+        "password": "$2b$10$JuXqNA5R3z2m.0xlxre.6eU4GFbWJQtFbhscGeOFwtWJPdOHja7LW",
+        "image": "/img/users/user_1635053822743Caida.jpg",
+        "category": "User"
     }
 ]

@@ -1,16 +1,22 @@
 const express = require('express')
-const validateUserAuth = require('../middlewares/userAuth')
-const uploadUsers = require('../middlewares/multer-users')
-const controller = require('../controllers/usersController')
 const router = express.Router()
+const uploadUserAvatar = require('../middlewares/multer-users')
+const usersMiddleware = require('../middlewares/usersValidationsMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
+const controller = require('../controllers/usersController')
 
+// Login Form
+router.get("/ingreso", guestMiddleware, controller.login)
+router.post("/ingreso", controller.processLogin)
 
+// Register Form
+router.get("/registro", guestMiddleware, controller.register)
+router.post("/registro", uploadUserAvatar.single("image"), usersMiddleware, controller.processRegister)
 
-
-router.get("/registro", controller.register)
-router.post("/registro", uploadUsers.single("image"),validateUserAuth, controller.registerUser)
-
-router.get("/ingreso", controller.login)
+// User Profile
+router.get("/mi-cuenta", authMiddleware, controller.profile)
+router.get("/logout", controller.logout)
 
 
 module.exports = router

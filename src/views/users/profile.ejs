@@ -1,0 +1,99 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="profile-main">
+                <section class="profile-container">
+                    <form class="form-profile" action="/users/profile" method="POST" enctype="multipart/form-data">
+                        <h2>Bienvenid@ <%= user.name %>
+                        </h2>
+
+                        <div class="profile-img">
+                            <img src=<%=user.image %> alt="product image">
+                        </div>
+
+                        <div class="profile-names-container">
+                            <div class="profile-field">
+                                <i class="fas fa-user"></i>
+                                <label clasS="profile-label" for="name">Nombre: </label>
+                                <input class="profile-input" type="text" name="name" id="name"
+                                    value="<%= locals.oldData ? oldData.name : user.name %>">
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="error-text">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                <% } %>
+                            </div>
+
+                            <div class="profile-field">
+                                <i class="fas fa-ghost"></i>
+                                <label class="profile-label" for="surname">Apellido: </label>
+                                <input class="profile-input" type="text" name="surname" id="surname"
+                                    value="<%= locals.oldData ? oldData.surname : user.surname %>">
+                                <% if (locals.errors && errors.surname) { %>
+                                    <div class="error-text">
+                                        <%= errors.surname.msg %>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <div class="profile-field">
+                            <i class="fas fa-user"></i>
+                            <label class="profile-label" for="user">Nombre de usuario: </label>
+                            <input class="profile-input" type="text" name="user" id="user"
+                                value="<%= locals.oldData ? oldData.user : user.user %>">
+                            <% if (locals.errors && errors.user) { %>
+                                <div class="error-text">
+                                    <%= errors.user.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="profile-field">
+                            <i class="fas fa-envelope"></i>
+                            <label class="profile-label" for="email">Dirección de correo electrónico: </label>
+                            <input class="profile-input" type="email" name="email" id="email"
+                                value="<%= locals.oldData ? oldData.email : user.email %>">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="error-text">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <p class="profile-pass-text">Cambio de Contraseña:</p>
+
+                        <div class="profile-field">
+                            <i class="fas fa-lock"></i>
+                            <label class="profile-label" for="password">Contraseña actual: </label>
+                            <input class="profile-input" type="password" name="password" id="password">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="error-text">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="profile-field">
+                            <i class="fas fa-lock"></i>
+                            <label class="profile-label" for="password2">Nueva contraseña: </label>
+                            <input class="profile-input" type="password" name="password2" id="password2">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="error-text">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="form-button">
+                            <button type="submit" class="send-button">Guardar los cambios</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+
+    </body>
+
+    </html>

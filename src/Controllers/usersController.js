@@ -1,54 +1,105 @@
-let users = require('../database/users.json');
-const fs = require("fs");
-const path = require("path");
-const bcrypt = require ("bcrypt")
+const users = require('../database/users.json');
+const userModel = require('../models/usersModel');
+const bcrypt = require("bcryptjs")
 const { validationResult } = require("express-validator")
 
 let controller = {
-     login: (req, res) => {
-        res.render('./users/login.ejs')
+    /* GET: Login Form */
+    login: (req, res) => {
+        res.render('./users/login.ejs');
     },
-    
+
+    /* POST: User to login */
+    processLogin: (req, res) => {
+        let userToLogin = userModel.findByField('email', req.body.email);
+
+        // Check the user & password combination
+        // Save the user in Session
+        if (userToLogin) {
+            let checkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            if (checkPassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                // Set user in Cookies
+                if (req.body.remember_user) {
+                    res.cookie('userCookieEmail', req.body.email, { maxAge: (((1000 * 60) * 60) * 24) * 7 }) // 7 days
+                }
+
+                return res.redirect('/users/mi-cuenta')
+            }
+            return res.render('./users/login.ejs', {
+                errors: {
+                    email: {
+                        msg: 'No reconocemos esta combinación de usuario y contraseña'
+                    }
+                }
+            });
+        }
+
+        return res.render('./users/login.ejs', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra Base de Datos'
+                }
+            }
+        });
+    },
+
+    /* GET: Register Form */
     register: (req, res) => {
-        res.render('./users/register.ejs')
+        res.cookie('testing', 'Hola Mundo', { maxAge: 1000 * 30 });
+        return res.render('./users/register.ejs');
     },
 
-    registerUser: (req, res) => {
-        const resultValidation = validationResult(req)
-        
+    /* POST: Create new user in the database */
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req);   
+        const file = req.file;
+
         if (resultValidation.errors.length > 0) {
-			return res.render('./users/register.ejs', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		} else {
-        const id = users.length + 1;
-        const file = req.file
-        const { user, name, surname, category, password } = req.body
-        const newUser = {
-            id: id,
-            user: user,
-            name: name,
-            surname: surname,
+            return res.render('./users/register.ejs', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        // Check if the email is already register in the Database
+        let userExist = userModel.findByField('email', req.body.email);
+        if (userExist) {
+            return res.render('./users/register.ejs', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
+        // Take the information to create the user
+        let userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
             image: `/img/users/${file.filename}`,
-            category: "User",
-            password: bcrypt.hashSync(password, 10)
-        }
-            users.push(newUser)
-
-        fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(users, null, 4), { encoding: 'utf-8' })
-
-        res.render('./users/login.ejs', { user });
+            category: "User"
         }
 
+        userModel.create(userToCreate);
+
+        return res.send('Ok, se guardó el usuario');
     },
 
+    /* GET: Redirect to user profile (mi-cuenta) */
+    profile: (req, res) => {
+        return res.render("./users/profile.ejs", { user: req.session.userLogged })
+    },
 
-
-    detail:(req,res) => {
-        const id = req.params.id;
-        let user = users.find(item=>item.id == id);
-        res.render("./users/user.ejs", { user })
+    /* GET: Delete everything that is in session */
+    logout: (req, res) => {
+        res.clearCookie('userCookieEmail');
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 
