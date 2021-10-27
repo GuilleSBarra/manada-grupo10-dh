@@ -1,8 +1,9 @@
 const productsModel = require('../models/productsModel');
 const usersModel = require('../models/usersModel');
 const bcrypt = require("bcryptjs")
-const fs = require("fs");
-const path = require("path");
+
+
+/***** ADMIN CONTROLLER *****/
 
 let admin = {
     /* GET: Admin Panel */
@@ -10,6 +11,9 @@ let admin = {
         return res.render('./admin/admin.ejs');
     },
 }
+
+
+/***** PRODUCTS ADMIN CONTROLLER *****/
 
 let products = {
     /* GET: Create Products Form */
@@ -33,10 +37,9 @@ let products = {
 
     /* GET: Select Products to Update */
     editProducts: (req, res) => {
-        const products = productsModel.findAll();
-        const categories = [...new Set(products.map(product => product.category))];
-        const productsByCategory = products.filter(product => product.category == req.query.category);
-        res.render('./admin/editProducts.ejs', { products: productsByCategory, categories })
+        const categories = productsModel.getCategoriesSelection();
+        const products = productsModel.getProductsSelection(req.query.category);
+        res.render('./admin/editProducts.ejs', { categories, products })
     },
 
     /* GET: Product Form */
@@ -75,6 +78,7 @@ let products = {
 }
 
 
+/***** USERS ADMIN CONTROLLER *****/
 
 let users = {
     /* GET: Create Users Form */

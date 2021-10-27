@@ -1,8 +1,10 @@
-const categories = require('../database/categories.json');
-const products = require('../database/products.json');
+const productsModel = require('../models/productsModel');
+const categoriesModel = require('../models/categoriesModel');
 
 const controller = {
   home: (req, res) => {
+    const products = productsModel.findAll();
+    const categories = categoriesModel.findAll();
     res.render('index.ejs', { products, categories })
   }
 }

@@ -37,11 +37,39 @@ const productsModel = {
     },
 
     /* Find a product by a particular filed */
-    /* Example: field = 'name' / text = 'Wombat, common' */
+    /* Example: field = 'category' / text = 'Jinete' */
     findByField: function (field, text) {
         let products = this.findAll();
         let productFound = products.find(product => product[field] === text);
         return productFound;
+    },
+
+    /* Find all products by a particular filed */
+    /* Example: field = 'category' / text = 'Jinete' */
+    findAllByField: function (field, text) {
+        let products = this.findAll();
+        let productsFound = products.filter(product => product[field] === text);
+        return productsFound;
+    },
+
+    /* Select the correct category depending on the URL */
+    selectCorrectCategory: function (urlCategory) {
+        let products = [];
+
+        if (urlCategory == "jinete") {
+            products = this.findAllByField('category', 'Jinete');
+        }
+        if (urlCategory == "equipo-accesorios") {
+            products = this.findAllByField('category', 'Equipo y Accesorios');
+        }
+        if (urlCategory == "cuidados-caballo") {
+            products = this.findAllByField('category', 'Cuidados del caballo');
+        }
+        if (urlCategory == "veterinaria") {
+            products = this.findAllByField('category', 'Veterinaria');
+        }
+
+        return products;
     },
 
     /* Save the new product in the database */
@@ -54,6 +82,20 @@ const productsModel = {
         products.push(newProduct);
         this.postData(products);
         return newProduct;
+    },
+
+    /* Get the categories to use the filter in Products to Update */
+    getCategoriesSelection: function () {
+        let products = productsModel.findAll();
+        let categories = [...new Set(products.map(product => product.category))];
+        return categories;
+    },
+
+    /* Get the Products by Category */
+    getProductsSelection: function (category) {
+        let products = productsModel.findAll();
+        let productsByCategory = products.filter(product => product.category == category);
+        return productsByCategory;
     },
     
     /* Update the product in the database */
