@@ -1,6 +1,6 @@
-const usersModel = require('../models/usersModel');
-const bcrypt = require("bcryptjs")
+const { usersModel } = require('../models');
 const { validationResult } = require("express-validator")
+const bcrypt = require("bcryptjs")
 
 let controller = {
     /* GET: Login Form */
@@ -22,7 +22,7 @@ let controller = {
 
                 // Set user in Cookies
                 if (req.body.remember_user) {
-                    res.cookie('userCookieEmail', req.body.email, { maxAge: (((1000 * 60) * 60) * 24) * 7 }) // 7 days
+                    res.cookie('userCookieEmail', req.body.email, { maxAge: (1000 * 60)})
                 }
 
                 return res.redirect('/users/mi-cuenta')
@@ -47,7 +47,6 @@ let controller = {
 
     /* GET: Register Form */
     register: (req, res) => {
-        res.cookie('testing', 'Hola Mundo', { maxAge: 1000 * 30 });
         return res.render('./users/register.ejs');
     },
 
@@ -81,12 +80,18 @@ let controller = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
             image: `/img/users/${file.filename}`,
-            category: "User"
+            category: "Usuario"
         }
 
         usersModel.create(userToCreate);
 
-        return res.redirect('/');
+        // Save the user in Session
+        // Set user in Cookies
+        delete userToCreate.password;
+        req.session.userLogged = userToCreate;
+        res.cookie('userCookieEmail', req.body.email, { maxAge: (1000 * 60)})
+
+        return res.redirect('/users/mi-cuenta')
     },
 
     /* GET: Redirect to user profile (mi-cuenta) */

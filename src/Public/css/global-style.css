@@ -177,6 +177,33 @@ h1 {
     color:rgb(100, 100, 100);
 }
 
+.main-header .profile-details {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 40px;
+    min-width: 190px;
+    padding: 0 15px 0 2px;
+}
+
+.main-header .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.main-header .profile-details .admin_name {
+    font-size: 17px;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.main-header .profile-details i {
+    font-size: 25px;
+    color: #333;
+}
+
 
 /*
 *

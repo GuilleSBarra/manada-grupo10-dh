@@ -10,7 +10,7 @@
                         </h2>
 
                         <div class="profile-img">
-                            <img src=<%=user.image %> alt="product image">
+                            <img src=<%=user.image %> alt="avatar">
                         </div>
 
                         <div class="profile-names-container">
@@ -89,6 +89,12 @@
 
                         <div class="form-button">
                             <button type="submit" class="send-button">Guardar los cambios</button>
+                        </div>
+                    </form>
+
+                    <form class="form-profile" action="/users/logout" method="GET">
+                        <div class="form-button">
+                            <button type="submit" class="send-button">Cerrar Sesión</button>
                         </div>
                     </form>
                 </section>

@@ -1,9 +1,13 @@
 <%- include('../partials/head') %>
 
     <body>
-        <%- include('../partials/header') %>
+        <%- include('../partials/adminSideBar') %>
 
-            <main class="admin-products-main-mobile admin-products-main-desktop">
+        <section class="admin-home-section">
+
+            <%- include('../partials/adminHeader') %>
+
+            <div class="admin-products-main-mobile admin-products-main-desktop">
                 <section class="admin-products-container">
                     <form class="admin-products-form" action="/admin/create-product" method="POST"
                         enctype="multipart/form-data">
@@ -12,19 +16,31 @@
                         <div class="admin-products-field">
                             <label for="image" class="admin-products-label">Imágen del Producto:</label>
                             <input id="image" class="admin-products-img" type="file" name="image">
-                            <span></span>
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="error-text">
+                                    <%= errors.image.msg %>
+                                </div>
+                            <% } %>
                         </div>
 
                         <div class="admin-products-field">
                             <input class="admin-products" type="text" name="name"
                                 placeholder="Nombre del producto">
-                            <span></span>
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="error-text">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                <% } %>
                         </div>
 
                         <div class="admin-products-field">
                             <input class="admin-products" type="text" name="description"
                                 placeholder="Descripción del producto">
-                            <span></span>
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="error-text">
+                                        <%= errors.description.msg %>
+                                    </div>
+                                <% } %>
                         </div>
 
                         <div class="admin-products-field">
@@ -57,13 +73,11 @@
                         <div class="admin-products-field">
                             <input class="admin-products" type="text" name="price" id="newProductPrice"
                                 placeholder="Precio del Producto">
-                            <span></span>
-                        </div>
-
-                        <div class="admin-products-field">
-                            <input class="admin-products" type="text" name="keywords" id="keywords"
-                                placeholder="Palabras clave">
-                            <span></span>
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="error-text">
+                                        <%= errors.price.msg %>
+                                    </div>
+                                <% } %>
                         </div>
 
                         <div class="admin-products-field">
@@ -78,13 +92,11 @@
                         <div class="admin-products-field">
                             <input class="admin-products" type="text" name="discountPrice" id="discountPrice"
                                 placeholder="Precio en descuento">
-                            <span></span>
                         </div>
 
                         <div class="admin-products-field">
                             <input class="admin-products" type="text" name="discount" id="discount"
                                 placeholder="Porcentaje de descuento">
-                            <span></span>
                         </div>
 
                         <div class="admin-products-form-button">
@@ -92,10 +104,8 @@
                         </div>
                     </form>
                 </section>
-
-            </main>
-
-            <%- include('../partials/footer') %>
+            </div>
+        </section>
+        <script src="/js/adminSideBar.js"></script>
     </body>
-
-    </html>
+</html>

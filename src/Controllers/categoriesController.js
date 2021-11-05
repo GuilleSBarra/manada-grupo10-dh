@@ -1,4 +1,4 @@
-const productsModel = require('../models/productsModel');
+const { productsModel } = require('../models');
 
 /* Check the Category of the URL. Ex: /categories/cuidados-caballo */
 /* Depending on the category of the URL, the model return the products on the selected category */

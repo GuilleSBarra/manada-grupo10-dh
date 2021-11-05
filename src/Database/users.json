@@ -1,31 +1,24 @@
 [
     {
         "id": 1,
-        "user": "daramayo90",
+        "user": "daramayo",
         "name": "Damián",
         "surname": "Aramayo",
         "email": "da.aramayo1990@gmail.com",
-        "password": "123456",
-        "category": "Administrador",
-        "image": "/img/users/daramayo90.JPG"
+        "password": "$2a$10$/brxNL2HOgQ2kd7.hPhFWe6XPXAUsDbF33VDQVTmhhgJr1P40YkBa",
+        "terms": "on",
+        "image": "/img/users/user_1636070545081Perfil-CV.jpg",
+        "category": "Administrador"
     },
     {
         "id": 2,
-        "user": "NatyKatunskis",
-        "name": "Natalia",
-        "surname": "Katunskis",
-        "password": "123456789",
-        "category": "Administrador",
-        "image": "/img/users/nkatunskis.jpg"
-    },
-    {
-        "id": 3,
-        "user": "franmaster08",
-        "name": "Francisco",
-        "surname": "Jimenez",
-        "email": "f.jimenezcohen@digitalhouse.com",
-        "password": "123456",
-        "category": "Cliente",
-        "image": "/img/users/franmaster08.jpg"
+        "user": "test1",
+        "name": "Damián",
+        "surname": "Aramayo",
+        "email": "damian.aramayo@viandascook.com",
+        "password": "$2a$10$GWvvedy09ffQ4N/oxn2zueNnTit/PZNP9.v3CcvaINr71YgpnVtOS",
+        "terms": "on",
+        "image": "/img/users/user_test11636071872167Perfil.JPG",
+        "category": "Usuario"
     }
 ]

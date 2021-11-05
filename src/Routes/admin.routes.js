@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const uploadProducts = require('../middlewares/multerProductsMiddleware')
 const uploadUsers = require('../middlewares/multerUsersMiddleware')
+const usersMiddleware = require('../middlewares/usersValidationsMiddleware')
+const productsMiddleware = require('../middlewares/productsValidationsMiddleware')
 const controller = require('../controllers/adminController')
 
 /* Admin Panel */
@@ -11,7 +13,7 @@ router.get("/", controller.admin.index);
 
 /* Admin Panel: New Products */
 router.get("/create-product", controller.products.createProductsForm);
-router.post("/create-product", uploadProducts.single("image"), controller.products.createProducts)
+router.post("/create-product", uploadProducts.single("image"), productsMiddleware, controller.products.createProducts)
 
 /* Admin Panel: Select Products to Update */
 router.get("/edit-product/", controller.products.editProducts);
@@ -28,7 +30,7 @@ router.delete("/delete/:id", controller.products.destroy);
 
 /* Admin Panel: New Users */
 router.get("/create-user", controller.users.createUsersForm);
-router.post("/create-user", uploadProducts.single("image"), controller.users.createUsers)
+router.post("/create-user", uploadProducts.single("image"), usersMiddleware, controller.users.createUsers)
 
 /* Admin Panel: Select Users to Update */
 router.get("/edit-user/", controller.users.editUsers);

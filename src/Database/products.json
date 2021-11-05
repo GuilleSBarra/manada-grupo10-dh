@@ -35,24 +35,6 @@
         "discount": 94
     },
     {
-        "id": 3,
-        "name": "Botas de equitación",
-        "description": "Macaca nemestrina",
-        "image": "/img/products/botas-equitacion-fouganza-560-adulto-negro-de-piel.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "M",
-        "price": "$4.78",
-        "keywords": [
-            "Blue-faced booby",
-            "Red-cheeked cordon bleu",
-            "Barrows goldeneye"
-        ],
-        "inSale": true,
-        "discountPrice": "$6.73",
-        "discount": 40
-    },
-    {
         "id": 4,
         "name": "Squirrel, malabar",
         "description": "Ratufa indica",
@@ -97,33 +79,17 @@
         "category": "Jinete",
         "size": "S",
         "price": "$9.18",
-        "keywords": [
-            "North American red fox",
-            "Gull, lava",
-            "White-winged tern",
-            "Tern, royal"
-        ],
-        "inSale": false,
-        "discountPrice": "$6.99",
-        "discount": 32
+        "inSale": "false"
     },
     {
         "id": 7,
         "name": "Casco Equitación Fouganza",
-        "description": "Gyps bengalensis",
+        "description": "Gyps bengalensiskdsfdsjkhfkdjs",
         "image": "/img/products/casco-equitacion-fouganza-520-negro-mate.JPG",
         "category": "Jinete",
         "size": "S",
         "price": "$9.18",
-        "keywords": [
-            "North American red fox",
-            "Gull, lava",
-            "White-winged tern",
-            "Tern, royal"
-        ],
-        "inSale": false,
-        "discountPrice": "$6.99",
-        "discount": 32
+        "inSale": "false"
     },
     {
         "id": 8,

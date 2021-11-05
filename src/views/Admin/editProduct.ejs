@@ -1,9 +1,13 @@
 <%- include('../partials/head') %>
 
     <body>
-        <%- include('../partials/header') %>
+        <%- include('../partials/adminSideBar') %>
 
-            <main class="admin-products-main-mobile admin-products-main-desktop">                
+        <section class="admin-home-section">
+
+            <%- include('../partials/adminHeader') %>
+
+            <div class="admin-products-main-mobile admin-products-main-desktop">                
                 <section class="admin-editProduct-container">
                     <div class="admin-editProduct-image">
                         <img src=<%= product.image %> alt="product image">
@@ -90,9 +94,8 @@
                         </form>
                     </div>
                 </section>
-            </main>
-
-            <%- include('../partials/footer') %>
+            </div>
+        </section>
+        <script src="/js/adminSideBar.js"></script>
     </body>
-
-    </html>
+</html>

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const uploadUserAvatar = require('../middlewares/multerUSersMiddleware')
+const uploadUserAvatar = require('../middlewares/multerUsersMiddleware')
 const usersMiddleware = require('../middlewares/usersValidationsMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
