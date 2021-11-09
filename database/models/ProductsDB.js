@@ -8,34 +8,34 @@ module.exports = function(sequelize, dataTypes){
             autoIncremet: true
         },
         name:  {
-            
+            type: dataTypes.STRING,
+            allowNull: false
         },
         description:  {
-            
+            type: dataTypes.STRING,
+            allowNull: false
         },
         image:  {
-            
+            type: dataTypes.STRING,
         },
-        category:  {
-            
+        idProductsCategory:  {
+            type: dataTypes.INTERGER,
         },
-        size:  {
-            
+        idSize:  {
+            type: dataTypes.INTERGER,
         },
         price:  {
-            
-        },
-        keywords:  {
-            
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
         inSale:  {
-            
+            type: dataTypes.BOOLEAN,
         },
         discountPrice:  {
-            
+            type: dataTypes.DECIMAL
         },
         discount:  {
-            
+            type: dataTypes.STRING,
         }
     };
 
@@ -47,7 +47,25 @@ module.exports = function(sequelize, dataTypes){
     let Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models){
-        Product.belond
+        Product.belondToMany(models.shoppingCart, {
+            as: "ShoppingCarts",
+            through: "CartProduct",
+            foreignKey: "idProductt",
+            otherKey: "idShoppingCart",
+            timestamps: false
+        })};
+   
+    Product.associate = function(models){
+        Product.belondTo(models.productCategory, {
+            as: "Category",
+            foreignKey: "idProductsCategory",
+        })};
+    
+    Product.associate = function(models){
+        Product.belondTo(models.Size, {
+            as: "Size",
+            foreignKey: "idSize",
+        });
     }
    
     return Product        
