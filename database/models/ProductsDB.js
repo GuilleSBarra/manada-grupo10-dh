@@ -47,10 +47,10 @@ module.exports = function(sequelize, dataTypes){
     let Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models){
-        Product.belondToMany(models.shoppingCart, {
-            as: "ShoppingCarts",
+        Product.belondToMany(models.ProductCart, {
+            as: "productCart",
             through: "CartProduct",
-            foreignKey: "idProductt",
+            foreignKey: "idProduct",
             otherKey: "idShoppingCart",
             timestamps: false
         })};
