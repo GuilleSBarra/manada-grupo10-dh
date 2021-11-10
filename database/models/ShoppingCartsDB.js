@@ -17,9 +17,11 @@ module.exports = function(sequelize, dataTypes){
         },
         idUser:  {
             type: dataTypes.INTERGER,
+            allowNull: false
         },
         idStatus:  {
             type: dataTypes.INTERGER,
+            defaultValue: "1"
         }
     };
 
@@ -28,7 +30,7 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    let Product = sequelize.define(alias, cols, config);
+    let shoppingCart = sequelize.define(alias, cols, config);
 
     shoppingCart.associate = function(models){
         shoppingCart.belondToMany(models.ProductCart, {
@@ -52,6 +54,6 @@ module.exports = function(sequelize, dataTypes){
         });
     }
    
-    return Product        
+    return shoppingCart        
 
 }

@@ -56,7 +56,7 @@ module.exports = function(sequelize, dataTypes){
         })};
    
     Product.associate = function(models){
-        Product.belondTo(models.productCategory, {
+        Product.belondTo(models.ProductCategory, {
             as: "Category",
             foreignKey: "idProductsCategory",
         })};
