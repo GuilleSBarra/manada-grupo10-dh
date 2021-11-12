@@ -3,6 +3,7 @@
         <p>Envios gratis a todo el país</p>
     </div>
 
+
     <section class="main-header">
         <nav class="main-navbar">
             <ul type="none" class="nav-bar">
@@ -14,21 +15,15 @@
             </ul>
         </nav>
 
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="login-register">
-            <a href="/admin"><i class="far fa-heart"></i></a>
-        </div>
-
         <div class="logo-conteiner">
             <a href="/">
                 <h1>Ma Na Da</h1>
             </a>
         </div>
-
-
+        
+        <div class="admin-enter">
+            <a href="/admin"><i class="far fa-heart"></i></a>
+        </div>
 
             <!--Admin User: Name and Image-->
         <% if (locals.isLogged) { %>
@@ -38,20 +33,47 @@
                     <%= locals.userLogged.name %>
                 </span>
                 <i class='bx bx-chevron-down'></i>
+                <div class="profile-details-disable">
+                    <ul type="none">
+                        <li><a href="/users/mi-cuenta" alt="Ver todo">Mi Perfil</a></li>
+                        <li><a href="/users/logout" alt="Ver todo">Logout</a></li>
+                    </ul>
+                </div>
             </div>
         <% } else { %>
             <div class="login-register">
                 <a href="/users/ingreso"><i class="far fa-user"></i></a>
             </div>
         <% } %>
-
-        <div class="searchbar-desktop">
-            <i class="fas fa-search"></i>
+        
+        <div class="main-header-flex">
+            <div class="cart">
+                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+    
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-
-        <div class="cart">
-            <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
-        </div>
+    </section>
+    <section class="burger-menu-disabled">
+        <ul type="none" class="burger-menu-list">
+            <% if (locals.isLogged) { %>
+                <li class="burger-menu-profile"><a href="/users/mi-cuenta"><i class='bx bxs-face'></i> Mi Cuenta</a></li>
+            <% } else { %>
+                <li class="burger-menu-profile"><a href="/users/ingreso"><i class='bx bxs-face'></i> Ingresar</a></li>
+                <li class="burger-menu-profile"><a href="/users/registro"><i class='bx bx-user'></i> Registarse</a></li>
+            <% } %>
+            <li class="burger-menu-profile"><a href="/admin"><i class='bx bx-heart'></i> Admin Panel</a></li>
+            <li class="burger-menu-products"><i class='bx bx-box'></i> Productos</li>
+            <ul type="none" class="burger-products-list">
+                <li><a href="/products">Ver Todo</a></li>
+                <li><a href="/category/jinete">Jinete</a></li>
+                <li><a href="/category/equipo-accesorios">Equipo y Accesorios</a></li>
+                <li><a href="/category/cuidados-caballo">Cuidados del Caballo</a></li>
+                <li><a href="/category/veterinaria">Veterinaria</a></li>
+            </ul>
+        </ul>
     </section>
 
     <div class="div-searchbar">
@@ -60,4 +82,5 @@
                 class="fas fa-search"></i>
         </form>
     </div>
+    
 </header>
