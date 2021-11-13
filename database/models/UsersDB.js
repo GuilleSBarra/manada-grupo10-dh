@@ -35,7 +35,8 @@ module.exports = function(sequelize, dataTypes){
         },
         idUserCategory:  {
             type: dataTypes.INTERGER,
-            defaultValue: "user"
+            defaultValue: "1",
+            allowNull: false
         }
     };
 
