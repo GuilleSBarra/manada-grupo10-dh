@@ -20,9 +20,11 @@ module.exports = function(sequelize, dataTypes){
         },
         idProductsCategory:  {
             type: dataTypes.INTERGER,
+            allowNull: false
         },
         idSize:  {
             type: dataTypes.INTERGER,
+            allowNull: false
         },
         price:  {
             type: dataTypes.DECIMAL,
@@ -30,6 +32,7 @@ module.exports = function(sequelize, dataTypes){
         },
         inSale:  {
             type: dataTypes.BOOLEAN,
+            defaultValue:"false"
         },
         discountPrice:  {
             type: dataTypes.DECIMAL

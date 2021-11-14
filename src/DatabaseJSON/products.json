@@ -4,15 +4,9 @@
         "name": "Blue-faced booby",
         "description": "Sula dactylatra",
         "image": "/img/products/bocado-equitacion-fouganza-pelham-articulado-poni-y-caballo-de-caucho.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "2XL",
+        "idProductsCategory": "2",
+        "idsize": 5,
         "price": "$1.47",
-        "keywords": [
-            "Beisa oryx",
-            "Bulbul, black-eyed",
-            "Western bearded dragon"
-        ],
         "inSale": true,
         "discountPrice": "$3.14",
         "discount": 43
@@ -22,14 +16,9 @@
         "name": "Chestnut weaver",
         "description": "Ploceus rubiginosus",
         "image": "/img/products/bolsa-de-limpieza-cepillos-equitacion-lami-cell-azul-y-gris.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "L",
+        "idProductsCategory": "3",
+        "idsize": 4,
         "price": "$6.40",
-        "keywords": [
-            "Gull, southern black-backed",
-            "Butterfly, canadian tiger swallowtail"
-        ],
         "inSale": true,
         "discountPrice": "$6.70",
         "discount": 94
@@ -39,17 +28,9 @@
         "name": "Squirrel, malabar",
         "description": "Ratufa indica",
         "image": "/img/products/cabezada-equitacion-fouganza-580-estras-caballo-negro-1.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "XL",
+        "idProductsCategory": "2",
+        "idsize": 5,
         "price": "$2.98",
-        "keywords": [
-            "Crane, sarus",
-            "Iguana, common green",
-            "Bent-toed gecko",
-            "Ibex",
-            "Cliffchat, mocking"
-        ],
         "inSale": false,
         "discountPrice": "$4.50",
         "discount": 21
@@ -59,14 +40,9 @@
         "name": "Stork, saddle-billed",
         "description": "Ephipplorhynchus senegalensis",
         "image": "/img/products/cabezada-equitacion-fouganza-580-estras-caballo-negro.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "2XL",
+        "idProductsCategory": "2",
+        "idsize": 5,
         "price": "$9.90",
-        "keywords": [
-            "Turtle, eastern box",
-            "European stork"
-        ],
         "inSale": true,
         "discountPrice": "$2.06",
         "discount": 41
@@ -76,8 +52,8 @@
         "name": "Pig-tailed macaque",
         "description": "Macaca nemestrina",
         "image": "/img/products/calcetines-equitacion-sks-500-ninos-azul-petroleo-turquesa-motivos-ponis.JPG",
-        "category": "Jinete",
-        "size": "S",
+        "idProductsCategory": "1",
+        "idsize": 2,
         "price": "$9.18",
         "inSale": "false"
     },
@@ -86,8 +62,8 @@
         "name": "Casco Equitación Fouganza",
         "description": "Gyps bengalensiskdsfdsjkhfkdjs",
         "image": "/img/products/casco-equitacion-fouganza-520-negro-mate.JPG",
-        "category": "Jinete",
-        "size": "S",
+        "idProductsCategory": "1",
+        "idsize": 2,
         "price": "$9.18",
         "inSale": "false"
     },
@@ -96,14 +72,9 @@
         "name": "Silver-backed fox",
         "description": "Vulpes chama",
         "image": "/img/products/chaqueta-concurso-equitacion-fouganza-comp-100-mujer-azul-marino.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "L",
+        "idProductsCategory": "1",
+        "idsize": 4,
         "price": "$3.74",
-        "keywords": [
-            "White-eye, pale",
-            "Long-tailed spotted cat"
-        ],
         "inSale": true,
         "discountPrice": "$4.48",
         "discount": 77
@@ -113,17 +84,9 @@
         "name": "Great kiskadee",
         "description": "Pitangus sulphuratus",
         "image": "/img/products/cincha-corta-de-cuero-para-silla-de-doma-equitacion-poni-y-caballo-romeo-negro.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "XS",
+        "idProductsCategory": "2",
+        "idsize": 1,
         "price": "$1.32",
-        "keywords": [
-            "Brush-tailed rat kangaroo",
-            "Chestnut weaver",
-            "Klipspringer",
-            "Southern boubou",
-            "Bengal vulture"
-        ],
         "inSale": false,
         "discountPrice": "$2.78",
         "discount": 49
@@ -133,14 +96,9 @@
         "name": "Nyala",
         "description": "Tragelaphus angasi",
         "image": "/img/products/desenredante-lustrante-equitacion-ravene-easyshine-caballo-y-poni-750-ml.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "3",
+        "idsize": 3,
         "price": "$1.37",
-        "keywords": [
-            "Ass, asiatic wild",
-            "Snake, racer"
-        ],
         "inSale": false,
         "discountPrice": "$5.13",
         "discount": 32
@@ -150,15 +108,9 @@
         "name": "Oriental white-backed vulture",
         "description": "Gyps bengalensis",
         "image": "/img/products/estribos-equitacion-reflex-adulto.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "2XL",
+        "idProductsCategory": "2",
+        "idsize": 5,
         "price": "$2.54",
-        "keywords": [
-            "Skink, blue-tongued",
-            "Wallaby, dama",
-            "Parakeet, rose-ringed"
-        ],
         "inSale": true,
         "discountPrice": "$8.24",
         "discount": 90
@@ -168,17 +120,9 @@
         "name": "Common shelduck",
         "description": "Tadorna tadorna",
         "image": "/img/products/gel-refrescante-tendones-equitacion-fouganza-cool-gel-caballo-y-poni-500ml.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "2XL",
+        "idProductsCategory": "4",
+        "idsize": 5,
         "price": "$0.72",
-        "keywords": [
-            "Western bearded dragon",
-            "Bateleur eagle",
-            "Giant girdled lizard",
-            "Woodrat (unidentified)",
-            "Rhinoceros, white"
-        ],
         "inSale": false,
         "discountPrice": "$4.22",
         "discount": 95
@@ -188,15 +132,9 @@
         "name": "Turaco, violet-crested",
         "description": "Tauraco porphyrelophus",
         "image": "/img/products/grasa-cascos-equitacion-fouganza-unguento-hidratante-caballo-y-poni-verde-750ml.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "4",
+        "idsize": 3,
         "price": "$7.26",
-        "keywords": [
-            "Whale, southern right",
-            "Spoonbill, european",
-            "Bat-eared fox"
-        ],
         "inSale": true,
         "discountPrice": "$0.34",
         "discount": 62
@@ -206,16 +144,9 @@
         "name": "Gull, southern black-backed",
         "description": "Larus dominicanus",
         "image": "/img/products/helmet.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "3XL",
+        "idProductsCategory": "1",
+        "idsize": 5,
         "price": "$2.60",
-        "keywords": [
-            "Racer snake",
-            "Coot, red-knobbed",
-            "Otter, small-clawed",
-            "Shelduck, european"
-        ],
         "inSale": false,
         "discountPrice": "$5.39",
         "discount": 29
@@ -225,14 +156,9 @@
         "name": "Siskin, yellow-rumped",
         "description": "Carduelis uropygialis",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza-1.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "3XL",
+        "idProductsCategory": "3",
+        "idsize": 5,
         "price": "$6.06",
-        "keywords": [
-            "Mouse, four-striped grass",
-            "Striped dolphin"
-        ],
         "inSale": false,
         "discountPrice": "$1.59",
         "discount": 24
@@ -242,17 +168,9 @@
         "name": "Magpie, black-backed",
         "description": "Gymnorhina tibicen",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza-2.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "4",
+        "idsize": 3,
         "price": "$8.17",
-        "keywords": [
-            "Eagle, bald",
-            "Cormorant, little",
-            "Striped dolphin",
-            "Eastern boa constrictor",
-            "Bare-faced go away bird"
-        ],
         "inSale": false,
         "discountPrice": "$7.47",
         "discount": 56
@@ -262,17 +180,9 @@
         "name": "Agama lizard (unidentified)",
         "description": "Agama sp.",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$7.18",
-        "keywords": [
-            "Wallaby, whip-tailed",
-            "Eastern dwarf mongoose",
-            "Wolf spider",
-            "Stork, saddle-billed",
-            "Skink, african"
-        ],
         "inSale": false,
         "discountPrice": "$9.23",
         "discount": 61
@@ -282,16 +192,9 @@
         "name": "Stork, white",
         "description": "Ciconia ciconia",
         "image": "/img/products/mantilla-doma-clasica-con-salvacruz-integrado-caballo-900-fouganza-azul-marino.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "XS",
+        "idProductsCategory": "2",
+        "idsize": 1,
         "price": "$3.76",
-        "keywords": [
-            "Meerkat, red",
-            "Fox, blue",
-            "Black-throated butcher bird",
-            "Tiger cat"
-        ],
         "inSale": false,
         "discountPrice": "$7.64",
         "discount": 70
@@ -301,15 +204,9 @@
         "name": "Mourning collared dove",
         "description": "Streptopelia decipiens",
         "image": "/img/products/pantalon-equitacion-fouganza-500-mesh-ninos-beige-y-azul-marino.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "XL",
+        "idProductsCategory": "1",
+        "idsize": 5,
         "price": "$8.40",
-        "keywords": [
-            "Buttermilk snake",
-            "Darwin ground finch (unidentified)",
-            "Coot, red-knobbed"
-        ],
         "inSale": false,
         "discountPrice": "$8.47",
         "discount": 79
@@ -319,16 +216,9 @@
         "name": "Boa, emerald green tree",
         "description": "Boa caninus",
         "image": "/img/products/piedra-de-sal-equitacion-kerbl-caballo-y-poni-himalaya-5-kg.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "4",
+        "idsize": 3,
         "price": "$3.15",
-        "keywords": [
-            "Common dolphin",
-            "Bushbaby, large-eared",
-            "Chital",
-            "Rock dove"
-        ],
         "inSale": true,
         "discountPrice": "$0.92",
         "discount": 24
@@ -338,16 +228,9 @@
         "name": "Colobus, white-mantled",
         "description": "Colobus guerza",
         "image": "/img/products/polo-concurso-equitacion-fouganza-100-compet-ninos-blanco-manga-corta.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "XS",
+        "idProductsCategory": "1",
+        "idsize": 1,
         "price": "$2.97",
-        "keywords": [
-            "Hawk-eagle, crowned",
-            "Common melba finch",
-            "Gull, kelp",
-            "Asian water buffalo"
-        ],
         "inSale": true,
         "discountPrice": "$1.77",
         "discount": 29
@@ -357,15 +240,9 @@
         "name": "Mongoose, javan gold-spotted",
         "description": "Herpestes javanicus",
         "image": "/img/products/protectores-integrales-equitacion-fouganza-caballo-negro-neopreno-2-unidades.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "2",
+        "idsize": 3,
         "price": "$3.09",
-        "keywords": [
-            "Smith's bush squirrel",
-            "Seal, harbor",
-            "Rat, desert kangaroo"
-        ],
         "inSale": false,
         "discountPrice": "$4.61",
         "discount": 67
@@ -375,17 +252,9 @@
         "name": "Colobus, magistrate black",
         "description": "Colobus guerza",
         "image": "/img/products/rendaje-extensor-caballo-rojo-blanco.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "2",
+        "idsize": 2,
         "price": "$0.44",
-        "keywords": [
-            "Siskin, pine",
-            "Turtle, snake-necked",
-            "Woylie",
-            "Puffin, horned",
-            "Asian foreset tortoise"
-        ],
         "inSale": false,
         "discountPrice": "$1.61",
         "discount": 51
@@ -395,15 +264,9 @@
         "name": "Owl, great horned",
         "description": "Bubo virginianus",
         "image": "/img/products/silla-equitacion-caballo-schooling-negro-polivalente-cuero-equipada-175.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "2",
+        "idsize": 3,
         "price": "$4.06",
-        "keywords": [
-            "Blue-faced booby",
-            "Red-cheeked cordon bleu",
-            "Barrows goldeneye"
-        ],
         "inSale": false,
         "discountPrice": "$4.34",
         "discount": 52
@@ -413,16 +276,9 @@
         "name": "Sandhill crane",
         "description": "Grus canadensis",
         "image": "/img/products/unguento-aceite-casco-top-caballo.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "XS",
+        "idProductsCategory": "4",
+        "idsize": 1,
         "price": "$8.06",
-        "keywords": [
-            "Turtle, snake-necked",
-            "Monitor lizard (unidentified)",
-            "Falcon, prairie",
-            "Elegant crested tinamou"
-        ],
         "inSale": false,
         "discountPrice": "$7.45",
         "discount": 41
@@ -432,14 +288,9 @@
         "name": "Cobra, cape",
         "description": "Naja nivea",
         "image": "/img/products/vitaminas-equitacion-red-cell-caballo-y-poni-36l.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "XL",
+        "idProductsCategory": "3",
+        "idsize": 5,
         "price": "$6.66",
-        "keywords": [
-            "Hippopotamus",
-            "Green heron"
-        ],
         "inSale": true,
         "discountPrice": "$8.76",
         "discount": 93
@@ -449,14 +300,9 @@
         "name": "Mexican beaded lizard",
         "description": "Heloderma horridum",
         "image": "/img/products/orejeras-equitacion-fouganza-hd-strass-caballo-negro-con-cristales.JPG",
-        "category": "Equipo y Accesorios",
-        "type": "Type C",
-        "size": "M",
+        "idProductsCategory": "2",
+        "idsize": 3,
         "price": "$8.70",
-        "keywords": [
-            "Shrike, common boubou",
-            "Agouti"
-        ],
         "inSale": true,
         "discountPrice": "$6.14",
         "discount": 91
@@ -466,14 +312,9 @@
         "name": "Turtle, snake-necked",
         "description": "Chelodina longicollis",
         "image": "/img/products/forro-polar-equitacion-mujer-violeta-capucha-2-en-1.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "3XL",
+        "idProductsCategory": "1",
+        "idsize": 5,
         "price": "$5.18",
-        "keywords": [
-            "Columbian rainbow boa",
-            "Ring-tailed possum"
-        ],
         "inSale": false,
         "discountPrice": "$0.16",
         "discount": 31
@@ -483,16 +324,9 @@
         "name": "Pigeon, feral rock",
         "description": "Columba livia",
         "image": "/img/products/pantalon-equitacion-fouganza-120-ninos-azul-marino-y-turquesa.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "XS",
+        "idProductsCategory": "1",
+        "idsize": 1,
         "price": "$0.32",
-        "keywords": [
-            "Bushpig",
-            "Cockatoo, sulfur-crested",
-            "Indian peacock",
-            "Grizzly bear"
-        ],
         "inSale": false,
         "discountPrice": "$8.56",
         "discount": 100
@@ -502,15 +336,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/guantes-equitacion-fouganza-560-ninos-azul-marino-y-rosa.JPG",
-        "category": "Jinete",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "1",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -520,15 +348,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/pila-para-electrificador-de-valla-equitacion-ako-9v-130-ah.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -538,15 +360,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/red-para-heno-equitacion-fouganza-negro.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -556,15 +372,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/kit-limpieza-equitacion-fouganza-adulto-azul-turquesa.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -574,15 +384,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/kit-limpieza-equitacion-ninos-rosa.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -592,15 +396,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/champu-equitacion-fouganza-caballo-y-poni-frutos-rojos-500-ml.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "3",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -610,15 +408,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/quietex-850g-tranquilizante-natural-formulado-para-relajar-animales-nerviosos.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "4",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -628,15 +420,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/desenredante-lustrante-equitacion-fouganza-caballo-y-poni-150-ml.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "4",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -646,15 +432,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/aptima-biotic-450g-suplemento-sinergico-de-probioticos-y-prebioticos.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "4",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -664,15 +444,9 @@
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/golosinas-equitacion-caballo-y-poni-fougatreats-alfalfa-1-kg.JPG",
-        "category": "Veterinaria",
-        "type": "Type C",
-        "size": "S",
+        "idProductsCategory": "4",
+        "idsize": 2,
         "price": "$6.78",
-        "keywords": [
-            "Emerald green tree boa",
-            "Slender loris",
-            "Whip-tailed wallaby"
-        ],
         "inSale": false,
         "discountPrice": "$9.36",
         "discount": 50
@@ -682,11 +456,9 @@
         "name": "Repelente de Insectos",
         "description": "Vombatus ursinus",
         "image": "/img/products/repelente-de-insectos-gel.JPG",
-        "category": "Cuidados del caballo",
-        "type": "Type C",
-        "size": "",
+        "idProductsCategory": "3",
+        "idsize": "",
         "price": "$9.83",
-        "keywords": "Emerald green tree boa,Slender loris,Whip-tailed wallaby",
         "inSale": "false",
         "discountPrice": "$9.36",
         "discount": "50"
