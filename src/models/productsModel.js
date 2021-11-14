@@ -4,12 +4,12 @@ const path = require('path');
 const productsModel = {
     /* Read the info from the database */
     getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../database/products.json"), 'utf-8'));
+        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/products.json"), 'utf-8'));
     },
 
     /* Post the new info in the database */
     postData: function (productData) {
-        return fs.writeFileSync(path.join(__dirname, "../database/products.json"), JSON.stringify(productData, null, 4), { encoding: 'utf-8' });
+        return fs.writeFileSync(path.join(__dirname, "../databaseJSON/products.json"), JSON.stringify(productData, null, 4), { encoding: 'utf-8' });
     },
 
     /* Return all the information from the database */

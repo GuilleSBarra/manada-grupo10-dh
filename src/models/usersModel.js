@@ -5,12 +5,12 @@ const path = require('path');
 const usersModel = {
     /* Read the info from the database */
     getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../database/users.json"), 'utf-8'));
+        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/users.json"), 'utf-8'));
     },
 
     /* Post the new info in the database */
     postData: function (userData) {
-        return fs.writeFileSync(path.join(__dirname, "../database/users.json"), JSON.stringify(userData, null, 4), { encoding: 'utf-8' });
+        return fs.writeFileSync(path.join(__dirname, "../databaseJSON/users.json"), JSON.stringify(userData, null, 4), { encoding: 'utf-8' });
     },
 
     /* Return all the information from the database */

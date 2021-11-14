@@ -4,7 +4,7 @@ const path = require('path');
 const categoriesModel = {
     /* Read the info from the database */
     getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../database/categories.json"), 'utf-8'));
+        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/categories.json"), 'utf-8'));
     },
 
     /* Return all the categories from the database */
