@@ -1,4 +1,4 @@
-.login-body, .register-body {
+.login-main-mobile, .login-main-desktop {
     color: #FFFF;
 }
 
@@ -89,6 +89,10 @@
     margin-top: 10px;
     margin-bottom: 7px;
     max-width: 240px;
+}
+
+.login-remember {
+    text-align: center;
 }
 
 .form-button {

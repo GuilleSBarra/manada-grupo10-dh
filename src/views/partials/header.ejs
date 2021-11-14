@@ -59,7 +59,11 @@
     <section class="burger-menu-disabled">
         <ul type="none" class="burger-menu-list">
             <% if (locals.isLogged) { %>
-                <li class="burger-menu-profile"><a href="/users/mi-cuenta"><i class='bx bxs-face'></i> Mi Cuenta</a></li>
+                <li class="burger-menu-profile"><i class='bx bxs-face'></i> Mi Cuenta</a></li>
+                <ul type="none" class="burger-profile-list">
+                    <li><a href="/users/mi-cuenta">Perfil</a></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                </ul>
             <% } else { %>
                 <li class="burger-menu-profile"><a href="/users/ingreso"><i class='bx bxs-face'></i> Ingresar</a></li>
                 <li class="burger-menu-profile"><a href="/users/registro"><i class='bx bx-user'></i> Registarse</a></li>

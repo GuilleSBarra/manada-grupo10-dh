@@ -15,13 +15,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 50px;
+    padding-top: 90px;
     width: 85%;
     margin: auto;
+    transition: all 0.5s ease-out;
+}
+
+.index-products-filter-active {
+    padding-top: 600px;
+    transition: all 0.5s ease-out;
 }
 
 .index-products article {
-    width: 45%;
+    width: 90%;
     display: block;
     position: relative;
 }
@@ -77,6 +83,12 @@
     visibility: hidden;
 }
 
+/* Tablet */
+@media (min-width: 500px) {
+    .index-products article {
+        width: 45%;
+    }
+}
 
 
 /* Desktop */
@@ -84,14 +96,12 @@
     .index-products {
         width: 60%;
         max-height: 650px;
-        padding-top: 0;
     }
 
     .shop-products {
-        width: 70%;
+        width: 75%;
         max-height: 100%;
         margin: auto;
-        margin-top: 80px;
     }
 
     .index-products article {

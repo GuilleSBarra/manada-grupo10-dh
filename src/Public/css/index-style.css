@@ -120,6 +120,13 @@
     border-radius: 10px;
     box-shadow: 0px 1px 10px rgb(80, 100, 140);
     padding: 20px 0;
+    transition: all 0.5s ease-out;
+
+}
+
+.index-categories-header-filter-active {
+    padding-bottom: 500px;
+    transition: all 0.5s ease-out;
 }
 
 .index-categories-filter-container {
