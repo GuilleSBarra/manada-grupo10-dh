@@ -19,7 +19,9 @@
     "express-validator": "^6.13.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.3",
+    "mysql2": "^2.3.3-rc.0",
     "nodemon": "^2.0.13",
+    "sequelize": "^6.9.0",
     "uuid": "^8.3.2"
   },
   "repository": {
@@ -30,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa/issues"
   },
-  "homepage": "https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa#readme"
+  "homepage": "https://github.com/NKATUNSKIS/Grupo_10_Proyecto_integrador_MaNaDa#readme",
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
 }
