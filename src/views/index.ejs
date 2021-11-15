@@ -73,13 +73,15 @@
                         <section class="index-products">
                             <% let count=0; %>
                                 <% for (let i=0 ; i < products.length ; i++) { %>
-                                    <% if (count < 6) { %>
-                                        <% if (products[i].category==category.name) { %>
-                                            <% count=count + 1 %>
-                                            <% let product=products[i] %>
-                                            <%- include('partials/products', { product }) %>
+                                    <% if (products[i].idProductsCategory != 4) { %>
+                                        <% if (count < 6) { %>
+                                            <% if (products[i].productCategory.name == category.name) { %>
+                                                <% count=count + 1 %>
+                                                <% let product=products[i] %>
+                                                <%- include('partials/products', { product }) %>
+                                            <% } %>
                                         <% } %>
-                                <% } %>
+                                    <% } %>
                             <% }; %>
                         </section>
                     </section>

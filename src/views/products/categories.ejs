@@ -7,11 +7,11 @@
             <div>
                 <a href="/"><span><i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i></span></a>
                 <a href="/products"><span>Shop <i class="fas fa-chevron-right"></i></span></a>
-                <span class="span-name"><%= products[0].category %></span>
+                <span class="span-name"><%= products[0].productCategory.name %></span>
             </div>
 
             <div class="shop-header">
-                <h1>Todos los productos de <%= products[0].category %></h1>
+                <h1>Todos los productos de <%= products[0].productCategory.name %></h1>
             </div>
 
             <div class="index-categories-header-filter">

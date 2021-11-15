@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
-const productsModel = require('../models/productsModel');
+const { productsModel } = require('../models');
+const { categoriesModel } = require('../models');
 const usersModel = require('../models/usersModel');
 const bcrypt = require("bcryptjs");
 
@@ -19,17 +20,16 @@ let admin = {
 
 let products = {
     /* GET: Create Products Form */
-    createProductsForm: (req, res) => {
+    createProductsForm: async function (req, res) {
         const adminHeader = "Productos"
         return res.render('./admin/createProducts.ejs', { adminHeader })
     },
 
     /* POST: Create new Products in the database */
-    createProducts: (req, res) => {
+    createProducts: async function (req, res) {
         const resultValidation = validationResult(req);  
-        const file = req.file;
         const adminHeader = "Productos"
-
+        
         if (resultValidation.errors.length > 0) {
             return res.render('./admin/createProducts.ejs', {
                 errors: resultValidation.mapped(),
@@ -38,55 +38,88 @@ let products = {
             });
         }
         
-        // Take the information to add a new product
-        let productToCreate = {
-            ...req.body,
-            image: `/img/products/${file.filename}`
-        }
+        try {
+            const file = req.file;
+            const idCategory = await categoriesModel.getIdByField('name', req.body.category);
+            
+            // Take the information to add a new product
+            let productToCreate = {
+                ...req.body,
+                image: `/img/products/${file.filename}`,
+                idProductsCategory: idCategory,
+                idSize: ''
+            }
+
+            await productsModel.create(productToCreate);
+            return res.render('./admin/createProducts.ejs', { adminHeader })
         
-        productsModel.create(productToCreate);
-        return res.render('./admin/createProducts.ejs', { adminHeader })
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
     },
 
     /* GET: Select Products to Update */
-    editProducts: (req, res) => {
-        const categories = productsModel.getCategoriesSelection();
-        const products = productsModel.getProductsSelection(req.query.category);
-        const adminHeader = "Productos";
-        res.render('./admin/editProducts.ejs', { categories, products, adminHeader })
+    editProducts: async function (req, res) {
+        try {
+            if (req.query.category) {
+                const categories = await categoriesModel.findAll();
+                const idCategory = await categoriesModel.getIdByField('name', req.query.category);
+                const products = await productsModel.findAllByField('idProductsCategory', idCategory);
+                const adminHeader = "Productos";
+                res.render('./admin/editProducts.ejs', { categories, products, adminHeader })
+            } else {
+                const categories = await categoriesModel.findAll();
+                const products = await productsModel.findAll();
+                const adminHeader = "Productos";
+                res.render('./admin/editProducts.ejs', { categories, products, adminHeader })
+            }
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
     },
 
     /* GET: Product Form */
-    editForm: (req, res) => {
-        const product = productsModel.findByPk(req.params.id);
-        const adminHeader = "Productos";
-        res.render('./admin/editProduct.ejs', { product, adminHeader })
+    editForm: async function (req, res) {
+        try {
+            const product = await productsModel.findByPk(req.params.id);
+            const adminHeader = "Productos";
+            res.render('./admin/editProduct.ejs', { product, adminHeader })
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
     },
 
     /* POST: Update the product in the database */
-    update: (req, res) => {
-        const file = req.file;
-        const id = req.params.id;
-        const searchedProduct = productsModel.findByPk(id);
+    update: async function (req, res) {
+        try {
+            const file = req.file;
+            const id = req.params.id;
+            const idCategory = await categoriesModel.getIdByField('name', req.body.category);
+            const searchedProduct = await productsModel.findByPk(id);
+    
+            if (file == undefined) {
+                searchedProduct.image = searchedProduct.image;
+            } else {
+                searchedProduct.image = `/img/products/${file.filename}`;
+            }
+    
+            // Take the information to update the product in the database
+            let productToUpdate = {
+                ...req.body,
+                idProductsCategory: idCategory,
+                image: searchedProduct.image
+            }
+            
+            await productsModel.update(productToUpdate, id);
+            return res.redirect('/admin/edit-product/' + id);
 
-        if (file == undefined) {
-            searchedProduct.image = searchedProduct.image;
-        } else {
-            searchedProduct.image = `/img/products/${file.filename}`;
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
         }
-
-        // Take the information to update the product in the database
-        let productToUpdate = {
-            ...req.body,
-            image: searchedProduct.image
-        }
-        
-        productsModel.update(productToUpdate, id);
-        res.redirect('/admin/edit-product/' + id);
     },
 
     /* Delete the product from the database. Call the view to Select Products to Update */
-    destroy: (req, res) => {
+    destroy: async function (req, res) {
         productsModel.delete(req.params.id);
         products.editProducts (req, res);
     },
@@ -97,13 +130,13 @@ let products = {
 
 let users = {
     /* GET: Create Users Form */
-    createUsersForm: (req, res) => {
+    createUsersForm: async function (req, res) {
         const adminHeader = "Usuarios";
         return res.render('./admin/createUsers.ejs', { adminHeader })
     },
     
     /* POST: Create new Users in the database */
-    createUsers: (req, res) => {
+    createUsers: async function (req, res) {
         const resultValidation = validationResult(req);  
         const file = req.file;
         const adminHeader = "Usuarios";
@@ -143,7 +176,7 @@ let users = {
     },
 
     /* GET: Select Users to Update */
-    editUsers: (req, res) => {
+    editUsers: async function (req, res) {
         const adminHeader = "Usuarios";
         const users = usersModel.findAll();
         const categories = [...new Set(users.map(user => user.category))];
@@ -155,14 +188,14 @@ let users = {
     },
 
     /* GET: User Form */
-    editForm: (req, res) => {
+    editForm: async function (req, res) {
         const user = usersModel.findByPk(req.params.id);
         const adminHeader = "Usuarios";
         res.render('./admin/editUser.ejs', { user, adminHeader })
     },
 
     /* POST: Update the User in the database */
-    update: (req, res) => {
+    update: async function (req, res) {
         const file = req.file;
         const id = req.params.id;
         const searchedUser = usersModel.findByPk(id);
@@ -184,7 +217,7 @@ let users = {
     },
 
     /* Delete the user from the database. Call the view to Select Users to Update */
-    destroy: (req, res) => {
+    destroy: async function (req, res) {
         usersModel.delete(req.params.id);
         users.editUsers (req, res);
     },

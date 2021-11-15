@@ -1,24 +1,22 @@
+const db = require('../database/models');
 const fs = require('fs');
 const path = require('path');
 
 const productsModel = {
-    /* Read the info from the database */
-    getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/products.json"), 'utf-8'));
-    },
-
     /* Post the new info in the database */
-    postData: function (productData) {
+    postData: async function (productData) {
         return fs.writeFileSync(path.join(__dirname, "../databaseJSON/products.json"), JSON.stringify(productData, null, 4), { encoding: 'utf-8' });
     },
 
     /* Return all the information from the database */
-    findAll: function () {
-        return this.getData();
+    findAll: async function () {
+        return await db.products.findAll({
+            include: [{ association: "productCategory" }]
+        });
     },
 
     /* Create a new ID for new Products */
-    generateId: function (){
+    generateId: async function (){
         let products = this.findAll();
         let lastProduct = products.pop();
 
@@ -30,99 +28,90 @@ const productsModel = {
     },
 
     /* Find a product by its ID */
-    findByPk: function (id) {
-        let products = this.findAll();
-        let productFound = products.find(product => product.id == id);
-        return productFound;
+    findByPk: async function (id) {
+        return await db.products.findByPk(id,{
+            include: [{ association: "productCategory" }]
+        });
     },
 
     /* Find a product by a particular filed */
     /* Example: field = 'category' / text = 'Jinete' */
-    findByField: function (field, text) {
-        let products = this.findAll();
-        let productFound = products.find(product => product[field] === text);
-        return productFound;
+    findByField: async function (field, text) {
+        let productFound = await db.products.findOne({
+            include: [{ association: "productCategory" }],
+            where: { [field]: text }
+        })
+        return await productFound;
     },
 
     /* Find all products by a particular filed */
     /* Example: field = 'category' / text = 'Jinete' */
-    findAllByField: function (field, text) {
-        let products = this.findAll();
-        let productsFound = products.filter(product => product[field] === text);
-        return productsFound;
+    findAllByField: async function (field, text) {
+        let productsFound = await db.products.findAll({
+            include: [{ association: "productCategory" }],
+            where: { [field]: text }
+        })
+        return await productsFound;
     },
 
     /* Select the correct category depending on the URL */
-    selectCorrectCategory: function (urlCategory) {
+    selectCorrectCategory: async function (urlCategory) {
         let products = [];
 
         if (urlCategory == "jinete") {
-            products = this.findAllByField('category', 'Jinete');
+            products = await this.findAllByField('idProductsCategory', 1);
         }
         if (urlCategory == "equipo-accesorios") {
-            products = this.findAllByField('category', 'Equipo y Accesorios');
+            products = await this.findAllByField('idProductsCategory', 2);
         }
         if (urlCategory == "cuidados-caballo") {
-            products = this.findAllByField('category', 'Cuidados del caballo');
+            products = await this.findAllByField('idProductsCategory', 3);
         }
         if (urlCategory == "veterinaria") {
-            products = this.findAllByField('category', 'Veterinaria');
+            products = await this.findAllByField('idProductsCategory', 4);
         }
 
-        return products;
+        return await products;
     },
 
     /* Save the new product in the database */
-    create: function (productData) {
-        let products = this.findAll();
-        let newProduct = {
-            id: this.generateId(),
-            ...productData
-        }
-        products.push(newProduct);
-        this.postData(products);
-        return newProduct;
+    create: async function (newProduct) {
+        await db.products.create(newProduct)
     },
 
     /* Get the categories to use the filter in Products to Update */
-    getCategoriesSelection: function () {
+    getCategoriesSelection: async function () {
         let products = productsModel.findAll();
         let categories = [...new Set(products.map(product => product.category))];
         return categories;
     },
 
     /* Get the Products by Category */
-    getProductsSelection: function (category) {
+    getProductsSelection: async function (category) {
         let products = productsModel.findAll();
         let productsByCategory = products.filter(product => product.category == category);
         return productsByCategory;
     },
     
     /* Update the product in the database */
-    update: function (productData, id) {
-        let products = this.findAll();
-
-        products.forEach(product => {
-            if (product.id == id) {
-                product.name = productData.name,
-                product.description = productData.description,
-                product.image = productData.image,
-                product.category = productData.category,
-                product.size = productData.size,
-                product.price = productData.price,
-                product.keywords = productData.keywords,
-                product.inSale = productData.inSale,
-                product.discountPrice = productData.discountPrice,
-                product.discount = productData.discount
-            }
+    update: async function (productData, id) {
+        await db.products.update({
+            name: productData.name,
+            description: productData.description,
+            image: productData.image,
+            idProductsCategory: productData.idProductsCategory,
+            size: productData.size,
+            price: productData.price,
+            inSale: productData.inSale,
+            discountPrice: productData.discountPrice,
+            discount: productData.discount
+        },{
+            where: { id: id }
         })
-
-        this.postData(products);
-        return products;
     },
 
     /* Delete the product from the database */
-    delete: function (id) {
+    delete: async function (id) {
         let products = this.findAll();
         let finalProducts = products.filter(product => product.id != id);
         this.postData(finalProducts);

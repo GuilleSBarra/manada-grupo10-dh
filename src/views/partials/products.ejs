@@ -1,18 +1,18 @@
 <article>
     <div class="product-container">
         <i class="far fa-heart"></i>
-        <a href="/products/detail/<%= product.id %>">
-            <img class="product-img" src="<%= product.image %>">
+        <a href="/products/detail/<%= product.dataValues.id %>">
+            <img class="product-img" src="<%= product.dataValues.image %>">
         </a>
         <ul type="none">
             <li class="product-type">
-                <%= product.category %>
+                <%= product.dataValues.category %>
             </li>
             <li class="product-name">
-                <%= product.name %>
+                <%= product.dataValues.name %>
             </li>
             <li class="product-price">
-                <%= product.price %>
+                $ <%= product.dataValues.price %>
             </li>
         </ul>
     </div>

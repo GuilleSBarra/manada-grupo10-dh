@@ -4,463 +4,699 @@
         "name": "Blue-faced booby",
         "description": "Sula dactylatra",
         "image": "/img/products/bocado-equitacion-fouganza-pelham-articulado-poni-y-caballo-de-caucho.JPG",
-        "idProductsCategory": "2",
-        "idsize": 5,
-        "price": "$1.47",
-        "inSale": true,
-        "discountPrice": "$3.14",
-        "discount": 43
+        "idProductsCategory": 2,
+        "idSize": 5,
+        "price": "1",
+        "inSale": "true",
+        "discountPrice": "3",
+        "discount": "43",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 2,
         "name": "Chestnut weaver",
         "description": "Ploceus rubiginosus",
         "image": "/img/products/bolsa-de-limpieza-cepillos-equitacion-lami-cell-azul-y-gris.JPG",
-        "idProductsCategory": "3",
-        "idsize": 4,
-        "price": "$6.40",
-        "inSale": true,
-        "discountPrice": "$6.70",
-        "discount": 94
+        "idProductsCategory": 3,
+        "idSize": 4,
+        "price": "18",
+        "inSale": "false",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 4,
         "name": "Squirrel, malabar",
         "description": "Ratufa indica",
         "image": "/img/products/cabezada-equitacion-fouganza-580-estras-caballo-negro-1.JPG",
-        "idProductsCategory": "2",
-        "idsize": 5,
-        "price": "$2.98",
-        "inSale": false,
-        "discountPrice": "$4.50",
-        "discount": 21
+        "idProductsCategory": 2,
+        "idSize": 5,
+        "price": "3",
+        "inSale": "false",
+        "discountPrice": "5",
+        "discount": "21",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 5,
         "name": "Stork, saddle-billed",
         "description": "Ephipplorhynchus senegalensis",
         "image": "/img/products/cabezada-equitacion-fouganza-580-estras-caballo-negro.JPG",
-        "idProductsCategory": "2",
-        "idsize": 5,
-        "price": "$9.90",
-        "inSale": true,
-        "discountPrice": "$2.06",
-        "discount": 41
+        "idProductsCategory": 2,
+        "idSize": 5,
+        "price": "10",
+        "inSale": "true",
+        "discountPrice": "2",
+        "discount": "41",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 6,
         "name": "Pig-tailed macaque",
         "description": "Macaca nemestrina",
         "image": "/img/products/calcetines-equitacion-sks-500-ninos-azul-petroleo-turquesa-motivos-ponis.JPG",
-        "idProductsCategory": "1",
-        "idsize": 2,
-        "price": "$9.18",
-        "inSale": "false"
+        "idProductsCategory": 1,
+        "idSize": 2,
+        "price": "9",
+        "inSale": "false",
+        "discountPrice": null,
+        "discount": null,
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 7,
         "name": "Casco Equitación Fouganza",
         "description": "Gyps bengalensiskdsfdsjkhfkdjs",
         "image": "/img/products/casco-equitacion-fouganza-520-negro-mate.JPG",
-        "idProductsCategory": "1",
-        "idsize": 2,
-        "price": "$9.18",
-        "inSale": "false"
+        "idProductsCategory": 1,
+        "idSize": 2,
+        "price": "9",
+        "inSale": "false",
+        "discountPrice": null,
+        "discount": null,
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 8,
         "name": "Silver-backed fox",
         "description": "Vulpes chama",
         "image": "/img/products/chaqueta-concurso-equitacion-fouganza-comp-100-mujer-azul-marino.JPG",
-        "idProductsCategory": "1",
-        "idsize": 4,
-        "price": "$3.74",
-        "inSale": true,
-        "discountPrice": "$4.48",
-        "discount": 77
+        "idProductsCategory": 1,
+        "idSize": 4,
+        "price": "4",
+        "inSale": "true",
+        "discountPrice": "4",
+        "discount": "77",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 9,
         "name": "Great kiskadee",
         "description": "Pitangus sulphuratus",
         "image": "/img/products/cincha-corta-de-cuero-para-silla-de-doma-equitacion-poni-y-caballo-romeo-negro.JPG",
-        "idProductsCategory": "2",
-        "idsize": 1,
-        "price": "$1.32",
-        "inSale": false,
-        "discountPrice": "$2.78",
-        "discount": 49
+        "idProductsCategory": 2,
+        "idSize": 1,
+        "price": "1",
+        "inSale": "false",
+        "discountPrice": "3",
+        "discount": "49",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 10,
         "name": "Nyala",
         "description": "Tragelaphus angasi",
         "image": "/img/products/desenredante-lustrante-equitacion-ravene-easyshine-caballo-y-poni-750-ml.JPG",
-        "idProductsCategory": "3",
-        "idsize": 3,
-        "price": "$1.37",
-        "inSale": false,
-        "discountPrice": "$5.13",
-        "discount": 32
+        "idProductsCategory": 3,
+        "idSize": 3,
+        "price": "1",
+        "inSale": "false",
+        "discountPrice": "5",
+        "discount": "32",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 11,
         "name": "Oriental white-backed vulture",
         "description": "Gyps bengalensis",
         "image": "/img/products/estribos-equitacion-reflex-adulto.JPG",
-        "idProductsCategory": "2",
-        "idsize": 5,
-        "price": "$2.54",
-        "inSale": true,
-        "discountPrice": "$8.24",
-        "discount": 90
+        "idProductsCategory": 2,
+        "idSize": 5,
+        "price": "3",
+        "inSale": "true",
+        "discountPrice": "8",
+        "discount": "90",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 12,
         "name": "Common shelduck",
         "description": "Tadorna tadorna",
         "image": "/img/products/gel-refrescante-tendones-equitacion-fouganza-cool-gel-caballo-y-poni-500ml.JPG",
-        "idProductsCategory": "4",
-        "idsize": 5,
-        "price": "$0.72",
-        "inSale": false,
-        "discountPrice": "$4.22",
-        "discount": 95
+        "idProductsCategory": 4,
+        "idSize": 5,
+        "price": "1",
+        "inSale": "false",
+        "discountPrice": "4",
+        "discount": "95",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 13,
         "name": "Turaco, violet-crested",
         "description": "Tauraco porphyrelophus",
         "image": "/img/products/grasa-cascos-equitacion-fouganza-unguento-hidratante-caballo-y-poni-verde-750ml.JPG",
-        "idProductsCategory": "4",
-        "idsize": 3,
-        "price": "$7.26",
-        "inSale": true,
-        "discountPrice": "$0.34",
-        "discount": 62
+        "idProductsCategory": 4,
+        "idSize": 3,
+        "price": "7",
+        "inSale": "true",
+        "discountPrice": "0",
+        "discount": "62",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 14,
         "name": "Gull, southern black-backed",
         "description": "Larus dominicanus",
         "image": "/img/products/helmet.JPG",
-        "idProductsCategory": "1",
-        "idsize": 5,
-        "price": "$2.60",
-        "inSale": false,
-        "discountPrice": "$5.39",
-        "discount": 29
+        "idProductsCategory": 1,
+        "idSize": 5,
+        "price": "3",
+        "inSale": "false",
+        "discountPrice": "5",
+        "discount": "29",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 15,
         "name": "Siskin, yellow-rumped",
         "description": "Carduelis uropygialis",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza-1.JPG",
-        "idProductsCategory": "3",
-        "idsize": 5,
-        "price": "$6.06",
-        "inSale": false,
-        "discountPrice": "$1.59",
-        "discount": 24
+        "idProductsCategory": 3,
+        "idSize": 5,
+        "price": "6",
+        "inSale": "false",
+        "discountPrice": "2",
+        "discount": "24",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 16,
         "name": "Magpie, black-backed",
         "description": "Gymnorhina tibicen",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza-2.JPG",
-        "idProductsCategory": "4",
-        "idsize": 3,
-        "price": "$8.17",
-        "inSale": false,
-        "discountPrice": "$7.47",
-        "discount": 56
+        "idProductsCategory": 4,
+        "idSize": 3,
+        "price": "8",
+        "inSale": "false",
+        "discountPrice": "7",
+        "discount": "56",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 17,
         "name": "Agama lizard (unidentified)",
         "description": "Agama sp.",
         "image": "/img/products/kit-completo-cuidado-cuero-equitacion-fouganza.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$7.18",
-        "inSale": false,
-        "discountPrice": "$9.23",
-        "discount": 61
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "61",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 18,
         "name": "Stork, white",
         "description": "Ciconia ciconia",
         "image": "/img/products/mantilla-doma-clasica-con-salvacruz-integrado-caballo-900-fouganza-azul-marino.JPG",
-        "idProductsCategory": "2",
-        "idsize": 1,
-        "price": "$3.76",
-        "inSale": false,
-        "discountPrice": "$7.64",
-        "discount": 70
+        "idProductsCategory": 2,
+        "idSize": 1,
+        "price": "4",
+        "inSale": "false",
+        "discountPrice": "8",
+        "discount": "70",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 19,
         "name": "Mourning collared dove",
         "description": "Streptopelia decipiens",
         "image": "/img/products/pantalon-equitacion-fouganza-500-mesh-ninos-beige-y-azul-marino.JPG",
-        "idProductsCategory": "1",
-        "idsize": 5,
-        "price": "$8.40",
-        "inSale": false,
-        "discountPrice": "$8.47",
-        "discount": 79
+        "idProductsCategory": 1,
+        "idSize": 5,
+        "price": "8",
+        "inSale": "false",
+        "discountPrice": "8",
+        "discount": "79",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 20,
         "name": "Boa, emerald green tree",
         "description": "Boa caninus",
         "image": "/img/products/piedra-de-sal-equitacion-kerbl-caballo-y-poni-himalaya-5-kg.JPG",
-        "idProductsCategory": "4",
-        "idsize": 3,
-        "price": "$3.15",
-        "inSale": true,
-        "discountPrice": "$0.92",
-        "discount": 24
+        "idProductsCategory": 4,
+        "idSize": 3,
+        "price": "3",
+        "inSale": "true",
+        "discountPrice": "1",
+        "discount": "24",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 21,
         "name": "Colobus, white-mantled",
         "description": "Colobus guerza",
         "image": "/img/products/polo-concurso-equitacion-fouganza-100-compet-ninos-blanco-manga-corta.JPG",
-        "idProductsCategory": "1",
-        "idsize": 1,
-        "price": "$2.97",
-        "inSale": true,
-        "discountPrice": "$1.77",
-        "discount": 29
+        "idProductsCategory": 1,
+        "idSize": 1,
+        "price": "3",
+        "inSale": "true",
+        "discountPrice": "2",
+        "discount": "29",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 22,
         "name": "Mongoose, javan gold-spotted",
         "description": "Herpestes javanicus",
         "image": "/img/products/protectores-integrales-equitacion-fouganza-caballo-negro-neopreno-2-unidades.JPG",
-        "idProductsCategory": "2",
-        "idsize": 3,
-        "price": "$3.09",
-        "inSale": false,
-        "discountPrice": "$4.61",
-        "discount": 67
+        "idProductsCategory": 2,
+        "idSize": 3,
+        "price": "3",
+        "inSale": "false",
+        "discountPrice": "5",
+        "discount": "67",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 23,
         "name": "Colobus, magistrate black",
         "description": "Colobus guerza",
         "image": "/img/products/rendaje-extensor-caballo-rojo-blanco.JPG",
-        "idProductsCategory": "2",
-        "idsize": 2,
-        "price": "$0.44",
-        "inSale": false,
-        "discountPrice": "$1.61",
-        "discount": 51
+        "idProductsCategory": 2,
+        "idSize": 2,
+        "price": "0",
+        "inSale": "false",
+        "discountPrice": "2",
+        "discount": "51",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 24,
         "name": "Owl, great horned",
         "description": "Bubo virginianus",
         "image": "/img/products/silla-equitacion-caballo-schooling-negro-polivalente-cuero-equipada-175.JPG",
-        "idProductsCategory": "2",
-        "idsize": 3,
-        "price": "$4.06",
-        "inSale": false,
-        "discountPrice": "$4.34",
-        "discount": 52
+        "idProductsCategory": 2,
+        "idSize": 3,
+        "price": "4",
+        "inSale": "false",
+        "discountPrice": "4",
+        "discount": "52",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 25,
         "name": "Sandhill crane",
         "description": "Grus canadensis",
         "image": "/img/products/unguento-aceite-casco-top-caballo.JPG",
-        "idProductsCategory": "4",
-        "idsize": 1,
-        "price": "$8.06",
-        "inSale": false,
-        "discountPrice": "$7.45",
-        "discount": 41
+        "idProductsCategory": 4,
+        "idSize": 1,
+        "price": "8",
+        "inSale": "false",
+        "discountPrice": "7",
+        "discount": "41",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 26,
         "name": "Cobra, cape",
         "description": "Naja nivea",
         "image": "/img/products/vitaminas-equitacion-red-cell-caballo-y-poni-36l.JPG",
-        "idProductsCategory": "3",
-        "idsize": 5,
-        "price": "$6.66",
-        "inSale": true,
-        "discountPrice": "$8.76",
-        "discount": 93
+        "idProductsCategory": 3,
+        "idSize": 5,
+        "price": "7",
+        "inSale": "true",
+        "discountPrice": "9",
+        "discount": "93",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 27,
         "name": "Mexican beaded lizard",
         "description": "Heloderma horridum",
         "image": "/img/products/orejeras-equitacion-fouganza-hd-strass-caballo-negro-con-cristales.JPG",
-        "idProductsCategory": "2",
-        "idsize": 3,
-        "price": "$8.70",
-        "inSale": true,
-        "discountPrice": "$6.14",
-        "discount": 91
+        "idProductsCategory": 2,
+        "idSize": 3,
+        "price": "9",
+        "inSale": "true",
+        "discountPrice": "6",
+        "discount": "91",
+        "productCategory": {
+            "id": 2,
+            "name": "Equipo y Accesorios",
+            "image": "./img/accesorios.jpg",
+            "description": "Todos los accesorios para tu caballo"
+        }
     },
     {
         "id": 28,
         "name": "Turtle, snake-necked",
         "description": "Chelodina longicollis",
         "image": "/img/products/forro-polar-equitacion-mujer-violeta-capucha-2-en-1.JPG",
-        "idProductsCategory": "1",
-        "idsize": 5,
-        "price": "$5.18",
-        "inSale": false,
-        "discountPrice": "$0.16",
-        "discount": 31
+        "idProductsCategory": 1,
+        "idSize": 5,
+        "price": "5",
+        "inSale": "false",
+        "discountPrice": "0",
+        "discount": "31",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 29,
         "name": "Pigeon, feral rock",
         "description": "Columba livia",
         "image": "/img/products/pantalon-equitacion-fouganza-120-ninos-azul-marino-y-turquesa.JPG",
-        "idProductsCategory": "1",
-        "idsize": 1,
-        "price": "$0.32",
-        "inSale": false,
-        "discountPrice": "$8.56",
-        "discount": 100
+        "idProductsCategory": 1,
+        "idSize": 1,
+        "price": "0",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "100",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 30,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/guantes-equitacion-fouganza-560-ninos-azul-marino-y-rosa.JPG",
-        "idProductsCategory": "1",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 1,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 1,
+            "name": "Jinete",
+            "image": "./img/jinete.jpg",
+            "description": "Todo lo que necesitas para ser Jinete"
+        }
     },
     {
         "id": 31,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/pila-para-electrificador-de-valla-equitacion-ako-9v-130-ah.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 32,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/red-para-heno-equitacion-fouganza-negro.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 33,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/kit-limpieza-equitacion-fouganza-adulto-azul-turquesa.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 34,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/kit-limpieza-equitacion-ninos-rosa.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 35,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/champu-equitacion-fouganza-caballo-y-poni-frutos-rojos-500-ml.JPG",
-        "idProductsCategory": "3",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 3,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     },
     {
         "id": 36,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/quietex-850g-tranquilizante-natural-formulado-para-relajar-animales-nerviosos.JPG",
-        "idProductsCategory": "4",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 4,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 37,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/desenredante-lustrante-equitacion-fouganza-caballo-y-poni-150-ml.JPG",
-        "idProductsCategory": "4",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 4,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 38,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/aptima-biotic-450g-suplemento-sinergico-de-probioticos-y-prebioticos.JPG",
-        "idProductsCategory": "4",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 4,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 39,
         "name": "Wombat, common",
         "description": "Vombatus ursinus",
         "image": "/img/products/golosinas-equitacion-caballo-y-poni-fougatreats-alfalfa-1-kg.JPG",
-        "idProductsCategory": "4",
-        "idsize": 2,
-        "price": "$6.78",
-        "inSale": false,
-        "discountPrice": "$9.36",
-        "discount": 50
+        "idProductsCategory": 4,
+        "idSize": 2,
+        "price": "7",
+        "inSale": "false",
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 4,
+            "name": "Veterinaria",
+            "image": "./img/cuidados.jpg",
+            "description": "La mejor medicina equina la encotrás en MaNaDa"
+        }
     },
     {
         "id": 40,
         "name": "Repelente de Insectos",
         "description": "Vombatus ursinus",
         "image": "/img/products/repelente-de-insectos-gel.JPG",
-        "idProductsCategory": "3",
-        "idsize": "",
-        "price": "$9.83",
+        "idProductsCategory": 3,
+        "idSize": 1,
+        "price": "10",
         "inSale": "false",
-        "discountPrice": "$9.36",
-        "discount": "50"
+        "discountPrice": "9",
+        "discount": "50",
+        "productCategory": {
+            "id": 3,
+            "name": "Cuidados del caballo",
+            "image": "./img/cuidados.jpg",
+            "description": "El mejor lugar para cuidar de tu amigo"
+        }
     }
 ]

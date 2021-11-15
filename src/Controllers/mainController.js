@@ -1,11 +1,15 @@
-const productsModel = require('../models/productsModel');
-const categoriesModel = require('../models/categoriesModel');
+const { productsModel } = require('../models');
+const { categoriesModel } = require('../models');
 
 const controller = {
-  home: (req, res) => {
-    const products = productsModel.findAll();
-    const categories = categoriesModel.findAll();
-    res.render('index.ejs', { products, categories })
+  home: async function (req, res) {
+    try {
+      const products = await productsModel.findAll();
+      const categories = await categoriesModel.findAll();
+      res.render('index.ejs', { products, categories })
+    } catch (error) {
+        res.status(404).render('404-page.ejs');
+    }
   }
 }
 

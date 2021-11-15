@@ -1,15 +1,29 @@
+const db = require('../database/models');
 const fs = require('fs');
 const path = require('path');
 
 const categoriesModel = {
     /* Read the info from the database */
-    getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/categories.json"), 'utf-8'));
+    getData: async function () {
+        return await db.productcategories.findAll();
     },
 
     /* Return all the categories from the database */
-    findAll: function () {
-        return this.getData();
+    findAll: async function () {
+        return await this.getData();
+    },
+
+    /* Find a category by its ID */
+    findByPk: async function (id) {
+        return await db.productcategories.findByPk(id);
+    },
+    
+    /* Get the PK from a column name */
+    getIdByField: async function (field, text) {
+        let category = await db.productcategories.findOne({
+            where: { [field]: text }
+        })
+        return await category.id;
     }
 }
 

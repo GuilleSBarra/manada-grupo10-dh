@@ -40,10 +40,10 @@
                                 <label class="admin-products-label" for="category">Categoría</label>
                                 <div class="admin-products-control">
                                     <select name="category" id="category">
-                                        <option value="Jinete" <%= product.category == 'Jinete' ? 'selected' : '' %>>Jinete</option>
-                                        <option value="Cuidados del caballo" <%= product.category == 'Cuidados del caballo' ? 'selected' : '' %>>Cuidados del caballo</option>
-                                        <option value="Veterinaria" <%= product.category == 'Veterinaria' ? 'selected' : '' %>>Veterinaria</option>
-                                        <option value="Equipo y Accesorios" <%= product.category == 'Equipo y Accesorios' ? 'selected' : '' %>>Equipo y accesorios</option>
+                                        <option value="Jinete" <%= product.productCategory.name == 'Jinete' ? 'selected' : '' %>>Jinete</option>
+                                        <option value="Cuidados del caballo" <%= product.productCategory.name == 'Cuidados del caballo' ? 'selected' : '' %>>Cuidados del caballo</option>
+                                        <option value="Veterinaria" <%= product.productCategory.name == 'Veterinaria' ? 'selected' : '' %>>Veterinaria</option>
+                                        <option value="Equipo y Accesorios" <%= product.productCategory.name == 'Equipo y Accesorios' ? 'selected' : '' %>>Equipo y accesorios</option>
                                     </select>
                                 </div>
                             </div>
