@@ -1,27 +1,22 @@
 const db = require('../database/models');
-const fs = require('fs');
-const path = require('path');
 
 const productsModel = {
-    /* Post the new info in the database */
-    postData: async function (productData) {
-        return fs.writeFileSync(path.join(__dirname, "../databaseJSON/products.json"), JSON.stringify(productData, null, 4), { encoding: 'utf-8' });
-    },
-
     /* Return all the information from the database */
     findAll: async function () {
         return await db.products.findAll({
-            include: [{ association: "productCategory" }]
+            include: [
+                { association: "productCategory" },
+                { association: "productSize"}]
         });
     },
 
     /* Create a new ID for new Products */
     generateId: async function (){
-        let products = this.findAll();
-        let lastProduct = products.pop();
+        let products = await this.findAll();
+        let lastProduct = await products.pop();
 
         if (lastProduct) {
-            return lastProduct.id + 1;
+            return await lastProduct.id + 1;
         } else {
             return 1;
         }
@@ -112,10 +107,9 @@ const productsModel = {
 
     /* Delete the product from the database */
     delete: async function (id) {
-        let products = this.findAll();
-        let finalProducts = products.filter(product => product.id != id);
-        this.postData(finalProducts);
-        return true;
+        await db.products.destroy({
+            where: { id: id }
+        })
     }
 }
 

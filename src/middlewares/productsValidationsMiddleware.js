@@ -10,7 +10,7 @@ const validateProductsAuth = [
 
   check('description')
     .notEmpty().withMessage('Debes completar la Descripción del producto').bail()
-    .isLength({ min: 50 }).withMessage('La descripción debe contener al menos 50 caracteres'),
+    .isLength({ min: 10 }).withMessage('La descripción debe contener al menos 50 caracteres'),
 
   check('price')
     .notEmpty().withMessage('Debes completar el Precio').bail(),

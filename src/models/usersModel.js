@@ -1,27 +1,17 @@
-
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
 
 const usersModel = {
-    /* Read the info from the database */
-    getData: function () {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, "../databaseJSON/users.json"), 'utf-8'));
-    },
-
-    /* Post the new info in the database */
-    postData: function (userData) {
-        return fs.writeFileSync(path.join(__dirname, "../databaseJSON/users.json"), JSON.stringify(userData, null, 4), { encoding: 'utf-8' });
-    },
-
     /* Return all the information from the database */
-    findAll: function () {
-        return this.getData();
+    findAll: async function () {
+        return await db.users.findAll({
+            include: [{ association: "userCategory" }]
+        })
     },
 
     /* Create a new ID for new Users */
-    generateId: function (){
-        let users = this.findAll();
-        let lastUser = users.pop();
+    generateId: async function (){
+        let users = await this.findAll();
+        let lastUser = await users.pop();
 
         if (lastUser) {
             return lastUser.id + 1;
@@ -31,58 +21,55 @@ const usersModel = {
     },
 
     /* Find a user by its ID */
-    findByPk: function (id) {
-        let users = this.findAll();
-        let userFound = users.find(user => user.id == id);
-        return userFound;
+    findByPk: async function (id) {
+        return await db.users.findByPk(id,{
+            include: [{ association: "userCategory" }]
+        });
     },
 
     /* Find an user by a particular filed */
     /* Example: field = 'email' / text = 'da.aramayo1990@gmail.com' */
-    findByField: function (field, text) {
-        let users = this.findAll();
-        let userFound = users.find(user => user[field] === text);
-        return userFound;
+    findByField: async function (field, text) {
+        return await db.users.findOne({
+            include: [{ association: "userCategory" }],
+            where: { [field]: text }
+        })
+    },
+
+    /* Find all users by a particular filed */
+    /* Example: field = 'email' / text = 'da.aramayo1990@gmail.com' */
+    findAllByField: async function (field, text) {
+        return await db.users.findAll({
+            include: [{ association: "userCategory" }],
+            where: { [field]: text }
+        })
     },
 
     /* Save the new user in the database */
-    create: function (userData) {
-        let users = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        users.push(newUser);
-        this.postData(users);
-        return newUser;
+    create: async function (newUser) {
+        await db.users.create(newUser)
     },
 
     /* Update the user in the database */
-    update: function (userData, id) {
-        let users = this.findAll();
-
-        users.forEach(user => {
-            if (user.id == id) {
-                user.user = userData.user,
-                user.name = userData.name,
-                user.surname = userData.surname,
-                user.email = userData.email,
-                user.password = userData.password,
-                user.category = userData.category,
-                user.image = userData.image
-            }
+    update: async function (userData, id) {
+        await db.users.update({
+                user: userData.user,
+                name: userData.name,
+                surname: userData.surname,
+                email: userData.email,
+                image: userData.image,
+                password: userData.password,
+                idUserCategory: userData.idUserCategory,
+        },{
+            where: { id: id }
         })
-        
-        this.postData(users);
-        return users;
     },
 
     /* Delete the user from the database */
-    delete: function (id) {
-        let users = this.findAll();
-        let finalUsers = users.filter(user => user.id != id);
-        this.postData(finalUsers);
-        return true;
+    delete: async function (id) {
+        await db.users.destroy({
+            where: { id: id }
+        })
     }
 }
 

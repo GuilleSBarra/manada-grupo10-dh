@@ -1,7 +1,9 @@
 const { validationResult } = require("express-validator");
 const { productsModel } = require('../models');
 const { categoriesModel } = require('../models');
-const usersModel = require('../models/usersModel');
+const { sizesModel } = require('../models');
+const { usersModel } = require('../models');
+const { usersCategoriesModel } = require('../models');
 const bcrypt = require("bcryptjs");
 
 
@@ -39,15 +41,21 @@ let products = {
         }
         
         try {
+            // Take the file, generate a new id, find the Category and the Size id
             const file = req.file;
+            const id = await productsModel.generateId();
             const idCategory = await categoriesModel.getIdByField('name', req.body.category);
+            const idSize = await sizesModel.getIdByField('name', req.body.size);
             
             // Take the information to add a new product
             let productToCreate = {
                 ...req.body,
+                id: id,
                 image: `/img/products/${file.filename}`,
                 idProductsCategory: idCategory,
-                idSize: ''
+                idSize: idSize,
+                discountPrice: null,
+                discount: null
             }
 
             await productsModel.create(productToCreate);
@@ -120,8 +128,12 @@ let products = {
 
     /* Delete the product from the database. Call the view to Select Products to Update */
     destroy: async function (req, res) {
-        productsModel.delete(req.params.id);
-        products.editProducts (req, res);
+        try {
+            await productsModel.delete(req.params.id);
+            return products.editProducts (req, res);
+        } catch (error){
+            res.status(404).render('404-page.ejs');
+        }
     },
 }
 
@@ -138,8 +150,8 @@ let users = {
     /* POST: Create new Users in the database */
     createUsers: async function (req, res) {
         const resultValidation = validationResult(req);  
-        const file = req.file;
         const adminHeader = "Usuarios";
+        const file = req.file;
 
         if (resultValidation.errors.length > 0) {
             return res.render('./admin/createUsers.ejs', {
@@ -149,77 +161,112 @@ let users = {
             });
         }
 
-        // Check if the email is already register in the Database
-        let userExist = usersModel.findByField('email', req.body.email);
-        if (userExist) {
-            return res.render('./admin/createUsers.ejs', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya está registrado'
-                    }
-                },
-                oldData: req.body,
-                adminHeader
-            });
+        try {
+            // Check if the email is already register in the Database
+            let userExist = await usersModel.findByField('email', req.body.email);
+            if (userExist) {
+                return res.render('./admin/createUsers.ejs', {
+                    errors: {
+                        email: {
+                            msg: 'Este email ya está registrado'
+                        }
+                    },
+                    oldData: req.body,
+                    adminHeader
+                });
+            }
+
+            const id = await usersModel.generateId();
+            const idCategory = await usersCategoriesModel.getIdByField('name', req.body.category);
+            console.log(file.filename);
+
+            // Take the information to create the user
+            let userToCreate = {
+                ...req.body,
+                id: id,
+                password: bcrypt.hashSync(req.body.password, 10),
+                image: `/img/users/${file.filename}`,
+                idUserCategory: idCategory
+            }
+
+            await usersModel.create(userToCreate);
+            return res.render('./admin/createUsers.ejs', { adminHeader })
+
+        } catch (error) {
+            //res.status(404).render('404-page.ejs');
+            res.send(error);
         }
 
-
-        // Take the information to create the user
-        let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: `/img/users/${file.filename}`
-        }
-
-        usersModel.create(userToCreate);
-        return res.render('./admin/createUsers.ejs', { adminHeader })
     },
 
     /* GET: Select Users to Update */
     editUsers: async function (req, res) {
-        const adminHeader = "Usuarios";
-        const users = usersModel.findAll();
-        const categories = [...new Set(users.map(user => user.category))];
-        const usersByCategory = users.filter(user => 
-            user.category == req.query.category || 
-            user.name == req.query.name ||
-            user.surname == req.query.surname);
-        res.render('./admin/editUsers.ejs', { users: usersByCategory, categories, adminHeader })
+        try {
+            if (req.query.category) {
+                const categories = await usersCategoriesModel.findAll();
+                const idCategory = await usersCategoriesModel.getIdByField('name', req.query.category);
+                const users = await usersModel.findAllByField('idUserCategory', idCategory);
+                const adminHeader = "Usuarios";
+                res.render('./admin/editUsers.ejs', { categories, users, adminHeader })
+            } else {
+                const categories = await usersCategoriesModel.findAll();
+                const users = await usersModel.findAll();
+                const adminHeader = "Usuarios";
+                res.render('./admin/editUsers.ejs', { categories, users, adminHeader })
+            }
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
     },
 
     /* GET: User Form */
     editForm: async function (req, res) {
-        const user = usersModel.findByPk(req.params.id);
-        const adminHeader = "Usuarios";
-        res.render('./admin/editUser.ejs', { user, adminHeader })
+        try {
+            const user = await usersModel.findByPk(req.params.id);
+            const adminHeader = "Usuarios";
+            res.render('./admin/editUser.ejs', { user, adminHeader })
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
     },
 
     /* POST: Update the User in the database */
     update: async function (req, res) {
-        const file = req.file;
-        const id = req.params.id;
-        const searchedUser = usersModel.findByPk(id);
+        try {
+            const file = req.file;
+            const id = req.params.id;
+            const idCategory = await usersCategoriesModel.getIdByField('name', req.body.category);
+            const searchedUser = await usersModel.findByPk(id);
+    
+            if (file == undefined) {
+                searchedUser.image = searchedUser.image;
+            } else {
+                searchedUser.image = `/img/users/${file.filename}`;
+            }
+    
+            // Take the information to update the user in the database
+            let userToUpdate = {
+                ...req.body,
+                idUserCategory: idCategory,
+                image: searchedUser.image
+            }
+            
+            await usersModel.update(userToUpdate, id);
+            res.redirect('/admin/edit-user/' + id);
 
-        if (file == undefined) {
-            searchedUser.image = searchedUser.image;
-        } else {
-            searchedUser.image = `/img/users/${file.filename}`;
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
         }
-
-        // Take the information to update the user in the database
-        let userToUpdate = {
-            ...req.body,
-            image: searchedUser.image
-        }
-        
-        usersModel.update(userToUpdate, id);
-        res.redirect('/admin/edit-user/' + id);
     },
 
     /* Delete the user from the database. Call the view to Select Users to Update */
     destroy: async function (req, res) {
-        usersModel.delete(req.params.id);
-        users.editUsers (req, res);
+        try {
+            await usersModel.delete(req.params.id);
+            return users.editUsers (req, res);
+        } catch (error){
+            res.status(404).render('404-page.ejs');
+        }
     },
 }
 

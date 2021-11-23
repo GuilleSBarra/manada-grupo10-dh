@@ -30,7 +30,7 @@ router.delete("/delete/:id", controller.products.destroy);
 
 /* Admin Panel: New Users */
 router.get("/create-user", controller.users.createUsersForm);
-router.post("/create-user", uploadProducts.single("image"), usersMiddleware, controller.users.createUsers)
+router.post("/create-user", uploadUsers.single("image"), usersMiddleware, controller.users.createUsers)
 
 /* Admin Panel: Select Users to Update */
 router.get("/edit-user/", controller.users.editUsers);
