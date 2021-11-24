@@ -24,8 +24,9 @@
                         </div>
 
                         <div class="admin-products-field">
-                            <input class="admin-products" type="text" name="name"
+                            <input class="admin-products productForm-name" type="text" name="name"
                                 placeholder="Nombre del producto">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.name) { %>
                                     <div class="error-text">
                                         <%= errors.name.msg %>
@@ -34,8 +35,9 @@
                         </div>
 
                         <div class="admin-products-field">
-                            <input class="admin-products" type="text" name="description"
+                            <input class="admin-products productForm-description" type="text" name="description"
                                 placeholder="Descripción del producto">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.description) { %>
                                     <div class="error-text">
                                         <%= errors.description.msg %>
@@ -71,8 +73,9 @@
                         </div>
 
                         <div class="admin-products-field">
-                            <input class="admin-products" type="text" name="price" id="newProductPrice"
+                            <input class="admin-products productForm-price" type="text" name="price" id="newProductPrice"
                                 placeholder="Precio del Producto">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.price) { %>
                                     <div class="error-text">
                                         <%= errors.price.msg %>

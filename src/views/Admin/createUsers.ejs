@@ -25,8 +25,9 @@
                             </div>
             
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="user"
+                                <input class="admin-products register-user" type="text" name="user"
                                     placeholder="Usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                                    <span class="error-js"></span>
                                     <% if (locals.errors && errors.user) { %>
                                         <div class="error-text">
                                             <%= errors.user.msg %>
@@ -35,8 +36,9 @@
                             </div>
                             
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="name"
+                                <input class="admin-products register-name" type="text" name="name"
                                     placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                                    <span class="error-js"></span>
                                     <% if (locals.errors && errors.name) { %>
                                         <div class="error-text">
                                             <%= errors.name.msg %>
@@ -45,8 +47,9 @@
                             </div>
             
                             <div class="admin-products-field">
-                                <input class="admin-products" type="text" name="surname"
+                                <input class="admin-products register-surname" type="text" name="surname"
                                     placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                                    <span class="error-js"></span>
                                     <% if (locals.errors && errors.surname) { %>
                                         <div class="error-text">
                                             <%= errors.surname.msg %>
@@ -55,8 +58,9 @@
                             </div>
             
                             <div class="admin-products-field">
-                                <input class="admin-products" type="email" name="email"
+                                <input class="admin-products register-email" type="email" name="email"
                                     placeholder="Correo Electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
+                                    <span class="error-js"></span>
                                     <% if (locals.errors && errors.email) { %>
                                         <div class="error-text">
                                             <%= errors.email.msg %>
@@ -65,8 +69,9 @@
                             </div>
             
                             <div class="admin-products-field">
-                                <input class="admin-products" type="password" name="password"
+                                <input class="admin-products register-password" type="password" name="password"
                                     placeholder="Contraseña">
+                                    <span class="error-js"></span>
                             </div>
             
                             <div class="admin-products-field">

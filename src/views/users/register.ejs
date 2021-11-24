@@ -11,7 +11,8 @@
 
                             <div class="register-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="user" id="user" placeholder="Usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                                <input class="controls register-user" type="text" name="user" id="user" placeholder="Usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.user) { %>
 									<div class="error-text">
 										<%= errors.user.msg %>
@@ -21,7 +22,8 @@
 
                             <div class="register-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                                <input class="controls register-name" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.name) { %>
 									<div class="error-text">
 										<%= errors.name.msg %>
@@ -31,7 +33,8 @@
 
                             <div class="register-field">
                                 <i class="fas fa-ghost"></i>
-                                <input class="controls" type="text" name="surname" id="surname" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                                <input class="controls register-surname" type="text" name="surname" id="surname" placeholder="Apellido" value="<%= locals.oldData ? oldData.surname : null %>">
+                                <span class="error-js"></span>
                                     <% if (locals.errors && errors.surname) { %>
                                         <div class="error-text">
                                             <%= errors.surname.msg %>
@@ -41,7 +44,8 @@
 
                             <div class="register-field">
                                 <i class="fas fa-envelope"></i>
-                                <input class="controls" type="email" name="email" id="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>">
+                                <input class="controls register-email" type="email" name="email" id="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email : null %>">
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.email) { %>
 									<div class="error-text">
 										<%= errors.email.msg %>
@@ -51,7 +55,8 @@
 
                             <div class="register-field">
                                 <i class="fas fa-lock"></i>
-                                <input class="controls" type="password" name="password" id="password" placeholder="Contraseña">
+                                <input class="controls register-password" type="password" name="password" id="password" placeholder="Contraseña">
+                                <span class="error-js"></span>
                                     <% if (locals.errors && errors.password) { %>
                                         <div class="error-text">
                                             <%= errors.password.msg %>

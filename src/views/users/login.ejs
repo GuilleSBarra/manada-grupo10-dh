@@ -11,7 +11,8 @@
 
                             <div class="login-field">
                                 <i class="fas fa-user"></i>
-                                <input class="controls" type="text" name="email" placeholder="Email" value="<%= locals.oldData ? oldData.user : null %>">
+                                <input class="controls login-email" type="text" name="email" placeholder="Email" value="<%= locals.oldData ? oldData.user : null %>">
+                                <span class="error-js"></span>
                                     <% if (locals.errors && errors.email) { %>
                                         <div class="error-text">
                                             <%= errors.email.msg %>
@@ -22,7 +23,8 @@
 
                             <div class="login-field">
                                 <i class="fas fa-lock"></i>
-                                <input class="controls" type="password" name="password" placeholder="Contraseña" value="" >
+                                <input class="controls login-password" type="password" name="password" placeholder="Contraseña" value="" >
+                                <span class="error-js"></span>
                                 <% if (locals.errors && errors.password) { %>
 									<div class="error-text">
 										<%= errors.password.msg %>
