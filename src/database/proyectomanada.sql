@@ -7,7 +7,7 @@
  Source Host           : localhost:3306
  Source Schema         : proyectomanada
 
- Target Server Type    : MySQL
+ Target Server Type    : MusersySQL
  Target Server Version : 100413
  File Encoding         : 65001
 
@@ -65,6 +65,7 @@ CREATE TABLE `productcategories`  (
 INSERT INTO `productcategories` VALUES (1, 'Jinete', './img/jinete.jpg', 'Todo lo que necesitas para ser Jinete');
 INSERT INTO `productcategories` VALUES (2, 'Equipo y Accesorios', './img/accesorios.jpg', 'Todos los accesorios para tu caballo');
 INSERT INTO `productcategories` VALUES (3, 'Cuidados del caballo', './img/cuidados.jpg', 'El mejor lugar para cuidar de tu amigo');
+INSERT INTO `productcategories` VALUES (4, 'Veterinaria', './img/cuidados.jpg', 'La mejor medicina equina la encotrás en MaNaDa');
 
 -- ----------------------------
 -- Table structure for products
