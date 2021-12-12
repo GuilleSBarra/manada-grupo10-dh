@@ -111,7 +111,7 @@
 
 
 /* Desktop */
-@media (min-width: 941px){
+@media (min-width: 1330px){
     .single-product-container {
         display: flex;
         flex-wrap: wrap;

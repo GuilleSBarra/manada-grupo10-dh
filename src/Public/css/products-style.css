@@ -15,7 +15,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 90px;
     width: 85%;
     margin: auto;
     transition: all 0.5s ease-out;
@@ -92,11 +91,18 @@
 
 
 /* Desktop */
-@media (min-width: 941px){
+@media (min-width: 1330px){
     .index-products {
         width: 60%;
         max-height: 650px;
     }
+
+    /*
+    .noindex-products {
+        width: 60%;
+        max-height: 650px;
+    }
+    */
 
     .shop-products {
         width: 75%;

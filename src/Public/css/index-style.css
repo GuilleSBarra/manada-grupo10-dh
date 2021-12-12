@@ -96,6 +96,7 @@
     color: #FFFF;
     padding: 180px 0 50px 0;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .index-categories-header div {
@@ -336,7 +337,7 @@
 
 
 /* Desktop */
-@media (min-width: 941px){
+@media (min-width: 1330px){
     .index-banner-img {
         width: 100%;
         margin-top: 100px;
@@ -355,8 +356,7 @@
     .index-flex-categories-products {
         display: flex;
         justify-content: space-between;
-        max-width: 1280px;
-        width: 90%;
+        width: 70%;
         margin: auto;
         margin-top: 25px;
         margin-bottom: 7%;
@@ -368,20 +368,16 @@
     }
 
     .index-categories {
-        max-width: 400px;
-        max-height: 650px;
-        height: 100vh;
-        padding-bottom: 70vh;
-        margin-left: 2%;
+        height: 900px;
+        width: 30%;
+        padding-bottom: 800px;
         position: relative;
     }
 
     .index-categories-2 {
-        max-width: 400px;
-        max-height: 650px;
-        height: 100vh;
-        padding-bottom: 70vh;
-        margin-right: 2%;
+        height: 900px;
+        width: 30%;
+        padding-bottom: 800px;
         position: relative;
         order: 1;
     }
