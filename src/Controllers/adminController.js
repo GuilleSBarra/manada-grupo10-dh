@@ -178,7 +178,6 @@ let users = {
 
             const id = await usersModel.generateId();
             const idCategory = await usersCategoriesModel.getIdByField('name', req.body.category);
-            console.log(file.filename);
 
             // Take the information to create the user
             let userToCreate = {
