@@ -1,0 +1,34 @@
+const { usersModel } = require('../models');
+// const { validationResult } = require("express-validator")
+// const bcrypt = require("bcryptjs")
+
+let controller = {
+    /* GET: All Users */
+    allUsers: async function (req, res) {
+        try {
+            const users = await productsModel.findAll();
+            res.starus(200).json({
+                count: products, 
+                Users: users
+                
+                })
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
+    },
+    
+    detail: async function (req, res) {
+        try {
+            const product = await productsModel.findByPk(req.params.id);
+            res.status(200).json(
+                { count: product.length,
+                    countByCategory:  55
+                });
+        } catch (error) {
+            res.status(404).render('404-page.ejs');
+        }
+    }
+    
+}
+
+module.exports = controller
