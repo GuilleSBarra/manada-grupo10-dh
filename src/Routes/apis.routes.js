@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const controllerUsersApi = require('../controllers/apiUsersContoller');
-const controllerProducstApi = require('../controllers/apiProductsContoller');
+const controllerUsersApi = require('../Controllers/apiUsersController');
+const controllerProducstApi = require('../controllers/apiProductsController');
 
 /*** GET APIS PRODUCT ***/ 
 
+router.use('/products/:id', controllerProducstApi.detail);
 router.use('/products', controllerProducstApi.allProducts);
-router.use('/products', controllerProducstApi.detail)
 
 
 /*** GET APIS USERS ***/
+router.use('/users/:id',controllerUsersApi.detail);
 router.use('/users',controllerUsersApi.allUsers);
-router.use('/users',controllerUsersApi.detail);
+
 
 
 module.exports = router;
