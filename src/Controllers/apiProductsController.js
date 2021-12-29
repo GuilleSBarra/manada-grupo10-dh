@@ -1,5 +1,5 @@
 const apiProductsModel = require('../models/apiProductsModel');
-
+const productcategories = require('../database/models/productcategories')
 const controller = {
 
     // allProducts: async function (req, res) {
@@ -19,6 +19,7 @@ const controller = {
             const products = await apiProductsModel.findAll();
             res.status(200).json({
                 count: products.length,
+                // countByCategory:
                 products: products.map(item => ({
                     id: item.id,
                     name: item.name,
