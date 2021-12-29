@@ -19,7 +19,14 @@ const controller = {
             const products = await apiProductsModel.findAll();
             res.status(200).json({
                 count: products.length,
-                Users: products,
+                products: products.map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    description: item.description,
+                    category: item.idProductsCategory,
+                    size: item.idSize,   
+                    detail: `http://localhost:3000/api/products/${item.id}`
+                })), 
                 status: 200
                 })
         } catch (error) {

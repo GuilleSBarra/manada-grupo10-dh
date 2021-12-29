@@ -10,7 +10,13 @@ let controller = {
             const users = await apiUsersModel.findAll();
             res.status(200).json({
                 count: users.length,
-                Users: users,
+                Users: users.map(item => ({
+                    id: item.id,
+                   email: item.email,
+                    name: item.name,
+                    surname: item.surname,
+                    detail: `http://localhost:3000/api/users/${item.id}`
+                })),
                 status: 200
                 })
         } catch (error) {
@@ -24,13 +30,13 @@ let controller = {
             const user = await apiUsersModel.findByPk(req.params.id);
             res.status(200).json(
                 { 
-                User: {
-                    id: user.id,
-                    user: user.user,
-                    name: user.name,
-                    surname: user.surname,
-                    email: user.email,
-                    image: user.image},
+                User: user.map(item => ({
+                    id: item.id,
+                    email: item.email,
+                    name: item.name,
+                    surname: item.surname,
+                    image: `http://localhost:3000/${item.image}`
+                })),
                 status: 200
                 });
         } catch (error) {
