@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "Perro321*",
-    "database": "Manada_database",
-    "host": "127.0.0.1",
+    "password": null,
+    "database": "proyectomanada",
+    "host": "localhost",
     "dialect": "mysql",
     "port": "3306"
   },
