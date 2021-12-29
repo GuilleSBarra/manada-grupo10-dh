@@ -1,0 +1,103 @@
+.main-404 {
+    background-color: #112240;
+}
+
+.Error404 {
+    width: 90%;
+    margin-top: 150px;
+    margin-left: 5%;
+    padding: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.title-Error404 {
+    color: #64ffda;
+    font-size: 10vw;
+    margin-bottom: 30px;
+}
+
+
+.subtitle-Error404 {
+    font-size: 8vw;
+    color: #64ffda;
+}
+
+.text-Error404 {
+    font-size: 5vw;
+    color: #e6f1ff;
+}
+
+.img-Error404 {
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+box-shadow: 0px 0px 5px rgb(80, 100, 140);
+
+}
+
+
+/* Tablet */
+@media (min-width: 800px){
+   
+.Error404 {
+    width: 90%;
+    margin-top: 150px;
+    margin-left: 5%;
+    padding: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.title-Error404 {
+    font-size: 100px;
+}
+
+
+.subtitle-Error404 {
+    font-size: 80px;
+}
+
+.text-Error404 {
+    font-size: 60px;
+}
+
+.img-Error404 {
+    width: 600px;
+    margin-bottom: 30px;
+
+}
+}
+
+
+/* Desktop */
+ @media (min-width: 1330px){
+    
+    .Error404 {
+    /* width: 90%; */
+    margin-top: 90px;
+    /* margin-left: 5%;
+    padding: auto;
+    display: inline-block;
+    text-align: center; */
+}
+
+.title-Error404 {
+    font-size: 60px;
+}
+
+
+.subtitle-Error404 {
+    font-size: 40px;
+}
+
+.text-Error404 {
+    font-size: 20px;
+}
+
+.img-Error404 {
+    width: 400px;
+    margin-bottom: 15px;
+
+}
+}
