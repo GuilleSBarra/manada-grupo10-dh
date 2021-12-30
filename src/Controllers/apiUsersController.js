@@ -30,20 +30,19 @@ let controller = {
             const user = await apiUsersModel.findByPk(req.params.id);
             res.status(200).json(
                 { 
-                User: user.map(item => ({
-                    id: item.id,
-                    email: item.email,
-                    name: item.name,
-                    surname: item.surname,
-                    image: `http://localhost:3000/${item.image}`
-                })),
+                User: {
+                    id: user.id,
+                    email: user.email,
+                    name: user.name,
+                    surname: user.surname,
+                    image: `http://localhost:3000/${user.image}`
+                },
                 status: 200
                 });
         } catch (error) {
             res.status(404).render('404-page.ejs');
         }
     }
-    
 }
 
 module.exports = controller
