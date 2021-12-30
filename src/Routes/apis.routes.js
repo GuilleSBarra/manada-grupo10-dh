@@ -9,9 +9,14 @@ router.use('/products/:id', controllerProducstApi.detail);
 router.use('/products', controllerProducstApi.allProducts);
 
 
+
+
 /*** GET APIS USERS ***/
+
 router.use('/users/:id',controllerUsersApi.detail);
 router.use('/users',controllerUsersApi.allUsers);
+
+
 
 
 
