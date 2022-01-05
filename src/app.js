@@ -33,7 +33,7 @@ app.use(methodOverride('X-HTTP-Method-Override'))
 
 
 /*Routes*/
-app.use ('/', require('./routes/index.routes'));
+app.use ('/', require('./Routes/index'));
 
 
 /*Error: 404*/
