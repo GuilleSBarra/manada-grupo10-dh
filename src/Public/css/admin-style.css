@@ -243,10 +243,6 @@
     margin: 40px 0;
 }
 
-.admin-table-container tr:nth-child(even) {
-    background-color: rgb(220, 230, 250);
-}
-
 .admin-table-container table {
     width: 100%;
     border-collapse: collapse;

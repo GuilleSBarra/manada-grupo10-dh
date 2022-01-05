@@ -63,8 +63,10 @@ window.addEventListener('load', function () {
                 error[1].innerText = "Si dejas el campo en blanco nunca vas a poder ingresar";
             } else if (password.value.length < 8) {
                 error[1].innerText = "Recordá que tu contraseña tiene al menos 8 caracteres";
-            } else if (password.value.match(alphanumeric)) {
+                /*
+            } else if (!password.value.match(alphanumeric)) {
                 error[1].innerText = "No la recuerdas? Te doy una pista: Debe contener al menos una letra, un número y un caracter";
+            */
             } else {
                 error[1].innerText = "";
             }

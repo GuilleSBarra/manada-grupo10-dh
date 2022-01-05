@@ -25,8 +25,13 @@
             <a href="/admin"><i class="far fa-heart"></i></a>
         </div>
 
-            <!--Admin User: Name and Image-->
+        <!--Admin User: Name and Image-->
         <% if (locals.isLogged) { %>
+            <% if (locals.userLogged.idUserCategory == 2) { %>
+                <div class="admin-enter">
+                    <a href="/admin"><i class="far fa-heart"></i></a>
+                </div>
+            <% } %>
             <div class="profile-details">
                 <img src="<%= locals.userLogged.image %>" width="20px">
                 <span class="admin_name">
