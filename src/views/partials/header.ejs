@@ -20,10 +20,6 @@
                 <h1>Ma Na Da</h1>
             </a>
         </div>
-        
-        <div class="admin-enter">
-            <a href="/admin"><i class="far fa-heart"></i></a>
-        </div>
 
         <!--Admin User: Name and Image-->
         <% if (locals.isLogged) { %>
@@ -73,7 +69,11 @@
                 <li class="burger-menu-profile"><a href="/users/ingreso"><i class='bx bxs-face'></i> Ingresar</a></li>
                 <li class="burger-menu-profile"><a href="/users/registro"><i class='bx bx-user'></i> Registarse</a></li>
             <% } %>
-            <li class="burger-menu-profile"><a href="/admin"><i class='bx bx-heart'></i> Admin Panel</a></li>
+            <% if (locals.isLogged) { %>
+                <% if (locals.userLogged.idUserCategory == 2) { %>
+                    <li class="burger-menu-profile"><a href="/admin"><i class='bx bx-heart'></i> Admin Panel</a></li>
+                <% } %>
+            <% } %>
             <li class="burger-menu-products"><i class='bx bx-box'></i> Productos</li>
             <ul type="none" class="burger-products-list">
                 <li><a href="/products">Ver Todo</a></li>

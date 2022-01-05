@@ -12,8 +12,13 @@ const bcrypt = require("bcryptjs");
 let admin = {
     /* GET: Admin Panel */
     index: (req, res) => {
-        const adminHeader = "Dashboard"
-        return res.render('./admin/admin.ejs', { adminHeader });
+        /* Validate if the user is Administrator */
+        if (req.session.userLogged && req.session.userLogged.idUserCategory == 2) {
+            const adminHeader = "Dashboard"
+            return res.render('./admin/admin.ejs', { adminHeader });
+        } else {
+            res.status(404).render('404-page.ejs');
+        }
     },
 }
 
