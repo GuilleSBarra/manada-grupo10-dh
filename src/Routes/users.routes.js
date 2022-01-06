@@ -4,7 +4,7 @@ const uploadUserAvatar = require('../middlewares/multerUsersMiddleware')
 const usersMiddleware = require('../middlewares/usersValidationsMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
-const controller = require('../controllers/usersController')
+const controller = require('../Controllers/usersController')
 
 /* Login Form */
 router.get("/ingreso", guestMiddleware, controller.login)
