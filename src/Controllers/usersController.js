@@ -82,7 +82,7 @@ let controller = {
             }
     
             const id = await usersModel.generateId();
-            const idCategory = await usersCategoriesModel.getIdByField('name', req.body.category);
+         
 
             // Take the information to create the user
             let userToCreate = {
@@ -90,7 +90,7 @@ let controller = {
                 id: id,
                 password: bcrypt.hashSync(req.body.password, 10),
                 image: `/img/users/${file.filename}`,
-                idUserCategory: idCategory
+                idUserCategory: 1
             }
 
             await usersModel.create(userToCreate);
