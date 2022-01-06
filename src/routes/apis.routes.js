@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controllerUsersApi = require('../Controllers/apiUsersController');
+const controllerUsersApi = require('../controllers/apiUsersController');
 const controllerProducstApi = require('../controllers/apiProductsController');
 
 /*** GET APIS PRODUCT ***/ 
